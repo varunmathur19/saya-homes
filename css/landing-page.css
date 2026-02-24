@@ -1,0 +1,150 @@
+.landing-page {
+    position: fixed;
+    inset: auto 0 0;
+    height: 100%;
+    width: 100%;
+    background: url(../images/landing-bg.webp) center/cover var(--secondary-color);
+    z-index: 999999999;
+    overflow: hidden;
+    transition: .8s linear
+}
+
+.landing-page.shutter-up {
+    bottom: 100%;
+    pointer-events: none
+}
+
+.landing-logo .img-fluid {
+    width: 80%;
+    margin: auto
+}
+
+.landing-logo .st0 {
+    stroke: #F5873D;
+    fill: #F5873D
+}
+
+.landing-logo .st1 {
+    stroke: #F8B641;
+    fill: #F8B641
+}
+
+.landing-logo .st2 {
+    stroke: #C5303B;
+    fill: #C5303B
+}
+
+.landing-logo svg path {
+    stroke-width: 1;
+    stroke-linejoin: miter;
+    stroke-miterlimit: 1;
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    fill-opacity: 0;
+    -webkit-animation: 6s linear 1.65s forwards Draw;
+    animation: 6s linear 1.65s forwards Draw
+}
+
+@-webkit-keyframes Draw {
+    0% {
+        stroke-dashoffset: 760;
+        fill-opacity: 0
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0
+    }
+
+    100%,
+    60% {
+        fill-opacity: 1
+    }
+}
+
+@keyframes Draw {
+    0% {
+        stroke-dashoffset: 760;
+        fill-opacity: 0
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0
+    }
+
+    100%,
+    60% {
+        fill-opacity: 1
+    }
+}
+
+.cmd-title {
+    width: fit-content;
+    margin: 2rem 0 0 auto;
+    padding-left: 3.5rem;
+    position: relative;
+    z-index: 1
+}
+
+.cmd-title::before {
+    content: '';
+    position: absolute;
+    width: 2.5rem;
+    height: 1px;
+    left: 0;
+    top: 1rem;
+    background-color: var(--primary-color)
+}
+
+.cmd-title small {
+    font-size: 75%
+}
+
+.landing-page .readmore.position-absolute {
+    bottom: 2rem;
+    z-index: 1
+}
+
+.main-home {
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s ease-in-out
+}
+
+.main-home.active {
+    opacity: 1;
+    visibility: visible
+}
+
+@media (max-width:991.9px) {
+    .landing-logo .img-fluid {
+        max-width: 340px
+    }
+
+    .landing-text .inner {
+        padding: 0 2rem
+    }
+}
+
+@media (max-width:767.9px) {
+    .landing-text .inner {
+        padding: 0
+    }
+}
+
+@media (max-width:540px) {
+    .landing-logo .img-fluid {
+        max-width: 250px
+    }
+}
+
+@media (max-width:375px) {
+    .landing-logo .img-fluid {
+        max-width: 200px
+    }
+
+    .landing-text .inner {
+        margin-bottom: 5rem
+    }
+}

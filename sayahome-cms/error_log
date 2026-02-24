@@ -1,0 +1,93 @@
+[19-Oct-2021 11:02:42 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/webtesting/public_html/onedash/option2/lms/application/views/dashboard.php on line 11
+[20-Oct-2021 08:03:45 UTC] PHP Fatal error:  Call to a member function select() on null in /home/webtesting/public_html/onedash/option2/lms/application/models/Login_model.php on line 8
+[20-Oct-2021 09:00:18 UTC] PHP Fatal error:  Call to a member function select() on null in /home/webtesting/public_html/onedash/option2/lms/application/models/Login_model.php on line 8
+[20-Oct-2021 09:04:25 UTC] PHP Fatal error:  Call to a member function select() on null in /home/webtesting/public_html/onedash/option2/lms/application/models/Login_model.php on line 8
+[20-Oct-2021 09:10:41 UTC] PHP Fatal error:  Call to a member function select() on null in /home/webtesting/public_html/onedash/option2/lms/application/models/Login_model.php on line 8
+[20-Oct-2021 09:11:35 UTC] PHP Fatal error:  Call to a member function select() on null in /home/webtesting/public_html/onedash/option2/lms/application/models/Login_model.php on line 8
+[20-Oct-2021 09:16:00 UTC] PHP Fatal error:  Call to a member function select() on null in /home/webtesting/public_html/onedash/option2/lms/application/models/Login_model.php on line 17
+[20-Oct-2021 09:27:05 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/webtesting/public_html/onedash/option2/lms/application/views/dashboard.php on line 35
+[20-Oct-2021 09:27:25 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/webtesting/public_html/onedash/option2/lms/application/views/dashboard.php on line 35
+[20-Oct-2021 09:27:45 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/webtesting/public_html/onedash/option2/lms/application/views/dashboard.php on line 35
+[20-Oct-2021 09:29:38 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/webtesting/public_html/onedash/option2/lms/application/views/dashboard.php on line 35
+[20-Oct-2021 09:30:00 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/webtesting/public_html/onedash/option2/lms/application/views/dashboard.php on line 35
+[20-Oct-2021 09:30:01 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/webtesting/public_html/onedash/option2/lms/application/views/dashboard.php on line 35
+[20-Oct-2021 09:30:30 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/webtesting/public_html/onedash/option2/lms/application/views/dashboard.php on line 35
+[20-Oct-2021 09:31:34 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/webtesting/public_html/onedash/option2/lms/application/views/dashboard.php on line 35
+[20-Oct-2021 09:32:56 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/webtesting/public_html/onedash/option2/lms/application/views/dashboard.php on line 35
+[20-Oct-2021 09:41:31 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/webtesting/public_html/onedash/option2/lms/application/views/dashboard.php on line 51
+[20-Oct-2021 09:42:00 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/webtesting/public_html/onedash/option2/lms/application/views/dashboard.php on line 51
+[20-Oct-2021 09:44:41 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/webtesting/public_html/onedash/option2/lms/application/views/dashboard.php on line 51
+[20-Oct-2021 09:44:57 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/webtesting/public_html/onedash/option2/lms/application/views/dashboard.php on line 51
+[20-Oct-2021 09:44:58 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/webtesting/public_html/onedash/option2/lms/application/views/dashboard.php on line 51
+[20-Oct-2021 09:47:08 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/webtesting/public_html/onedash/option2/lms/application/views/dashboard.php on line 51
+[20-Oct-2021 10:00:18 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/webtesting/public_html/onedash/option2/lms/application/views/dashboard.php on line 51
+[20-Oct-2021 11:16:59 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/webtesting/public_html/onedash/option2/lms/application/models/Enquire_model.php on line 15
+[21-Oct-2021 08:00:23 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/webtesting/public_html/onedash/option2/lms/application/views/export.php on line 209
+[21-Oct-2021 08:00:23 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/webtesting/public_html/onedash/option2/lms/application/views/export.php on line 209
+[21-Oct-2021 08:00:54 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/webtesting/public_html/onedash/option2/lms/application/views/export.php on line 213
+[21-Oct-2021 08:01:41 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/webtesting/public_html/onedash/option2/lms/application/views/export.php on line 209
+[21-Oct-2021 08:02:40 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/webtesting/public_html/onedash/option2/lms/application/views/export.php on line 209
+[21-Oct-2021 08:02:41 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/webtesting/public_html/onedash/option2/lms/application/views/export.php on line 209
+[21-Oct-2021 09:34:06 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/webtesting/public_html/onedash/option2/lms/application/views/export.php on line 209
+[21-Oct-2021 09:37:18 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/webtesting/public_html/onedash/option2/lms/application/views/export.php on line 209
+[21-Oct-2021 10:48:18 UTC] PHP Fatal error:  Call to undefined method CI_Controller::Controller() in /home/webtesting/public_html/onedash/option2/lms/application/controllers/Export.php on line 6
+[21-Oct-2021 10:50:30 UTC] PHP Fatal error:  Class 'Controller' not found in /home/webtesting/public_html/onedash/option2/lms/application/controllers/Export.php on line 2
+[21-Oct-2021 10:51:37 UTC] PHP Fatal error:  Class 'Controller' not found in /home/webtesting/public_html/onedash/option2/lms/application/controllers/Export.php on line 2
+[21-Oct-2021 10:51:40 UTC] PHP Fatal error:  Class 'Controller' not found in /home/webtesting/public_html/onedash/option2/lms/application/controllers/Export.php on line 2
+[21-Oct-2021 10:51:57 UTC] PHP Fatal error:  Class 'Controller' not found in /home/webtesting/public_html/onedash/option2/lms/application/controllers/Export.php on line 2
+[21-Oct-2021 10:51:58 UTC] PHP Fatal error:  Class 'Controller' not found in /home/webtesting/public_html/onedash/option2/lms/application/controllers/Export.php on line 2
+[21-Oct-2021 10:52:24 UTC] PHP Fatal error:  Call to undefined method CI_Controller::Controller() in /home/webtesting/public_html/onedash/option2/lms/application/controllers/Export.php on line 6
+[21-Oct-2021 10:52:25 UTC] PHP Fatal error:  Call to undefined method CI_Controller::Controller() in /home/webtesting/public_html/onedash/option2/lms/application/controllers/Export.php on line 6
+[21-Oct-2021 10:53:58 UTC] PHP Fatal error:  Call to undefined method CI_Controller::Controller() in /home/webtesting/public_html/onedash/option2/lms/application/controllers/Export.php on line 6
+[21-Oct-2021 10:53:59 UTC] PHP Fatal error:  Call to undefined method CI_Controller::Controller() in /home/webtesting/public_html/onedash/option2/lms/application/controllers/Export.php on line 6
+[21-Oct-2021 11:05:21 UTC] PHP Fatal error:  Call to a member function fetch_data() on null in /home/webtesting/public_html/onedash/option2/lms/application/controllers/Export.php on line 20
+[21-Oct-2021 11:21:34 UTC] PHP Fatal error:  Call to a member function fetch_data() on null in /home/webtesting/public_html/onedash/option2/lms/application/controllers/Export.php on line 20
+[21-Oct-2021 11:22:27 UTC] PHP Fatal error:  Call to a member function fetch_data() on null in /home/webtesting/public_html/onedash/option2/lms/application/controllers/Export.php on line 20
+[21-Oct-2021 11:26:15 UTC] PHP Fatal error:  Call to a member function fetch_data() on null in /home/webtesting/public_html/onedash/option2/lms/application/controllers/Export.php on line 20
+[21-Oct-2021 11:26:17 UTC] PHP Fatal error:  Call to a member function fetch_data() on null in /home/webtesting/public_html/onedash/option2/lms/application/controllers/Export.php on line 20
+[21-Oct-2021 11:29:09 UTC] PHP Fatal error:  Call to undefined method CI_Controller::Controller() in /home/webtesting/public_html/onedash/option2/lms/application/controllers/Export.php on line 6
+[22-Oct-2021 10:01:23 UTC] PHP Fatal error:  Call to a member function result() on null in /home/webtesting/public_html/onedash/option2/lms/application/controllers/Enquiry.php on line 38
+[22-Oct-2021 10:01:24 UTC] PHP Fatal error:  Call to a member function result() on null in /home/webtesting/public_html/onedash/option2/lms/application/controllers/Enquiry.php on line 38
+[25-Oct-2021 05:44:36 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/webtesting/public_html/onedash/option2/lms/application/controllers/Enquiry.php on line 82
+[25-Oct-2021 12:40:49 UTC] PHP Fatal error:  Call to undefined method Enquire_model::make_query() in /home/webtesting/public_html/onedash/option2/lms/application/models/Enquire_model.php on line 15
+[25-Oct-2021 12:40:59 UTC] PHP Fatal error:  Call to undefined method Enquire_model::make_query() in /home/webtesting/public_html/onedash/option2/lms/application/models/Enquire_model.php on line 15
+[25-Oct-2021 12:41:02 UTC] PHP Fatal error:  Call to undefined method Enquire_model::make_query() in /home/webtesting/public_html/onedash/option2/lms/application/models/Enquire_model.php on line 15
+[25-Oct-2021 12:45:09 UTC] PHP Fatal error:  Call to undefined method Enquire_model::make_query() in /home/webtesting/public_html/onedash/option2/lms/application/models/Enquire_model.php on line 15
+[26-Oct-2021 06:50:36 UTC] PHP Parse error:  syntax error, unexpected '--' (T_DEC) in /home/webtesting/public_html/onedash/option2/lms/application/views/export.php on line 167
+[26-Oct-2021 09:23:06 UTC] PHP Fatal error:  Call to a member function daterange() on null in /home/webtesting/public_html/onedash/option2/lms/application/controllers/Enquiry.php on line 95
+[26-Oct-2021 12:46:18 UTC] PHP Fatal error:  Call to undefined method Popup_model::make_datatables() in /home/webtesting/public_html/onedash/option2/lms/application/controllers/Popup_enquiry.php on line 21
+[26-Oct-2021 12:47:36 UTC] PHP Fatal error:  Call to undefined method Popup_model::make_datatables() in /home/webtesting/public_html/onedash/option2/lms/application/controllers/Popup_enquiry.php on line 21
+[28-Oct-2021 12:17:50 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[28-Oct-2021 12:18:22 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[28-Oct-2021 12:18:51 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[28-Oct-2021 12:18:51 UTC] PHP Fatal error:  Call to a member function delete() on null in /home/webtesting/public_html/centralpark/lms/application/controllers/General.php on line 16
+[28-Oct-2021 12:19:14 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[28-Oct-2021 13:13:49 UTC] PHP Fatal error:  Call to undefined method Video_model::get_video() in /home/webtesting/public_html/centralpark/lms/application/controllers/Video.php on line 122
+[28-Oct-2021 13:14:21 UTC] PHP Fatal error:  Call to undefined method Video_model::get_video() in /home/webtesting/public_html/centralpark/lms/application/controllers/Video.php on line 122
+[07-May-2022 09:42:33 UTC] PHP Fatal error:  Call to a member function get_coverage() on null in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Csr.php on line 188
+[07-May-2022 10:08:49 UTC] PHP Fatal error:  Call to undefined method Csr_model::csr_coverage() in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Csr.php on line 175
+[11-May-2022 07:22:00 UTC] PHP Fatal error:  Call to a member function get_all_data() on null in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Career.php on line 39
+[11-May-2022 07:22:12 UTC] PHP Fatal error:  Call to a member function get_all_data() on null in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Career.php on line 39
+[19-May-2022 06:35:34 UTC] PHP Fatal error:  Call to a member function add_csr() on null in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Career.php on line 82
+[19-May-2022 06:36:26 UTC] PHP Fatal error:  Call to a member function update_career() on null in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Career.php on line 123
+[20-May-2022 07:24:35 UTC] PHP Fatal error:  Call to undefined method Video_model::get_pressrelease() in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Video.php on line 119
+[20-May-2022 07:38:40 UTC] PHP Fatal error:  Call to undefined method Video_model::update_pressrelease() in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Video.php on line 122
+[20-May-2022 07:42:52 UTC] PHP Fatal error:  Call to undefined method Video_model::add_pressrelease() in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Video.php on line 77
+[21-May-2022 07:13:22 UTC] PHP Fatal error:  Call to undefined method Awards_model::add_awards() in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Awards.php on line 110
+[21-May-2022 07:16:08 UTC] PHP Fatal error:  Call to undefined method Awards_model::get_awards() in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Awards.php on line 202
+[21-May-2022 07:27:33 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/webtesting/public_html/SayahHome/sayahome-cms/application/views/awards/edit.php on line 65
+[09-Jun-2022 11:14:09 UTC] PHP Fatal error:  Call to a member function get_coverage() on null in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Team.php on line 189
+[09-Jun-2022 12:09:44 UTC] PHP Fatal error:  Call to a member function add_coverage() on null in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Team.php on line 105
+[09-Jun-2022 12:20:44 UTC] PHP Fatal error:  Call to a member function make_datatables() on null in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Project.php on line 26
+[09-Jun-2022 12:20:54 UTC] PHP Fatal error:  Call to a member function make_datatables() on null in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Project.php on line 26
+[09-Jun-2022 12:22:49 UTC] PHP Fatal error:  Call to a member function get_team() on null in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Project.php on line 53
+[13-Jun-2022 11:41:38 UTC] PHP Fatal error:  Call to a member function make_datatables() on null in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Event.php on line 26
+[13-Jun-2022 12:33:09 UTC] PHP Fatal error:  Call to a member function make_datatables() on null in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Event.php on line 26
+[13-Jun-2022 12:33:24 UTC] PHP Fatal error:  Call to a member function make_datatables() on null in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Event.php on line 26
+[13-Jun-2022 12:37:33 UTC] PHP Fatal error:  Call to a member function get_team() on null in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Event.php on line 123
+[14-Jun-2022 04:26:01 UTC] PHP Fatal error:  Call to a member function update_team() on null in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Event.php on line 187
+[14-Jun-2022 07:44:22 UTC] PHP Fatal error:  Call to a member function make_datatables() on null in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Gallery.php on line 26
+[14-Jun-2022 07:45:03 UTC] PHP Fatal error:  Call to a member function make_datatables() on null in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Gallery.php on line 26
+[14-Jun-2022 07:46:27 UTC] PHP Fatal error:  Call to a member function make_datatables() on null in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Gallery.php on line 27
+[14-Jun-2022 07:52:04 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Gallery.php on line 204
+[14-Jun-2022 09:17:13 UTC] PHP Fatal error:  Call to a member function add_event() on null in /home/webtesting/public_html/SayahHome/sayahome-cms/application/controllers/Gallery.php on line 104

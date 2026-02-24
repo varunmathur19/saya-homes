@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Mid Mid Sun Sun';
+    src: local('Mid Mid Sun Sun Regular'), local('Mid-Mid-Sun-Sun-Regular'),
+        url('MidMidSunSun.woff2') format('woff2'),
+        url('MidMidSunSun.woff') format('woff'),
+        url('MidMidSunSun.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}

@@ -1,0 +1,19 @@
+[21-Apr-2025 11:50:19 UTC] Database connection error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[23-Apr-2025 11:09:29 UTC] Database connection error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[23-Apr-2025 11:09:36 UTC] Database connection error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[23-Apr-2025 12:45:04 UTC] Database connection error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[23-Apr-2025 14:02:37 UTC] Database connection error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[23-Apr-2025 15:26:02 UTC] Database connection error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[23-Apr-2025 19:38:55 UTC] Database connection error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[24-Apr-2025 01:36:58 UTC] Database connection error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[24-Apr-2025 05:33:43 UTC] Database connection error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[24-Apr-2025 05:34:03 UTC] Database connection error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[24-Apr-2025 11:13:59 UTC] Database connection error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[24-Apr-2025 11:14:07 UTC] Database connection error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[24-Apr-2025 11:14:10 UTC] Database connection error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[24-Apr-2025 11:14:24 UTC] Database connection error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[24-Apr-2025 11:17:42 UTC] Database connection error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[01-May-2025 06:48:45 UTC] PHP Parse error:  Unclosed '{' on line 126 in /home/sayahomes/public_html/controller/form_integration.php on line 234
+[01-May-2025 06:48:52 UTC] PHP Parse error:  Unclosed '{' on line 126 in /home/sayahomes/public_html/controller/form_integration.php on line 234
+[06-May-2025 13:51:26 UTC] Database connection error: SQLSTATE[HY000] [2002] Connection refused
+[06-May-2025 13:51:36 UTC] Database connection error: SQLSTATE[HY000] [2002] Connection refused

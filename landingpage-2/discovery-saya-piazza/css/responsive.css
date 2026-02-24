@@ -1,0 +1,1009 @@
+@media(max-width: 1920px) and (min-width: 1800px){
+    #banner_carousel, #banner_carousel div, #banner_carousel img {
+    height: 96%;
+    /* object-position: bottom; */
+}
+.banner_section .location p {
+    font-size: 22px;
+}
+.banner_section .form {
+    padding: 90.5px 100px;
+}
+}
+
+@media(max-width:1600px){
+    .banner_section .typo {
+    font-size: 32px;
+}
+.banner_section .price {
+    font-size: 38px;
+}
+
+#banner_carousel img {
+    max-height: 740px;
+}
+.price_section .box h5 {
+    font-size: 17px;
+}
+.price_section p {
+    font-size: 20px;
+}
+.price_section .box {
+    min-height: 240px;
+    padding-top: 16px;
+}
+.price_section .enquiry_btn {
+    padding: 10px 14px;
+    font-size: 14px;
+}
+.content-box h4 {
+    font-size: 28px;
+    text-align: center;
+    font-weight: 400;
+}
+.content-box h4.text1 {
+    font-size: 28px;
+    text-align: center;
+    font-weight: 400;
+}
+}
+
+
+@media(max-width:1500px){
+    section#overview {
+    padding-top: 15px;
+}
+
+    .sectionTitle{
+        font-size: 34px;
+        line-height: 40px;
+    }
+
+    .right_body{
+        padding-top: 87px;
+        max-width: calc(100% - 110px);
+    }
+
+    .left_body{
+        max-width: 110px;
+    }
+
+    .left_body .mail{
+        height: 110px;
+    }
+
+    .left_body .mail img{
+        /* max-width: 47px; */
+        margin-bottom: 10px;
+    }
+
+    .left_body .mail p{
+        font-size: 13px;
+    }
+
+    .left_body .call .icon{
+        height: 50px;
+        width: 50px;
+    }
+
+    .left_body .call img{
+        max-width: 28px;
+        max-height: 28px;
+    }
+
+    .left_body .call p{
+        line-height: 20px;
+        font-size: 22px;
+    }
+
+    .left_body .call:before,
+    .left_body .call:after{
+        height: 50px;
+    }
+
+/* navbar */
+
+.navbar{
+    padding: 15px 0 15px;
+}
+
+/* banner section */
+
+.banner_section .top{
+    padding: 45px 0px;
+    padding-bottom: 0px;
+}
+
+.banner_section .project_logo{
+}
+
+.banner_section .tagline{
+    line-height: 50px;
+}
+
+.banner_section .tagline span{
+    margin-left: 50px;
+    font-size: 40px;
+}
+
+.banner_section .typo,
+.banner_section .price{
+    font-size: 32px;
+}
+
+.banner_section .typo{
+    padding-right: 30px;
+}
+
+.banner_section .price{
+    padding-left: 30px;
+}
+
+.banner_section .form{
+    padding: 55px 60px;
+}
+
+.banner_section .payment_plan p:nth-child(1){
+    font-size: 25px;
+}
+
+.banner_section .payment_plan p:nth-child(2){
+    font-size: 15px;
+}
+
+.banner_section .payment_plan{
+    padding: 10px 30px;
+}
+
+.banner_section .form_heading{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#banner_carousel img{
+    max-height: 617px;
+    /* object-position: bottom; */
+}
+
+/* overview section */
+
+.overview_section .hgl{
+    margin: 25px 0;
+}
+
+.overview_section .hgl li:not(:last-child){
+    margin-right: 30px;
+}
+
+.overview_section .hgl .icon{
+    margin-right: 10px;
+}
+
+.overview_section .hgl img{
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.overview_section .hgl p{
+    font-size: 23px;
+}
+
+/* price section */
+
+.price_section .price_col {
+    max-width: 33.33%;
+    flex: 0 0 33.33%;
+}
+
+/* offer section */
+
+.offer_section .single img{
+    height: 100px;
+    width: 100px;
+}
+
+.offer_section .single{
+    padding: 50px 50px 80px;
+}
+
+.offer_section .single h5{
+    font-size: 18px;
+    font-weight: 500;
+}
+.price_section .box {
+    min-height: 206px;
+    padding-top: 42px!important;
+}
+.price_section .enquiry_btn {
+    font-size: 14px;
+}
+.overview_section .left_col img {
+    width: 89%;
+    margin: 0px auto;
+}
+
+}
+
+
+
+/* end of 1500 */
+
+@media(max-width:1400px){
+    .price_section .box {
+    min-height: 206px;
+    padding-top: 23px!important;
+}
+.price_section .enquiry_btn {
+    font-size: 14px;
+}
+
+.custom_section{
+ padding:80px 0;   
+}
+
+/* navbar */
+
+body.fixed .navbar .navbar-brand img {
+    max-width: 140px;
+}
+
+.navbar .nav-link{
+    padding: 10px 12px!important;
+}
+
+body.fixed .navbar .nav-link{
+    font-size: 14px;
+}
+
+.right_body{
+    padding-top: 86px;
+}
+
+/* banner */
+
+#banner_carousel .carousel-indicators li{
+    width: 7px;
+    margin: 0px 5px;
+}
+
+.banner_section .top{
+    padding: 20px 0px;
+    padding-bottom: 0px;
+}
+
+.banner_section .project_logo{
+}
+
+.banner_section .tagline{
+    line-height: 40px;
+    font-size: 40px;
+    margin: 25px 0 25px;
+}
+
+.banner_section .tagline span{
+    margin-left: 40px;
+    font-size: 30px;
+}
+
+.banner_section .location p{
+    font-size: 22px;
+}
+
+.banner_section .location span{
+    font-size:14px;
+}
+
+.banner_section .typo, .banner_section .price{
+    font-size: 32px;
+}
+
+.banner_section .typo span,
+.banner_section .price span{
+    font-size: 16px;
+}
+
+.banner_section .form{
+    padding: 40px 50px;
+}
+
+.banner_section .form_heading{
+    font-size: 26px;
+}
+
+.banner_section .form-group{
+    margin-bottom:8px;
+}
+
+.banner_section .location{
+    margin-bottom:0;
+    margin-top: 10px;
+    margin-bottom: 11px;
+}
+
+#banner_carousel img{
+    max-height: 578px;
+}
+
+.banner_section .payment_plan{
+    margin: 15px auto;
+}
+
+/* overview */
+
+.overview_section .right_col{
+    padding: 18px;
+}
+
+.overview_section .hgl{
+    margin: 30px 0;
+}
+
+.overview_section .hgl li{
+    display: flex;
+}
+
+.overview_section .hgl p{
+    text-align: left;
+    font-size: 22px;
+}
+
+.overview_section .hgl p span{
+}
+
+.overview_section .hgl img{
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.overview_section .hgl .icon{
+    display:
+    inline-block;
+    margin: 0 0 4px 0;
+    padding-right: 15px;
+}
+
+/* price section */
+
+.price_section .price_box{
+    width: 80%;
+}
+
+.price_section .box{
+    padding: 40px 30px 70px;
+}
+
+/* location advantage */
+
+.location_advantage .pts li{
+    display:flex;
+    align-items: center;
+}
+
+.location_advantage .right_col{
+    padding: 40px;
+}
+
+.location_advantage .right_col p{
+    margin:0;
+    font-size: 15px;
+    line-height: 18px;
+    margin-left: 15px;
+    padding-left: 15px;
+}
+
+.location_advantage .right_col p:before{
+    width: 10px;
+}
+
+/* amenities section */
+
+.amenities_section .single img{
+    height: 350px;
+}
+
+.amenities_section .single h5{
+    font-size: 16px;
+    line-height: 20px;
+}
+
+/* other projects */
+
+.other_projects .single{
+    height: 450px;
+}
+
+.other_projects .logo{
+    max-width: 180px;
+    max-height: 90px;
+}
+
+.other_projects .price{
+    font-size: 34px;
+    margin: 20px 0 5px;
+}
+
+.other_projects .content p{
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.offer_section .single h5{
+    width: 90%;
+}
+
+
+}
+
+@media(max-width:1366px){
+
+.banner_section .top {
+    padding: 45px 0px;
+    padding-bottom: 0px;
+}
+.banner_section .form {
+    padding: 51.2px 50px;
+}
+.overview_section .left_col img {
+    width: 100%;
+    margin: 0px auto;
+}
+}
+
+@media(max-width:1280px){
+    .banner_section .form {
+    padding: 31px 50px;
+}
+#banner_carousel img {
+    max-height: 562px;
+}
+.overview_section .left_col img {
+    width: 100%;
+    margin: 0px auto;
+}
+
+}
+
+
+
+
+/* end of 1400 */
+
+@media(max-width:1199px){
+
+    /* header */
+    .navbar .hamburger_menu {
+        display: block;
+    }
+
+    .navbar .navbar_menus{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        z-index: 99;
+        height: 100vh;
+        opacity: 0;
+        visibility: hidden;
+        max-width:unset;
+        transition: all 100ms linear;
+        -webkit-transition: all 100ms linear;
+        -ms-transition: all 100ms linear;
+    }
+
+    .navbar .navbar_menus.show{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .navbar .navbar_menus .navbar-nav {
+        position: fixed;
+        top: 0;
+        right: -40%;
+        width: 100%;
+        max-width: 40%;
+        height: 100%;
+        background-color: var(--red);
+        z-index: 99;
+        padding-top: 15px;
+        transition: 0.3s all linear;
+    }
+
+    
+    .navbar .navbar_menus.show .navbar-nav{
+        right: 0;
+    }
+
+    .navbar .nav-link{
+        color:#fff;
+    }
+
+    .navbar .navbar_menus .close{
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        font-size: 50px;
+        color: #fff;
+        z-index: 9;
+        opacity: 0.5;
+        font-weight: normal;
+    }
+
+    .navbar .navbar_menus .backdrop {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: rgba(0 0 0 / 90%);
+        height: 100%;
+        width: 100%;
+        margin-left: unset;
+        overflow: hidden;
+        z-index: 9;
+    }
+
+}
+      .m-view{display:none }
+      .d-view{display:block}
+
+/* end of 1199px */
+
+
+@media(max-width:767px){
+
+    .dark_btn{
+        padding: 10px 25px;
+        height: auto;
+        font-size: 14px;
+    }
+
+
+ .m-view{display:block; }
+      .d-view{display:none;}
+
+    .d_sm_none{
+        display:none!important;
+    }
+
+    .d_sm_block{
+        display:block!important;
+    }
+
+    .sectionTitle{
+        font-size: 34px;
+        line-height: 40px;
+        margin-bottom: 30px;
+    }
+
+    .subTitle.center:before,
+    .subTitle.center:after{
+        display:none;
+    }
+
+    .subTitle.left:before{
+        display:none;
+    }
+
+    .subTitle.left{
+        margin-left:0;
+        padding-left:0;
+        letter-spacing: 1px;
+    }
+
+    .container{
+        max-width: 100%!important;
+    }
+
+    .custom_section{
+        padding:50px 0;
+    }
+
+    .left_body{
+        display:none;
+    }
+
+    .right_body{
+        max-width:100%;
+        padding-top: 72px;
+    }
+
+    .navbar{
+        padding: 10px 0 10px;
+    }
+
+    .navbar .container{
+        padding: 0 15px;
+    }
+
+    .navbar .navbar-brand img{
+        max-width: 120px;
+    }
+
+    .navbar .hamburger_menu{
+        height: 45px;
+        width: 45px;
+    }
+
+    .navbar .navbar_menus .navbar-nav{
+        max-width: 80%;
+        right: -80%;
+    }
+
+
+    .navbar .navbar_menus .close{
+        top: 15px;
+        left: 15px;
+        font-size: 40px;
+    }
+
+    .navbar .nav-link{
+        font-size: 18px;
+    }
+
+    body.fixed .navbar .navbar-brand img{
+        max-width: 100px;
+    }
+
+    .banner_section .project_logo{
+        max-width: 61%;
+    }
+
+    .banner_section .location p{
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .banner_section .location img{
+        width: 35px;
+        height: 35px;
+    }
+
+    #banner_carousel .carousel-indicators li{
+        width: 5px;
+        height: 25px;
+        margin: 0px 4px;
+    }
+
+    #banner_carousel .carousel-indicators li.active{
+        height:35px;
+    }
+
+    .banner_section .top{
+        padding: 20px 1px;
+    }
+
+    .banner_section .payment_plan{
+        padding: 10px 15px;
+    }
+
+    .banner_section .payment_plan p:nth-child(1){
+        font-size: 22px;
+    }
+
+    .banner_section .typo, .banner_section .price{
+        font-size: 18px;
+    }
+
+    .banner_section .typo span, .banner_section .price span{
+        font-size:14px;
+        letter-spacing: 0;
+    }
+
+    #banner_carousel .carousel-control-next, #banner_carousel .carousel-control-prev{
+        height: 40px;
+        width: 40px;
+    }
+
+    #banner_carousel:hover .carousel-control-prev{
+        left:15px;
+    }
+
+    #banner_carousel:hover .carousel-control-next{
+        right:15px;
+    }
+
+    .banner_section .form{
+        padding:30px;
+    }
+
+    .banner_section .form_heading{
+        font-size: 20px;
+    }
+
+    .overview_section .left_col{
+        padding:0 15px;
+    }
+
+    .overview_section .left_col li:nth-child(1){
+       
+    }
+
+    .overview_section .left_col li:nth-child(2){
+        margin-top:0;
+        max-width: 100%;
+        flex: 0 0 100%;
+        height:auto;
+    }
+
+    .overview_section .left_col img{
+        width:100%;
+        height:auto;
+    }
+
+    .overview_section .right_col{
+        padding: 30px 15px;
+    }
+
+    .overview_section p{
+        line-height: 30px;
+        text-align: justify;
+        font-size: 20px!important;
+    }
+
+    .outline_btn{
+        padding: 14px 25px;
+        letter-spacing: 1px;
+        font-size: 15px;
+    }
+
+    .price_section .price_col{
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .price_section .box{
+        padding: 24px 20px 40px;
+    }
+
+    .price_section p{
+        font-size: 17px;
+    }
+
+    .price_section .enquiry_btn{
+        padding: 8px 25px;
+        font-size: 14px;
+    }
+
+    .highlights_section .container{
+        max-width: 100%!important;
+        margin-left:0;
+    }
+
+    .highlights_section .left_col{
+        padding: 50px 15px;
+    }
+
+    .highlights_section li{
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .offer_section .single{
+        padding: 30px 30px 70px;
+    }
+
+    .offer_section .single{
+        margin-bottom: 60px;
+    }
+
+    .offer_section .single h5{
+        font-size: 16px;
+        height: 70px;
+    }
+
+    .floor_plan .nav-tabs{
+        margin-bottom:30px;
+    }
+
+    .floor_plan .nav-link{
+        padding: 12px 21px;
+        letter-spacing: 1px;
+        font-size: 13px;
+        margin: 0 3px;
+    }
+
+    .location_advantage .right_col{
+        padding:30px;
+    }
+
+    .location_advantage .icon img{
+        max-width: 32px;
+    }
+
+    .location_advantage .right_col p{
+        margin-left: 10px
+    }
+
+    .about_builder .left_col,
+    .about_builder .right_col{
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .about_builder p{
+        /* text-align: justify; */
+        line-height:24px;
+    }
+
+    .about_builder .right_col{
+        display:none;
+    }
+
+    .about_builder .form-col{
+        margin-top: 40px;
+    }
+
+    .about_builder .form-col .title{
+        flex: 0 0 60px;
+        max-width: 60px;
+        font-size: 22px;
+    }
+
+    .about_builder .left_col{
+        padding-right: 15px;
+    }
+
+    .about_builder .form-col .form{
+        flex: 0 0 calc(100% - 60px);
+        max-width: calc(100% - 60px);
+        padding: 30px;
+    }
+
+    footer p{
+        font-size:12px;
+    }
+
+     .modal .left_col,.modal .right_col{max-width:100%;flex:0 0 100%;padding:20px}
+    .modal .close{opacity:1;box-shadow:none!important}
+    .modal .close:before{display:none}   
+
+    .banner_section .call {
+        position:relative;
+        margin: 10px auto 0;
+        max-width: fit-content;
+        background: #fff;
+    }
+
+    .banner_section .call:before{
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: calc(100% + 70px);
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background: var(--red);
+        z-index: -1;
+    }
+
+    .banner_section .call .icon{
+        border: 2px solid rgb(120 15 25 / 60%);
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--red);
+        margin-right:10px;
+    }
+
+    .banner_section .call a{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none!important;
+        padding: 0 10px;
+    }
+
+    .banner_section .call img{
+        max-width: 23px;
+        max-height: 23px;
+        object-fit: contain;
+        filter: invert(1);
+    }
+
+    .banner_section .call span{
+        display: block;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        font-size: 14px;
+    }
+
+    .banner_section .call .txt{
+        margin:0;
+        font-family: 'Roboto';
+    }
+
+    .banner_section .call p{
+        margin: 0;
+        text-align: center;
+        line-height: 20px;
+        font-size: 21px;
+    }
+    section.about_builder.custom_section {
+    padding-top: 0px;
+    }
+    footer {
+        background: #1f2126;
+        padding: 15px 0;
+        padding-bottom: 50px;
+    }
+    .overview_section .hgl p span {font-size: 20px;margin-top: 3px;margin-left: 0;}
+    p.overview_p {font-size: 16px!important;}
+    .modal .left_col {
+    border-right: unset;
+       border-bottom: 1px solid #cdcdcd;
+}
+.price_section .box {
+    min-height: 200px;
+    padding-top: 40px;
+}
+p.book_p {
+    display: grid;
+}
+.modal .left_col img {
+    max-width: 90%;
+    margin: auto;
+    /* object-fit: cover; */
+}
+.content-box h4 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
+}
+.content-box h4.text1 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
+}
+section.custom_highlight_section.custom_highlight_section-1 {
+    margin-top: 40px;
+}
+section.custom_highlight_section {
+    margin-top: 20px;
+}
+
+.content-box h4 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 1px;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0px!important;;
+}
+.content-box h4.text1 {
+     font-size: 18px;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 1px;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0px!important;
+}
+.content-box {
+    width: 87%!important;
+    margin: auto;
+}
+
+}
+
+
+/* end of 767px */
+
+button.close {
+    background-color: #000;
+    right: 0;
+    left: 0;
+    width: fit-content;
+    padding: 0px 10px;
+    line-height: 40px;
+    height: 47px;
+    width: 44px;
+    display: flex;
+    align-items: revert;
+    justify-content: center;
+    left: unset;
+    right: 0px!important;
+}
