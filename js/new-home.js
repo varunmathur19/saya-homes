@@ -488,7 +488,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const projectsLink = document.querySelector(
-        'a.new-header-nav-link[href*="/projects"]',
+        'a.new-header-nav-link.header-our-projects-trigger',
     );
     const hoverProjectHeaderContainer = document.querySelector(
         ".hover-project-header-container",
@@ -504,13 +504,13 @@ document.addEventListener("DOMContentLoaded", function () {
         : [];
     const projectHeadings = hoverProjectHeaderContainer
         ? hoverProjectHeaderContainer.querySelectorAll(
-              ".projects-popup-heading",
-          )
+            ".projects-popup-heading",
+        )
         : [];
     const projectHeaderSocialIcons = hoverProjectHeaderContainer
         ? hoverProjectHeaderContainer.querySelectorAll(
-              ".header-social-icon-bottom",
-          )
+            ".header-social-icon-bottom",
+        )
         : [];
     const projectHeaderSocialLinkLeft = hoverProjectHeaderContainer
         ? hoverProjectHeaderContainer.querySelector(".header-social-link-left")
@@ -800,11 +800,11 @@ document.addEventListener("DOMContentLoaded", function () {
             var otherTrigger =
                 projectType === "residential"
                     ? document.querySelector(
-                          '.hover-header-container .header-nav-projects-trigger[data-project-type="commercial"]',
-                      )
+                        '.hover-header-container .header-nav-projects-trigger[data-project-type="commercial"]',
+                    )
                     : document.querySelector(
-                          '.hover-header-container .header-nav-projects-trigger[data-project-type="residential"]',
-                      );
+                        '.hover-header-container .header-nav-projects-trigger[data-project-type="residential"]',
+                    );
 
             if (!dropdown) return;
 
@@ -1130,7 +1130,7 @@ $(document).ready(function () {
         section4BgVideo.loop = false;
         section4BgVideo.currentTime = 0;
         showPauseState();
-        section4BgVideo.play().catch(function () {});
+        section4BgVideo.play().catch(function () { });
     });
 
     if (section4PauseIcon) {

@@ -26,7 +26,7 @@ if (!isset($base_url)) {
             <!-- Navigation Links -->
             <nav class="new-header-nav">
                 <a href="<?= $base_url ?>/new_home.php?about=1" class="new-header-nav-link">OUR STORY</a>
-                <a href="<?= $base_url ?>/projects" class="new-header-nav-link">OUR PROJECTS</a>
+                <a href="#" class="new-header-nav-link header-our-projects-trigger">OUR PROJECTS</a>
             </nav>
 
             <!-- Contact Icons -->
@@ -67,7 +67,7 @@ if (!isset($base_url)) {
                         <a href="<?= $base_url ?>/" class="header-nav-item-main">HOME</a>
                         <a href="<?= $base_url ?>/new_home.php?about=1" class="header-nav-item-main">ABOUT US</a>
                         <!-- Desktop/tablet: OUR PROJECTS (opens popup) -->
-                        <a href="<?= $base_url ?>/projects" class="header-nav-item-main header-nav-our-projects-link">OUR PROJECTS</a>
+                        <a href="#" class="header-nav-item-main header-nav-our-projects-link">OUR PROJECTS</a>
                         <!-- Mobile: RESIDENTIAL / COMMERCIAL with inline dropdown -->
                         <div class="header-nav-dropdown-wrap header-nav-mobile-projects">
                             <a href="#" class="header-nav-item-main header-nav-projects-trigger" data-project-type="residential">
@@ -112,9 +112,9 @@ if (!isset($base_url)) {
                                 </div>
                             </div>
                         </div>
-                        <a href="<?= $base_url ?>/media-page.php" class="header-nav-item-main">MEDIA</a>
+                        <a href="<?= $base_url ?>/new_media-page.php" class="header-nav-item-main">MEDIA</a>
                         <a href="<?= $base_url ?>/events" class="header-nav-item-main">EVENTS</a>
-                        <a href="<?= $base_url ?>/blogs" class="header-nav-item-main">BLOGS</a>
+                        <a href="<?= $base_url ?>/new-blog-page.php" class="header-nav-item-main">BLOGS</a>
                         <a href="<?= $base_url ?>/nri-corner" class="header-nav-item-main">NRI CORNER</a>
                     </nav>
 
@@ -123,7 +123,8 @@ if (!isset($base_url)) {
                         <a href="<?= $base_url ?>/construction-update" class="header-nav-item-secondary">Construction Update</a>
                         <a href="<?= $base_url ?>/csr" class="header-nav-item-secondary">CSR</a>
                         <a href="<?= $base_url ?>/awards-and-recognition" class="header-nav-item-secondary">Awards & Recognition</a>
-                        <a href="<?= $base_url ?>/contact-us" class="header-nav-item-secondary">Contact Us</a>
+                        <a href="<?= $base_url ?>/new_media-page.php?page=career" class="header-nav-item-secondary">Careers</a>
+                        <a href="<?= $base_url ?>/new_media-page.php?page=contact" class="header-nav-item-secondary">Contact Us</a>
                     </nav>
                 </div>
             </div>

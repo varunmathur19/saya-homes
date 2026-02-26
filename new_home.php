@@ -228,7 +228,7 @@
                     <div class="section-2-content-right-inner">
                         <p>Saya Group,  <b>founded 25 years ago</b>, is a pioneer in the real estate sector with a significant presence in the <b>Delhi NCR region</b>. Saya Group has been known for its pioneering efforts in  <b> luxury residential and commercial projects</b>.The group started off with the development of low-rise floors and luxury villas and soon expanded to high-rise luxury homes and commercial properties. Saya Group is a reliable real estate developer in the Delhi NCR region.</p>
                         <div class="section-2-content-right-inner-button">
-                            <a href="<?= $base_url ?>/about-us.php" class="btn1212">
+                            <a href="<?= $base_url ?>/new_home.php?about=1" class="btn1212">
                                 <p>Read More</p>
                                 <div>
                                     <img src="<?= $base_url ?>/images/new_theme/icons/button_hover_icon.svg" alt="Arrow Right">
@@ -400,7 +400,7 @@
                                 <div class="about-customer-relationship-slide swiper-slide">
                                     <div class="about-customer-relationship-icon-outer">
                                         <div class="about-customer-relationship-icon-wrap">
-                                            <img src="<?= $base_url ?>/images/svg/book.svg" alt="" class="about-customer-relationship-icon" width="64" height="64">
+                                            <img src="<?= $base_url ?>/images/svg/book1.svg" alt="" class="about-customer-relationship-icon" width="64" height="64">
                                         </div>
                                     </div>
                                     <h3 class="about-customer-relationship-title">KYC Generation</h3>
@@ -409,7 +409,7 @@
                                 <div class="about-customer-relationship-slide swiper-slide">
                                     <div class="about-customer-relationship-icon-outer">
                                         <div class="about-customer-relationship-icon-wrap">
-                                            <img src="<?= $base_url ?>/images/svg/Welcoming-The-Customer.svg" alt="" class="about-customer-relationship-icon" width="64" height="64">
+                                            <img src="<?= $base_url ?>/images/svg/hand1.svg" alt="" class="about-customer-relationship-icon" width="64" height="64">
                                         </div>
                                     </div>
                                     <h3 class="about-customer-relationship-title">Customer Welcome</h3>
@@ -418,7 +418,7 @@
                                 <div class="about-customer-relationship-slide swiper-slide">
                                     <div class="about-customer-relationship-icon-outer">
                                         <div class="about-customer-relationship-icon-wrap">
-                                            <img src="<?= $base_url ?>/images/svg/Booking-Entry.svg" alt="" class="about-customer-relationship-icon" width="64" height="64">
+                                            <img src="<?= $base_url ?>/images/svg/Booking-Entry 1.svg" alt="" class="about-customer-relationship-icon" width="64" height="64">
                                         </div>
                                     </div>
                                     <h3 class="about-customer-relationship-title">Booking the entry</h3>
@@ -428,7 +428,7 @@
                                 <div class="about-customer-relationship-slide swiper-slide">
                                     <div class="about-customer-relationship-icon-outer">
                                         <div class="about-customer-relationship-icon-wrap">
-                                            <img src="<?= $base_url ?>/images/svg/Builder-Buyer-Agreement.svg" alt="" class="about-customer-relationship-icon" width="64" height="64">
+                                            <img src="<?= $base_url ?>/images/svg/Builder-Buyer-Agreement2.svg" alt="" class="about-customer-relationship-icon" width="64" height="64">
                                         </div>
                                     </div>
                                     <h3 class="about-customer-relationship-title">Builder-buyer Agreement</h3>
@@ -482,7 +482,7 @@
                                 <div class="about-customer-relationship-slide swiper-slide">
                                     <div class="about-customer-relationship-icon-outer">
                                         <div class="about-customer-relationship-icon-wrap">
-                                            <img src="<?= $base_url ?>/images/svg/Co-ordination-for-registration.svg" alt="" class="about-customer-relationship-icon" width="64" height="64">
+                                            <img src="<?= $base_url ?>/images/svg/Co-ordination-for-registration1.svg" alt="" class="about-customer-relationship-icon" width="64" height="64">
                                         </div>
                                     </div>
                                     <h3 class="about-customer-relationship-title">Registration Support</h3>
@@ -528,11 +528,29 @@
                     <div class="about-partnerships-logo-item"><img src="<?= $base_url ?>/images/new_theme/homeloan.png" alt="Indiabulls Home Loans" class="about-partnerships-logo-img"></div>
                 </div>
                 <div class="about-partnerships-logos about-partnerships-logos-row2">
-                    <div class="about-partnerships-logo-item"><img src="<?= $base_url ?>/images/new_theme/icici.png" alt="ICICI Bank" class="about-partnerships-logo-img"></div>
-                    <div class="about-partnerships-logo-item"><img src="<?= $base_url ?>/images/new_theme/federal.png" alt="Federal Bank" class="about-partnerships-logo-img"></div>
-                    <div class="about-partnerships-logo-item"><img src="<?= $base_url ?>/images/new_theme/aditya.png" alt="Aditya Birla Capital" class="about-partnerships-logo-img"></div>
-                    <div class="about-partnerships-logo-item"><img src="<?= $base_url ?>/images/new_theme/union.png" alt="Union Bank of India" class="about-partnerships-logo-img"></div>
-                    <div class="about-partnerships-logo-item"><img src="<?= $base_url ?>/images/new_theme/homeloan.png" alt="Indiabulls Home Loans" class="about-partnerships-logo-img"></div>
+                    <div class="about-partnerships-logo-item">
+                        <img src="<?= $base_url ?>/images/svg/Bank-of-maharashtra.svg" alt="ICICI Bank" class="about-partnerships-logo-img">
+                    </div>
+                    <div class="about-partnerships-logo-item"><img src="<?= $base_url ?>/images/svg/Axis-bank.svg" alt="Federal Bank" class="about-partnerships-logo-img"></div>
+                    <div class="about-partnerships-logo-item"><img src="<?= $base_url ?>/images/svg/Bank-of-india.svg" alt="Aditya Birla Capital" class="about-partnerships-logo-img"></div>
+                    <div class="about-partnerships-logo-item"><img src="<?= $base_url ?>/images/svg/Central-bank-of-india.svg" alt="Union Bank of India" class="about-partnerships-logo-img"></div>
+                    <div class="about-partnerships-logo-item"><img src="<?= $base_url ?>/images/svg/Indian-bank.svg" alt="Indiabulls Home Loans" class="about-partnerships-logo-img"></div>
+                </div>
+                <div class="about-partnerships-logos about-partnerships-logos-extra">
+                    <!-- <div class="about-partnerships-logos-extra-row">
+                        <div class="about-partnerships-logo-item"><img src="<?= $base_url ?>/images/svg/Bank-of-maharashtra.svg" alt="Bank of Maharashtra" class="about-partnerships-logo-img"></div>
+                        <div class="about-partnerships-logo-item"><img src="<?= $base_url ?>/images/svg/Axis-bank.svg" alt="Axis Bank" class="about-partnerships-logo-img"></div>
+                        <div class="about-partnerships-logo-item"><img src="<?= $base_url ?>/images/svg/Bank-of-india.svg" alt="Bank of India" class="about-partnerships-logo-img"></div>
+                        <div class="about-partnerships-logo-item"><img src="<?= $base_url ?>/images/svg/Central-bank-of-india.svg" alt="Central Bank of India" class="about-partnerships-logo-img"></div>
+                    </div> -->
+                    <div class="about-partnerships-logos-extra-row">
+                        <div class="about-partnerships-logo-item"><img src="<?= $base_url ?>/images/svg/Indian-bank.svg" alt="Indian Bank" class="about-partnerships-logo-img"></div>
+                        <div class="about-partnerships-logo-item"><img src="<?= $base_url ?>/images/svg/Yes-bank-ltd.svg" alt="Yes Bank Ltd" class="about-partnerships-logo-img"></div>
+                        <div class="about-partnerships-logo-item"><img src="<?= $base_url ?>/images/new_theme/Amar-Ujala.png" alt="Amar Ujala" class="about-partnerships-logo-img"></div>
+                    </div>
+                    <div class="about-partnerships-logos-extra-row">
+                        <div class="about-partnerships-logo-item"><img src="<?= $base_url ?>/images/svg/THE-TIMES-OF-INDIA.png" alt="The Times of India" class="about-partnerships-logo-img"></div>
+                    </div>
                 </div>
                 <a href="<?= $base_url ?>/about-us.php#partnerships" class="about-partnerships-viewall">View All <span class="about-partnerships-viewall-icon"><img src="<?= $base_url ?>/images/svg/roatearrow.svg" alt="" class="about-partnerships-viewall-arrow"></span></a>
                 <!-- Media Partners (same section) -->
@@ -811,7 +829,7 @@ Saya Group Clears Rs 1,500 Cr Debt, Signals Debt-Free Growth Across NCR
 
                     <span>Explore stories and insights of  those who treated our properties home, and experience the difference yourself.</span>
                     <div class="section-8-btn-wrap mt-3">
-                        <a href="<?= $base_url ?>/blogs" class="btn1212" style="text-decoration: none;">
+                        <a href="<?= $base_url ?>/new-blog-page.php" class="btn1212" style="text-decoration: none;">
                             <span class="btn1212-text">Read Blogs</span>
                             <div>
                                 <img src="<?= $base_url ?>/images/new_theme/icons/button_hover_icon.svg" alt="Arrow Right">
@@ -819,21 +837,8 @@ Saya Group Clears Rs 1,500 Cr Debt, Signals Debt-Free Growth Across NCR
                         </a>
                     </div>
                 </div>
-                <div class="section-8-content-inner-middle" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
-                    <div class="section-8-blog-card">
-                        <div class="section-8-blog-card-image-wrap">
-                            <img id="blog-image-1" src="<?= $base_url ?>/images/new_theme/section-8-second.png" alt="Blog 1" style="width: 100%; height: 100%; object-fit: cover;">
-                            <div class="section-8-blog-card-overlay"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-8-content-inner-right" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
-                    <div class="section-8-blog-card">
-                        <div class="section-8-blog-card-image-wrap">
-                            <img id="blog-image-2" src="<?= $base_url ?>/images/new_theme/section-8-first.png" alt="Blog 2" style="width: 100%; height: 100%; object-fit: cover;">
-                            <div class="section-8-blog-card-overlay"></div>
-                        </div>
-                    </div>
+                <div class="section-8-content-inner-middle" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200" style="width: 100%;">
+                    <img src="<?= $base_url ?>/images/new_theme/blogimage.jpg" alt="Blog" style="width: 100%; height: auto; display: block;">
                 </div>
             </div>
         </div>
@@ -1747,6 +1752,19 @@ Saya Group Clears Rs 1,500 Cr Debt, Signals Debt-Free Growth Across NCR
             $(".formModalpopup1").click(function() {
                 $('#formModalpopup1').modal('show');
             });
+
+            var viewAllLink = document.querySelector('.about-partnerships-viewall');
+            var extraLogos = document.querySelector('.about-partnerships-logos-extra');
+            if (viewAllLink && extraLogos) {
+                viewAllLink.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    if (extraLogos.classList.contains('is-visible')) {
+                        extraLogos.classList.remove('is-visible');
+                    } else {
+                        extraLogos.classList.add('is-visible');
+                    }
+                });
+            }
         });
 
         // Slide data for dynamic updates (Zion, Zenith commented - not show)

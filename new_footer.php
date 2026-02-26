@@ -61,10 +61,10 @@ if (!isset($base_url)) {
                 <div class="new-footer-column">
                     <h6 class="new-footer-column-heading">MEDIA</h6>
                     <ul class="new-footer-links">
-                        <li><a href="<?= $base_url ?>/in-the-media">In The Media</a></li>
+                        <li><a href="<?= $base_url ?>/new_media-page.php">In The Media</a></li>
                         <li><a href="<?= $base_url ?>/awards-and-recognition">Awards & Recognition</a></li>
                         <li><a href="<?= $base_url ?>/events">Events</a></li>
-                        <li><a href="<?= $base_url ?>/blogs">Blogs</a></li>
+                        <li><a href="<?= $base_url ?>/new-blog-page.php">Blogs</a></li>
                     </ul>
                 </div>
 
@@ -74,8 +74,8 @@ if (!isset($base_url)) {
                     <ul class="new-footer-links">
                         <li><a href="<?= $base_url ?>/nri-corner">NRI Corner</a></li>
                         <li><a href="<?= $base_url ?>/customer-supports">Customer Support</a></li>
-                        <li><a href="<?= $base_url ?>/careers">Careers</a></li>
-                        <li><a href="<?= $base_url ?>/contact-us">Contact Us</a></li>
+                        <li><a href="<?= $base_url ?>/new_media-page.php?page=career">Careers</a></li>
+                        <li><a href="<?= $base_url ?>/new_media-page.php?page=contact">Contact Us</a></li>
                     </ul>
                 </div>
             </div>

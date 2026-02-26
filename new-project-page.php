@@ -5,6 +5,7 @@ $is_gold_layout = in_array($project_slug, ['gold-avenue', 'saya-zion', 'saya-zen
 if ($project_slug === 'gold-avenue') {
     $project_hero_category = 'Residential';
     $project_hero_name = 'SAYA GOLD AVENUE';
+    $project_overview_location = 'Indirapuram, Ghaziabad';
     $project_hero_breadcrumb_cat = 'RESIDENTIAL';
     $project_hero_breadcrumb_current = 'SAYA GOLD AVENUE';
     $project_page_title = 'Saya Gold Avenue | Residential | Saya Homes';
@@ -20,6 +21,7 @@ if ($project_slug === 'gold-avenue') {
 } elseif ($project_slug === 'saya-zion') {
     $project_hero_category = 'Residential';
     $project_hero_name = 'SAYA ZION';
+    $project_overview_location = 'Sector- 4, Greater Noida';
     $project_hero_breadcrumb_cat = 'RESIDENTIAL';
     $project_hero_breadcrumb_current = 'SAYA ZION';
     $project_page_title = 'Saya Zion | Residential | Saya Homes';
@@ -29,7 +31,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
     $project_section2_img = 'projectsection-2.jpg';
     $project_section2_alt = 'Saya Zion - Ready to Move In';
     $project_section2_heading = 'Saya Zion';
-    $project_section2_tagline = 'READY TO MOVE IN';
+    $project_section2_tagline = 'Project Delivered';
     $project_gold_display_name = 'Saya Zion';
     $project_gold_logo = 'goldavenuelogo.jpg';
     $project_gold_about_heading = 'Elevating Every Moment, With Luxury Living';
@@ -37,6 +39,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
 } elseif ($project_slug === 'saya-zenith') {
     $project_hero_category = 'Residential';
     $project_hero_name = 'SAYA ZENITH';
+    $project_overview_location = 'Indirapuram, Ghaziabad';
     $project_hero_breadcrumb_cat = 'RESIDENTIAL';
     $project_hero_breadcrumb_current = 'SAYA ZENITH';
     $project_page_title = 'Saya Zenith | Residential | Saya Homes';
@@ -46,7 +49,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
     $project_section2_img = 'projectsection-2.jpg';
     $project_section2_alt = 'Saya Zenith - Ready to Move In';
     $project_section2_heading = 'Saya Zenith';
-    $project_section2_tagline = 'READY TO MOVE IN';
+    $project_section2_tagline = 'Project Delivered';
     $project_gold_display_name = 'Saya Zenith';
     $project_gold_logo = 'goldavenuelogo.jpg';
     $project_gold_about_heading = 'Elevating Every Moment, With Luxury Living';
@@ -54,6 +57,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
 } elseif ($project_slug === 'saya-desire-residency') {
     $project_hero_category = 'Residential';
     $project_hero_name = 'SAYA DESIRE RESIDENCY';
+    $project_overview_location = 'Indirapuram, Ghaziabad';
     $project_hero_breadcrumb_cat = 'RESIDENTIAL';
     $project_hero_breadcrumb_current = 'SAYA DESIRE RESIDENCY';
     $project_page_title = 'Saya Desire Residency | Residential | Saya Homes';
@@ -63,7 +67,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
     $project_section2_img = 'projectsection-2.jpg';
     $project_section2_alt = 'Saya Desire Residency - Ready to Move In';
     $project_section2_heading = 'Saya Desire Residency';
-    $project_section2_tagline = 'READY TO MOVE IN';
+    $project_section2_tagline = 'Project Delivered';
     $project_gold_display_name = 'Saya Desire Residency';
     $project_gold_logo = 'goldavenuelogo.jpg';
     $project_gold_about_heading = 'Elevating Every Moment, With Luxury Living';
@@ -71,6 +75,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
 } elseif ($project_slug === 'saya-biztop') {
     $project_hero_category = 'Commercial';
     $project_hero_name = 'SAYA BIZTOP';
+    $project_overview_location = 'Sector Ecotech-1, Greater Noida';
     $project_hero_breadcrumb_cat = 'COMMERCIAL';
     $project_hero_breadcrumb_current = 'SAYA BIZTOP';
     $project_page_title = 'Saya Biztop | Commercial | Saya Homes';
@@ -79,12 +84,13 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
     $project_section2_img = 'ppsec-2pg.jpg';
     $project_section2_alt = 'Saya Biztop - Commercial Development';
     $project_section2_heading = 'Saya Biztop';
-    $project_section2_tagline = 'READY TO MOVE IN';
+    $project_section2_tagline = 'Nearing Possession';
     $project_display_name = 'Saya Biztop';
     $project_gallery_subtitle = 'Saya Biztop Carnival';
 } elseif ($project_slug === 'saya-piazza') {
     $project_hero_category = 'Commercial';
     $project_hero_name = 'SAYA PIAZZA';
+    $project_overview_location = 'Sector 131';
     $project_hero_breadcrumb_cat = 'COMMERCIAL';
     $project_hero_breadcrumb_current = 'SAYA PIAZZA';
     $project_page_title = 'Saya Piazza | Commercial | Saya Homes';
@@ -93,12 +99,13 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
     $project_section2_img = 'ppsec-2pg.jpg';
     $project_section2_alt = 'Saya Piazza - Commercial Development';
     $project_section2_heading = 'Saya Piazza';
-    $project_section2_tagline = 'READY TO MOVE IN';
+    $project_section2_tagline = 'OC RECEIVED';
     $project_display_name = 'Saya Piazza';
     $project_gallery_subtitle = 'Saya Piazza Carnival';
 } else {
     $project_hero_category = 'Commercial';
     $project_hero_name = 'SAYA SOUTH X';
+    $project_overview_location = 'Sector Ecotech-1, Greater Noida';
     $project_hero_breadcrumb_cat = 'COMMERCIAL';
     $project_hero_breadcrumb_current = 'SAYA-SOUTHX';
     $project_page_title = 'Saya South X | Commercial | Saya Homes';
@@ -107,7 +114,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
     $project_section2_img = 'ppsec-2pg.jpg';
     $project_section2_alt = 'Saya South X - Commercial Development';
     $project_section2_heading = 'Saya South X';
-    $project_section2_tagline = 'READY TO MOVE IN';
+    $project_section2_tagline = 'Nearing Possession';
     $project_display_name = 'Saya South X';
     $project_gallery_subtitle = 'Saya South X Carnival';
 }
@@ -132,11 +139,11 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
         <section class="project-hero">
             <div class="project-hero-container">
                 <nav class="project-hero-breadcrumb" aria-label="Breadcrumb">
-                    <a href="<?= $base_url ?>/">HOME</a>
+                    <a href="<?= $base_url ?>/new_home.php">HOME</a>
                     <span class="project-hero-breadcrumb-sep">/</span>
-                    <a href="<?= $base_url ?>/projects">PROJECTS</a>
+                    <span>PROJECTS</span>
                     <span class="project-hero-breadcrumb-sep">/</span>
-                    <a href="<?= $base_url ?>/projects#<?= strtolower($project_hero_breadcrumb_cat) ?>"><?= $project_hero_breadcrumb_cat ?></a>
+                    <span><?= $project_hero_breadcrumb_cat ?></span>
                     <span class="project-hero-breadcrumb-sep">/</span>
                     <span class="project-hero-breadcrumb-current"><?= $project_hero_breadcrumb_current ?></span>
                 </nav>
@@ -147,8 +154,8 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                     </div>
                     <div class="project-hero-right">
                         <p class="project-hero-desc"><?= $project_hero_desc ?></p>
-                        <a href="#" class="project-hero-readmore">
-                            <span class="project-hero-readmore-text"><?= $project_hero_btn_text ?></span>
+                        <a href="<?= $base_url ?>/new_media-page.php?page=contact" class="project-hero-readmore">
+                            <span class="project-hero-readmore-text">Book a Site Visit</span>
                             <div>
                                 <img src="<?= $base_url ?>/images/new_theme/icons/button_hover_icon.svg" alt="Arrow Right">
                             </div>
@@ -182,7 +189,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                     <a href="#brochure">Download Brochure</a>
                     <a href="#map">Map Location</a>
                     <a href="#masterlayout"><?= $is_gold_layout ? 'Flats Layout' : 'Master Layout' ?></a>
-                    <a href="#floor-layout"><?= $is_gold_layout ? 'Project Layout' : 'Floor Layout' ?></a>
+                    <!-- <a href="#floor-layout"><?= $is_gold_layout ? 'Project Layout' : 'Floor Layout' ?></a> -->
                 </nav>
                 <div class="project-detail-nav-right">
                     <a href="#contact">Contact With Us</a>
@@ -258,6 +265,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
 
          <!--section 4 - Overview / project info -->
          <section class="project-overview<?= $is_gold_layout ? ' project-overview--gold' : '' ?>" id="highlight">
+            
             <div class="project-overview-container">
                 <div class="project-overview-left<?= $is_gold_layout ? ' project-overview-left--gold' : '' ?>">
                     <?php if ($is_gold_layout) { ?>
@@ -292,25 +300,30 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                         </div>
                         <div class="project-overview-card-row">
                             <span class="project-overview-card-label">Location</span>
-                            <span class="project-overview-card-value"><?= $is_gold_layout ? 'Indirapuram, Ghaziabad' : 'Sector 94, Noida' ?></span>
+                            <span class="project-overview-card-value"><?= $project_overview_location ?></span>
                         </div>
                         <div class="project-overview-card-row">
                             <span class="project-overview-card-label">Status</span>
                             <span class="project-overview-card-value"><?= $is_gold_layout ? 'Delivered Project' : 'Delivered' ?></span>
                         </div>
-                        <?php if ($is_gold_layout) { ?>
+                        <?php if ($is_gold_layout) {
+                            $gold_rera_phase1 = ($project_slug === 'gold-avenue') ? 'UPRERAPRJ6548' : 'Not Available';
+                            $gold_rera_phase2 = ($project_slug === 'gold-avenue') ? 'UPRERAPRJ6678 | www.up-rera.in' : 'Not Available';
+                        ?>
                         <div class="project-overview-card-row">
                             <span class="project-overview-card-label">RERA Number Phase I :</span>
-                            <span class="project-overview-card-value">UPRERAPRJ6548</span>
+                            <span class="project-overview-card-value"><?= $gold_rera_phase1 ?></span>
                         </div>
                         <div class="project-overview-card-row project-overview-card-row-last">
                             <span class="project-overview-card-label">RERA Number Phase II:</span>
-                            <span class="project-overview-card-value">UPRERAPRJ6678 | www.up-rera.in</span>
+                            <span class="project-overview-card-value"><?= $gold_rera_phase2 ?></span>
                         </div>
-                        <?php } else { ?>
+                        <?php } else {
+                            $project_rera = ($project_slug === 'saya-piazza') ? 'UPRERAPRJ364061 | www.up-rera.in' : 'UPRERAPRJ17950 | www.up-rera.in';
+                        ?>
                         <div class="project-overview-card-row project-overview-card-row-last">
                             <span class="project-overview-card-label">RERA Number :</span>
-                            <span class="project-overview-card-value">UPRERAPRJ17950 www.Up-Rera.In</span>
+                            <span class="project-overview-card-value"><?= $project_rera ?></span>
                         </div>
                         <?php } ?>
                     </div>
@@ -761,42 +774,42 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                 <div class="project-section-8-left">
                     <ul class="project-section-8-list" role="list">
                         <?php if (isset($project_display_name) && $project_display_name === 'Saya South X') { ?>
-                        <li class="project-section-8-item">
+                        <li class="project-section-8-item" data-amenity-image="<?= $base_url ?>/images/new_theme/southfoodcourt.png">
                             <button type="button" class="project-section-8-item-head" aria-expanded="false">
                                 <span>Food Court</span>
                                 <span class="project-section-8-arrow" aria-hidden="true"><img src="<?= $base_url ?>/images/svg/projectpgaccodianarrow.svg" alt=""></span>
                             </button>
                             <div class="project-section-8-item-panel"><p>Multiple eating facilities under one roof.</p></div>
                         </li>
-                        <li class="project-section-8-item">
+                        <li class="project-section-8-item" data-amenity-image="<?= $base_url ?>/images/new_theme/AmpleParkingsouth.png">
                             <button type="button" class="project-section-8-item-head" aria-expanded="false">
                                 <span>Ample Parking</span>
                                 <span class="project-section-8-arrow" aria-hidden="true"><img src="<?= $base_url ?>/images/svg/projectpgaccodianarrow.svg" alt=""></span>
                             </button>
                             <div class="project-section-8-item-panel"><p>Sufficient parking space for everyone.</p></div>
                         </li>
-                        <li class="project-section-8-item">
+                        <li class="project-section-8-item" data-amenity-image="<?= $base_url ?>/images/new_theme/Cinemasouth.png">
                             <button type="button" class="project-section-8-item-head" aria-expanded="false">
                                 <span>Cinema</span>
                                 <span class="project-section-8-arrow" aria-hidden="true"><img src="<?= $base_url ?>/images/svg/projectpgaccodianarrow.svg" alt=""></span>
                             </button>
                             <div class="project-section-8-item-panel"><p>A contemporary movie theater for recreation.</p></div>
                         </li>
-                        <li class="project-section-8-item">
+                        <li class="project-section-8-item" data-amenity-image="<?= $base_url ?>/images/new_theme/CentralisedAirConditioningsouth.png">
                             <button type="button" class="project-section-8-item-head" aria-expanded="false">
                                 <span>Centralised Air Conditioning</span>
                                 <span class="project-section-8-arrow" aria-hidden="true"><img src="<?= $base_url ?>/images/svg/projectpgaccodianarrow.svg" alt=""></span>
                             </button>
                             <div class="project-section-8-item-panel"><p>Uniform cooling in the entire building.</p></div>
                         </li>
-                        <li class="project-section-8-item">
+                        <li class="project-section-8-item" data-amenity-image="<?= $base_url ?>/images/new_theme/iconicsouth.png">
                             <button type="button" class="project-section-8-item-head" aria-expanded="false">
                                 <span>Iconic Design</span>
                                 <span class="project-section-8-arrow" aria-hidden="true"><img src="<?= $base_url ?>/images/svg/projectpgaccodianarrow.svg" alt=""></span>
                             </button>
                             <div class="project-section-8-item-panel"><p>A distinctive architectural design that is unique.</p></div>
                         </li>
-                        <li class="project-section-8-item">
+                        <li class="project-section-8-item" data-amenity-image="<?= $base_url ?>/images/new_theme/High-SpeedElevatorssouth.png">
                             <button type="button" class="project-section-8-item-head" aria-expanded="false">
                                 <span>High-Speed Elevators</span>
                                 <span class="project-section-8-arrow" aria-hidden="true"><img src="<?= $base_url ?>/images/svg/projectpgaccodianarrow.svg" alt=""></span>
@@ -929,7 +942,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                     </ul>
                 </div>
                 <div class="project-section-8-right">
-                    <img src="<?= $base_url ?>/images/new_theme/section-8image.png" alt="Food Court - <?= htmlspecialchars($project_display_name) ?>">
+                    <img src="<?= $base_url ?>/images/new_theme/<?= (isset($project_display_name) && $project_display_name === 'Saya South X') ? 'southfoodcourt.png' : 'section-8image.png' ?>" alt="Food Court - <?= htmlspecialchars($project_display_name) ?>">
                 </div>
                 </div>
                 <?php } ?>
@@ -938,7 +951,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
          
          <?php if (!$is_gold_layout) { ?>
           <!-- section-9 -->
-          <section><img src="<?= $base_url ?>/images/new_theme/ppsec-2pg.jpg" alt="<?= htmlspecialchars($project_display_name) ?> - Commercial Development" class="project-section-2-img" /></section>
+          <section><img src="<?= $base_url ?>/images/new_theme/<?= (isset($project_display_name) && $project_display_name === 'Saya South X') ? 'ppsec-2pg.png' : 'ppsec-2pg.jpg' ?>" alt="<?= htmlspecialchars($project_display_name) ?> - Commercial Development" class="project-section-2-img" /></section>
 
           <!-- section10 - Explore The Specifications (slider) -->
         <div style="overflow-x:hidden;">
@@ -1117,21 +1130,6 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                             <div class="project-gold-welcome-slide">
                                 <img src="<?= $base_url ?>/images/new_theme/sayagold4.jpg" alt="Welcome Home to <?= htmlspecialchars($project_gold_display_name) ?>" class="project-gold-welcome-img">
                             </div>
-                            <div class="project-gold-welcome-slide">
-                                <img src="<?= $base_url ?>/images/new_theme/sayagold5.jpg" alt="Welcome Home to <?= htmlspecialchars($project_gold_display_name) ?>" class="project-gold-welcome-img">
-                            </div>
-                            <div class="project-gold-welcome-slide">
-                                <img src="<?= $base_url ?>/images/new_theme/sayagold6.jpg" alt="Welcome Home to <?= htmlspecialchars($project_gold_display_name) ?>" class="project-gold-welcome-img">
-                            </div>
-                            <div class="project-gold-welcome-slide">
-                                <img src="<?= $base_url ?>/images/new_theme/sayagold7.jpg" alt="Welcome Home to <?= htmlspecialchars($project_gold_display_name) ?>" class="project-gold-welcome-img">
-                            </div>
-                            <div class="project-gold-welcome-slide">
-                                <img src="<?= $base_url ?>/images/new_theme/sayagold8.jpg" alt="Welcome Home to <?= htmlspecialchars($project_gold_display_name) ?>" class="project-gold-welcome-img">
-                            </div>
-                            <div class="project-gold-welcome-slide">
-                                <img src="<?= $base_url ?>/images/new_theme/sayagold9.jpg" alt="Welcome Home to <?= htmlspecialchars($project_gold_display_name) ?>" class="project-gold-welcome-img">
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -1161,7 +1159,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                         <div class="project-section-12-gallery-bottom-right">
                             <div class="project-section-12-gallery-right-top">
                                 <div class="project-section-12-gallery-item">
-                                    <img src="<?= $base_url ?>/images/new_theme/gallery2.png" alt="<?= htmlspecialchars($project_display_name) ?> - Interior" class="project-section-12-gallery-img">
+                                    <img src="<?= $base_url ?>/images/new_theme/southgallery.png" alt="<?= htmlspecialchars($project_display_name) ?> - Interior" class="project-section-12-gallery-img">
                                 </div>
                                 <div class="project-section-12-gallery-item">
                                     <img src="<?= $base_url ?>/images/new_theme/gallery2.png" alt="<?= htmlspecialchars($project_display_name) ?> - Interior" class="project-section-12-gallery-img">
@@ -1195,7 +1193,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                 <div class="project-section-13-inner">
                     <h2 class="project-section-13-title">FAQs</h2>
                     <div class="project-section-13-image-wrap">
-                        <img src="<?= $base_url ?>/images/new_theme/projectpgsec-13.png" alt="Family at Saya Homes" class="project-section-13-image">
+                        <img src="<?= $base_url ?>/images/new_theme/projectFAQ.png" alt="Family at Saya Homes" class="project-section-13-image">
                     </div>
                     <div class="project-section-13-right">
                         <div class="project-section-13-accordion">
@@ -1528,7 +1526,33 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                     </div>
                     <div class="project-section-14-right">
                         <div class="project-section-14-map-wrap">
-                            <img src="<?= $base_url ?>/images/new_theme/projectpagesec-14map-14.png" alt="<?= htmlspecialchars($project_display_name) ?> - Location Map" class="project-section-14-map">
+                            <iframe
+                                class="project-section-14-map"
+                                src="<?php
+                                    if ($project_slug === 'gold-avenue') {
+                                        echo 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.8020515009453!2d77.36738617616437!3d28.635694233935876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce55208a29989%3A0x34108dce06a6a1cd!2sSaya%20Gold%20Avenue!5e0!3m2!1sen!2sin!4v1758095695258!5m2!1sen!2sin';
+                                    } elseif ($project_slug === 'saya-zion') {
+                                        echo 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.6205280240047!2d77.42118427549995!3d28.611158775676497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef8c70b095fb%3A0xccba793af9fef9b8!2sSaya%20Zion!5e0!3m2!1sen!2sin!4v1758096449057!5m2!1sen!2sin';
+                                    } elseif ($project_slug === 'saya-zenith') {
+                                        echo 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.737482466996!2d77.37931195!3d28.637629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cefff913bff37%3A0xeb98211d861ae375!2sSaya%20Zenith%2C%20Indirapuram%2C%20Ghaziabad%2C%20Uttar%20Pradesh%20201014!5e0!3m2!1sen!2sin!4v1758097700427!5m2!1sen!2sin';
+                                    } elseif ($project_slug === 'saya-desire-residency') {
+                                        echo 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.4579680263423!2d77.37952597550137!3d28.646003075657315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf006e8f6298f%3A0xb1daeee376071162!2sDesire%20Residency!5e0!3m2!1sen!2sin!4v1758097967005!5m2!1sen!2sin';
+                                    } elseif ($project_slug === 'saya-biztop') {
+                                        echo 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.9035015745903!2d77.4509729!3d28.6026716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cee63cec82b53%3A0xce8c253846aa1a81!2sSaya%20South%20X!5e0!3m2!1sen!2sin!4v1757322920419!5m2!1sen!2sin';
+                                    } elseif ($project_slug === 'saya-piazza') {
+                                        echo 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224126.88431518854!2d77.20546152785643!3d28.630284565217824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce7f95ffd4779%3A0xfa4cc6134c0f00c!2sSaya%20Piazza!5e0!3m2!1sen!2sin!4v1758094405660!5m2!1sen!2sin';
+                                    } elseif (isset($project_display_name) && $project_display_name === 'Saya South X') {
+                                        echo 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.910114812492!2d77.44640678745125!3d28.602473222754025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cee63cec82b53%3A0xce8c253846aa1a81!2sSaya%20South%20X!5e0!3m2!1sen!2sin!4v1716028532318!5m2!1sen!2sin';
+                                    } else {
+                                        echo 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.1324318681337!2d77.375!3d28.535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMyJz06LjAiTiA3N8KwMjInMzAuMCJF!5e0!3m2!1sen!2sin!4v1700000000000';
+                                    }
+                                ?>"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                aria-label="<?= htmlspecialchars($project_display_name) ?> - Location Map"
+                            ></iframe>
                         </div>
                     </div>
                 </div>
@@ -2073,6 +2097,23 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                     item.classList.add(openClass);
                     btn.setAttribute('aria-expanded', 'true');
                     panel.style.maxHeight = panel.scrollHeight + 'px';
+                    // Saya South X: update right section image when accordion item is opened (with fade transition)
+                    var amenityImg = item.getAttribute('data-amenity-image');
+                    if (amenityImg) {
+                        var rightImg = document.querySelector('.project-section-8-right img');
+                        if (rightImg) {
+                            rightImg.style.opacity = '0';
+                            var duration = 300;
+                            setTimeout(function() {
+                                rightImg.src = amenityImg;
+                                if (rightImg.complete) {
+                                    rightImg.style.opacity = '1';
+                                } else {
+                                    rightImg.onload = function() { rightImg.style.opacity = '1'; };
+                                }
+                            }, duration);
+                        }
+                    }
                 }
             });
         });
