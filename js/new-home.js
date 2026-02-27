@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             id: "01",
             title: "Saya Gold Avenue",
-            location: "Greater Noida West",
+            location: "Indirapuram, Ghaziabad",
             desc: "A unique address with upstretched 3 & 4 BHK units and luxury penthouses.",
             image: baseUrl + "images/new_theme/saya_desktop_banner1.jpg",
             type: "residential",
@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
             title: "Saya Desire Residency",
             location: "Indirapuram, Ghaziabad",
             desc: "Comfort-oriented residences located in a well-established area, designed for easy living.",
-            image: baseUrl + "images/new_theme/saya_desktop_banner1.jpg",
+            image: baseUrl + "images/new_theme/sldierdesireimage.jpg",
             type: "residential",
         },
         {
@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
             title: "Saya Biztop",
             location: "Greater Noida West",
             desc: "An iconic commercial tower designed for modern enterprises, exceptional visibility, and high-growth potential.",
-            image: baseUrl + "images/new_theme/main_slider2.jpg",
+            image: baseUrl + "images/new_theme/sayasouthx.jpg",
             type: "commercial",
         },
         {

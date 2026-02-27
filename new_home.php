@@ -107,9 +107,9 @@
     <main>
         <?php $show_about_hero = isset($_GET['about']) && $_GET['about'] == '1'; ?>
         <?php if ($show_about_hero): ?>
-        <!-- About Us first section: single hero with aboutsec-1.jpg -->
+        <!-- About Us first section: single hero with about-us-mobile.jpg -->
         <div class="hero-slider-container hero-about-section">
-            <div class="hero-about-image" style="background-image: url('<?= $base_url ?>/images/new_theme/aboutsec-1.jpg');"></div>
+            <div class="hero-about-image" style="background-image: url('<?= $base_url ?>/images/new_theme/about-us-mobile.jpg');"></div>
             <h1 class="hero-about-title">About Sayahomes</h1>
         </div>
         <!-- Meet Our Founder section (aboutsec-2) - below about hero image -->
@@ -303,12 +303,12 @@
                             <!-- Left Content - row-reverse: image left, text right (same for residential & commercial) -->
                             <div class="project-slider-layout-inner" style="display: flex; flex-direction: row-reverse; gap: 10px; width: 100%">
                                 <div class="der-project-slileft order-2" style="display: flex; justify-content: center; align-items: center;">
-                                    <div class="project-slider-left-content">
+                                <div class="project-slider-left-content">
                                         <div class="project-slider-icon-wrapper">
                                             <img src="<?= $base_url ?>/images/new_theme/icons/project_slider_icon.svg" alt="Project Icon" class="project-slider-icon" id="address-icon" style="display: block;">
                                         </div>
                                         <h3 class="project-slider-title" id="slide-title">Saya Gold Avenue</h3>
-                                        <p class="project-slider-location underline-location" id="slide-location">Greater Noida West</p>
+                                        <p class="project-slider-location underline-location" id="slide-location">Indirapuram, Ghaziabad</p>
                                         <!-- <div class="project-slider-line" id="slide-line"></div> -->
                                         <p class="project-slider-description" id="slide-desc">A unique address with upstretched 3 & 4 BHK units and luxury penthouses.</p>
                                     </div>

@@ -19,6 +19,7 @@
     <!-- Blog Banner Section -->
     <section class="blog-banner-section">
         <div class="blog-banner-image" style="background-image: url('<?= $base_url ?>/images/new_theme/blogbanner.jpg');"></div>
+        <div class="blog-banner-image blog-banner-image-mobile" style="background-image: url('<?= $base_url ?>/images/new_theme/blog-mobile.jpg');"></div>
         <div class="blog-banner-content">
             <h1 class="blog-banner-title">Blog</h1>
             <nav class="blog-banner-breadcrumb" aria-label="Breadcrumb">

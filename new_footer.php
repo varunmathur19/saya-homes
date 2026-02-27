@@ -63,7 +63,7 @@ if (!isset($base_url)) {
                     <ul class="new-footer-links">
                         <li><a href="<?= $base_url ?>/new_media-page.php">In The Media</a></li>
                         <li><a href="<?= $base_url ?>/awards-and-recognition">Awards & Recognition</a></li>
-                        <li><a href="<?= $base_url ?>/events">Events</a></li>
+                        <li><a href="<?= $base_url ?>/new_media-page.php?page=event">Events</a></li>
                         <li><a href="<?= $base_url ?>/new-blog-page.php">Blogs</a></li>
                     </ul>
                 </div>

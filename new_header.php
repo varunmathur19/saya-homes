@@ -113,7 +113,7 @@ if (!isset($base_url)) {
                             </div>
                         </div>
                         <a href="<?= $base_url ?>/new_media-page.php" class="header-nav-item-main">MEDIA</a>
-                        <a href="<?= $base_url ?>/events" class="header-nav-item-main">EVENTS</a>
+                        <a href="<?= $base_url ?>/new_media-page.php?page=event" class="header-nav-item-main">EVENTS</a>
                         <a href="<?= $base_url ?>/new-blog-page.php" class="header-nav-item-main">BLOGS</a>
                         <a href="<?= $base_url ?>/nri-corner" class="header-nav-item-main">NRI CORNER</a>
                     </nav>

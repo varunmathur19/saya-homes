@@ -5640,7 +5640,7 @@ body.scroll-hero-visible .section-5-enquire-btn {
 }
 
 .new-header-nav-link:hover {
-    color: var(--color-primary);
+    color: var(--color-text-secondary);
 }
 
 .new-header-nav-link::after {
@@ -5660,7 +5660,7 @@ body.scroll-hero-visible .section-5-enquire-btn {
 
 .new-header-nav-link.header-our-projects-trigger:active,
 .new-header-nav-link.header-our-projects-trigger:focus {
-    color: #F6883E;
+    color: var(--color-text-secondary);
 }
 
 .new-header-contact-icons {
@@ -6416,7 +6416,7 @@ body.menu-open {
 }
 
 .header-nav-item-main:hover {
-    color: var(--color-accent);
+    color: #515151;
     transform: translateX(10px);
 }
 
@@ -6499,7 +6499,7 @@ body.menu-open {
 }
 
 .header-nav-item-secondary:hover {
-    color: #e57a35;
+    /* color: #e57a35; */
     transform: translateX(5px);
     font-weight: 500;
 }
