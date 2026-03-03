@@ -986,7 +986,7 @@
     letter-spacing: 0%;
     /* text-transform: capitalize; */
     color: #515151;
-    margin: 0 0 28px 0;
+    margin: 0 0 10px 0;
     max-width: 1200px;
 }
 .project-gold-elevate-btn {
@@ -1684,6 +1684,27 @@
     text-transform: capitalize;
 }
 
+.project-features-title {
+    font-family: "Lato", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--para, #515151);
+    margin: 0 0 16px 0;
+}
+
+.project-features-desc {
+    margin-bottom: 16px;
+}
+
+.project-features-desc p {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--para, #515151);
+    margin: 0 0 8px 0;
+}
+
 .project-features-nav {
     display: flex;
     gap: 10px;
@@ -2286,6 +2307,10 @@
 .project-section-8-gold-icon-item:nth-last-child(-n + 2) {
     border-bottom: none;
 }
+/* Saya Zion: Event Space & Amphitheatre (second-last) also gets underline */
+.project-section-8--saya-zion .project-section-8-gold-icon-item:nth-last-child(2) {
+    border-bottom: 2px solid #dddddd;
+}
 
 .project-section-8-gold-icon-img {
     width: 50px;
@@ -2403,44 +2428,86 @@
         flex-direction: column;
         gap: 32px;
         margin-top: 32px;
-        align-items: start;
+        align-items: stretch;
+        max-width: 100%;
     }
     .project-section-8-gold-slider-wrap {
         min-height: 0;
+        width: 100%;
+        order: 2;
+    }
+    .project-section-8-gold-icons {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+        order: 1;
     }
     .project-section-8-gold-img {
         height: auto;
         min-height: 0;
     }
+}
+
+@media (max-width: 768px) {
+    .project-section-8-gold-grid {
+        gap: 28px;
+        margin-top: 28px;
+    }
     .project-section-8-gold-icons {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: none;
+        gap: 0;
+    }
+    .project-section-8-gold-icon-item {
+        padding: 10px 12px 10px 0;
+    }
+    .project-section-8-gold-icon-item:nth-child(even) {
+        padding-left: 12px;
+    }
+    .project-section-8-gold-slider-wrap {
+        min-height: 260px;
     }
 }
 
 @media (max-width: 480px) {
     .project-section-8-gold-icons {
         grid-template-columns: 1fr;
+        max-width: 100%;
     }
-    .project-section-8-gold-icon-item {
-        padding-left: 0;
-        padding-right: 0;
+    .project-section-8-gold-icons::after {
+        display: none;
     }
-    .project-section-8-gold-icon-item:nth-child(odd) {
-        border-right: none;
-        padding-right: 0;
-    }
+    .project-section-8-gold-icon-item,
+    .project-section-8-gold-icon-item:nth-child(odd),
     .project-section-8-gold-icon-item:nth-child(even) {
-        padding: 10px;
+        padding: 12px 0;
+        border-right: none;
+        min-width: 0;
     }
     .project-section-8-gold-icon-item:last-child {
         border-bottom: none;
     }
+    .project-section-8-gold-icon-item {
+        gap: 14px;
+    }
     .project-section-8-gold-icon-img {
         width: 36px;
         height: 36px;
+        flex-shrink: 0;
     }
     .project-section-8-gold-icon-label {
+        font-size: 14px;
+        line-height: 18px;
+        word-wrap: break-word;
+    }
+    .project-section-8-gold-grid {
+        gap: 24px;
+        margin-top: 24px;
+    }
+    .project-section-8-gold-slider-wrap {
+        min-height: 220px;
+        width: 100%;
+        border-radius: 12px;
+    }
+    .project-section-8-gold-slide-caption {
+        padding: 40px 12px 12px;
         font-size: 14px;
     }
 }
@@ -2579,13 +2646,24 @@
         height: 35px;
     }
     .project-section-8-gold-slide-caption {
-        bottom: -23px;
+        padding: 36px 10px 10px;
+        font-size: 13px;
+        text-underline-offset: 8px;
+    }
+    .project-section-8-gold-slider-wrap {
+        min-height: 200px;
     }
 }
 @media (max-width: 363px) {
     .project-section-8-gold-slide-caption {
-        font-size: 14px;
-        bottom: -23px;
+        font-size: 12px;
+        padding: 30px 8px 8px;
+    }
+    .project-section-8-gold-slider-wrap {
+        min-height: 180px;
+    }
+    .project-section-8-gold-icon-label {
+        font-size: 13px;
     }
 }
 
@@ -3109,7 +3187,7 @@
 .project-section-12-gallery {
     width: 100%;
     background: #fff;
-    padding: 56px 50px 56px;
+    padding: 0px 50px 56px;
 }
 
 .project-section-12-gallery-inner {

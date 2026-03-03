@@ -103,14 +103,15 @@
 
 <body class="new-home-page">
     <?php include_once('new_header.php') ?>
-    <a href="#formModal" data-bs-toggle="modal" data-bs-source="Saya Highlights Enquiry" class="section-5-enquire-btn">ENQUIRE NOW</a>
+    <a href="<?= $base_url ?>/new_media-page.php?page=contact" class="section-5-enquire-btn">ENQUIRE NOW</a>
     <main>
         <?php $show_about_hero = isset($_GET['about']) && $_GET['about'] == '1'; ?>
         <?php if ($show_about_hero): ?>
-        <!-- About Us first section: single hero with about-us-mobile.jpg -->
+        <!-- About Us first section: desktop aboutusbanner.png, mobile aboutusmobile.png -->
         <div class="hero-slider-container hero-about-section">
-            <div class="hero-about-image" style="background-image: url('<?= $base_url ?>/images/new_theme/about-us-mobile.jpg');"></div>
-            <h1 class="hero-about-title">About Sayahomes</h1>
+            <div class="hero-about-image hero-about-image-desktop" style="background-image: url('<?= $base_url ?>/images/new_theme/aboutusbanner.png');"></div>
+            <div class="hero-about-image hero-about-image-mobile" style="background-image: url('<?= $base_url ?>/images/new_theme/aboutusmobile.png');"></div>
+            <p class="hero-about-title">About Saya Homes</p>
         </div>
         <!-- Meet Our Founder section (aboutsec-2) - below about hero image -->
         <section class="about-founder-section">
@@ -118,7 +119,7 @@
                 <div class="about-founder-content">
                     <h2 class="about-founder-heading">Meet the Visionary</h2>
                     <span class="about-founder-subheading">Founder's Profile</span>
-                    <p>Mr. Vikas Bhasin , the esteemed Chairman and Managing Director  of Saya Group, exemplifies visionary leadership and unmatched dedication in the field of real estate development. With a remarkable career spanning more than twenty years, his relentless pursuit of excellence has propelled Saya Group to the forefront of the industry.</p>
+                    <p><b>Mr. Vikas Bhasin</b> , the esteemed <b>Chairman and Managing Director</b>  of Saya Group, exemplifies visionary leadership and unmatched dedication in the field of real estate development. With a remarkable career spanning more than twenty years, his relentless pursuit of excellence has propelled Saya Group to the forefront of the industry.</p>
                     <p>Mr. Bhasin was born in Delhi and pursued his education at one of the most prestigious schools in the city before venturing into real estate. In 1996, he initiated his journey as a first-generation entrepreneur, establishing Saya Homes and laying the foundation of his career in the industry.</p>
                     <span class="about-founder-subheading">Early Life And Career</span>
                     <p>His leadership ethos embodies a profound belief in the power of teamwork, where every member contributes to realising the collective vision of creating exceptional projects for discerning customers. Under his guidance, Saya Group has emerged as a trailblazing force, distinguished by its unwavering commitment to punctuality and uncompromising standards of craftsmanship.</p>
@@ -141,21 +142,21 @@
                         <div class="slide-image slide-image-desktop-first"
                             style="background-image: url('<?= $base_url ?>/images/new_theme/saya_desktop_banner1.jpg');"></div>
                         <div class="slide-image slide-image-mobile-first"
-                            style="background-image: url('<?= $base_url ?>/images/new_theme/sayaphonebanner1.jpg');"></div>
+                            style="background-image: url('<?= $base_url ?>/images/new_theme/skylinephnibanner.png');"></div>
                     </div>
                     <!-- Slide 2 -->
                     <div class="swiper-slide" data-project-name="Saya South X">
                         <div class="slide-image slide-image-desktop"
                             style="background-image: url('<?= $base_url ?>/images/new_theme/sayasouthxbanner4.jpg');"></div>
                         <div class="slide-image slide-image-mobile"
-                            style="background-image: url('<?= $base_url ?>/images/new_theme/sayasouthxphonebanner.jpg');"></div>
+                            style="background-image: url('<?= $base_url ?>/images/new_theme/southxphnbanner.png');"></div>
                     </div>
                     <!-- Slide 3 - Saya Piazza -->
                     <div class="swiper-slide" data-project-name="Saya Piazza">
                         <div class="slide-image slide-image-desktop"
                             style="background-image: url('<?= $base_url ?>/images/new_theme/SayaWebfashionBanner.jpg');"></div>
                         <div class="slide-image slide-image-mobile"
-                            style="background-image: url('<?= $base_url ?>/images/new_theme/SayaWebfashionBannerphone.jpg');"></div>
+                            style="background-image: url('<?= $base_url ?>/images/new_theme/sayapiazzamobilebanner.png');"></div>
                     </div>
                     <!-- Slide 4 - COMMENTED: Saya Zenith (not show) -->
                     <!--
@@ -221,7 +222,7 @@
                 <div class="section-2-content-left" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">
                     <div class="section-2-content-left-inner">
                         <h2>About Saya Group</h2>
-                        <p>Redefining Modern Living with Better Real Estate Solutions</p>
+                        <h1>Crafting Iconic Luxury Homes and Commercial Spaces in Delhi NCR Region</h1>
                     </div>
                 </div>
                 <div class="section-2-content-right" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
@@ -674,7 +675,7 @@
 
         <div class="section-6" data-aos="fade-up" data-aos-duration="1000">
             <p class="text-center" data-aos="fade-down" data-aos-duration="600">Winner</p>
-            <h2 class="text-center" data-aos="fade-down" data-aos-duration="600" data-aos-delay="100">Awards & Recognitions </h2>
+            <h2 class="text-center" data-aos="fade-down" data-aos-duration="600" data-aos-delay="100" onclick="window.location.href='<?= $base_url ?>/awards-and-recognition';" style="cursor: pointer;">Awards & Recognitions </h2>
             
             <div class="section-6-slider-container">
                 <!-- <button class="section-6-slider-btn section-6-slider-btn-prev" aria-label="Previous slide">
@@ -773,7 +774,7 @@
                         <h2>Leading Innovations Catching the Spotlight</h2>
                     </div>
                     <div>
-                        <button class="btn1212">
+                        <button class="btn1212" type="button" onclick="window.location.href='<?= $base_url ?>/new_media-page.php';">
                             <p>View All</p>
                             <div>
                                 <img src="<?= $base_url ?>/images/new_theme/icons/button_hover_icon.svg" alt="Arrow Right">
@@ -1843,6 +1844,24 @@ Saya Group Clears Rs 1,500 Cr Debt, Signals Debt-Free Growth Across NCR
                     dot.classList.add('active');
                 } else {
                     dot.classList.remove('active');
+                }
+            });
+        }
+
+        // Redirect from footer arrow/project name to active project page
+        const heroProjectLinks = {
+            'Saya Gold Avenue': '<?= $base_url ?>/new-project-page.php?project=gold-avenue',
+            'Saya South X': '<?= $base_url ?>/new-project-page.php',
+            'Saya Piazza': '<?= $base_url ?>/new-project-page.php?project=saya-piazza'
+        };
+        const heroFooterProjectInfo = document.querySelector('#heroSliderFooter .slide-project-info');
+        if (heroFooterProjectInfo) {
+            heroFooterProjectInfo.style.cursor = 'pointer';
+            heroFooterProjectInfo.addEventListener('click', function() {
+                const currentProjectName = (document.getElementById('heroProjectName') || {}).textContent || '';
+                const targetUrl = heroProjectLinks[currentProjectName.trim()];
+                if (targetUrl) {
+                    window.location.href = targetUrl;
                 }
             });
         }

@@ -443,6 +443,14 @@ input[type="submit"],
     background-repeat: no-repeat;
 }
 
+.hero-about-section .hero-about-image-desktop {
+    display: block;
+}
+
+.hero-about-section .hero-about-image-mobile {
+    display: none;
+}
+
 .hero-about-section .hero-about-title {
     position: absolute;
     left: 50%;
@@ -1980,12 +1988,20 @@ input[type="submit"],
     display: block;
 }
 
-/* Mobile hero: 425px and below - sayaphonebanner1-5, height 100vh */
+/* Mobile hero: 490px and below - sayaphonebanner1-5, height 100vh */
 /* Use data-project-name so it works with Swiper loop (cloned slides) */
-@media (max-width: 426px) {
+@media (max-width: 490px) {
     .hero-slider-container {
         height: 100vh !important;
         min-height: 100vh !important;
+    }
+
+    .hero-about-section .hero-about-image-desktop {
+        display: none !important;
+    }
+
+    .hero-about-section .hero-about-image-mobile {
+        display: block !important;
     }
 
     .hero-slider
@@ -4402,7 +4418,7 @@ body.scroll-hero-visible .section-5-enquire-btn {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 12px;
+        gap: 0px;
     }
 
     .section-4-video-player p {
@@ -5226,6 +5242,22 @@ body.scroll-hero-visible .section-5-enquire-btn {
     transform: scale(1);
 }
 
+.section-9-content-inner-right-rating-section-inner-slider-buttons
+    .left-button.testimonial-nav-inactive,
+.section-9-content-inner-right-rating-section-inner-slider-buttons
+    .right-button.testimonial-nav-inactive {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.section-9-content-inner-right-rating-section-inner-slider-buttons
+    .left-button.testimonial-nav-inactive:hover,
+.section-9-content-inner-right-rating-section-inner-slider-buttons
+    .right-button.testimonial-nav-inactive:hover {
+    opacity: 0.4;
+    transform: none;
+}
+
 /* ============================================
    Get To Know Banner - padding outside image
    ============================================ */
@@ -5637,6 +5669,7 @@ body.scroll-hero-visible .section-5-enquire-btn {
     letter-spacing: 1px;
     transition: color var(--transition-base);
     position: relative;
+    width: fit-content;
 }
 
 .new-header-nav-link:hover {
@@ -6409,6 +6442,7 @@ body.menu-open {
     gap: 45px;
     position: relative;
     display: inline-block;
+    width: fit-content;
     font-weight: 500;
     font-style: Medium;
     font-size: 28px;
@@ -6485,6 +6519,7 @@ body.menu-open {
     will-change: transform, opacity;
     position: relative;
     display: inline-block;
+    width: fit-content;
 }
 
 .header-nav-item-secondary::after {
@@ -7770,6 +7805,7 @@ body.menu-open {
             display: flex !important;
             align-items: center !important;
             justify-content: center !important;
+            z-index: 9999;
         }
 
         .section-5-enquire-btn:hover {
@@ -9046,6 +9082,7 @@ body.menu-open {
     .section-3-content-top-left h2,
     .section-3-content-top-left p {
         text-align: center;
+        margin-top: 10px;
     }
 
     .section-3-content-top {
@@ -10769,6 +10806,30 @@ img {
         grid-template-columns: 1fr !important;
     }
 
+    .section-5-content-inner-div-2-inner-top,
+    .section-5-content-inner-div-2-inner-bottom,
+    .section-5-content-inner-top-3-inner {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .section-5-content-inner-div-2-inner-top::after,
+    .section-5-content-inner-div-2-inner-bottom::after,
+    .section-5-content-inner-top-3-inner::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .section-5-content-inner-div-2-inner-bottom > div,
+    .section-5-content-inner-top-3-inner > div {
+        position: relative;
+        z-index: 2;
+    }
+
     .section-5-content-inner-div-1,
     .section-5-content-inner-div-2,
     .section-5-content-inner-div-3 {
@@ -10790,6 +10851,7 @@ img {
         /* font-size: clamp(20px, 6vw, 28px) !important; */
         text-align: center !important;
         width: 100% !important;
+        font-size: 24px;
     }
 
     .section-5-content-inner {
@@ -10814,6 +10876,30 @@ img {
     .section-5-content-inner-bottom-3-inner {
         width: 100% !important;
         max-width: 100% !important;
+    }
+
+    .section-5-content-inner-top-3-inner {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .section-5-content-inner-top-3-inner::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .section-5-content-inner-top-3-inner > div {
+        position: relative;
+        z-index: 2;
+    }
+
+    .section-5-content-inner-top-3-inner p,
+    .section-5-content-inner-top-3-inner span {
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
     }
 
     .section-5-content-inner-div-2 {
@@ -12599,5 +12685,10 @@ img {
 @media (max-width: 769px) {
     .about-founder-heading {
         margin: 0 0 15px;
+    }
+}
+@media (min-width: 1091px) {
+    .new-footer-main-tagline {
+        margin: 0 0 0 100px;
     }
 }

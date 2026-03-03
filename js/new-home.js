@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
     new Swiper(".testimonial-swiper", {
         slidesPerView: 1,
         spaceBetween: 0,
-        loop: true,
+        loop: false,
         speed: 800,
         grabCursor: true,
         navigation: {
@@ -79,7 +79,26 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         effect: "slide",
         allowTouchMove: true,
+        on: {
+            init: function () {
+                updateTestimonialNavState(this);
+            },
+            slideChange: function () {
+                updateTestimonialNavState(this);
+            },
+        },
     });
+
+    function updateTestimonialNavState(swiper) {
+        var prev = document.querySelector(".testimonial-swiper-prev");
+        var next = document.querySelector(".testimonial-swiper-next");
+        if (prev) {
+            if (swiper.isBeginning) prev.classList.add("testimonial-nav-inactive"); else prev.classList.remove("testimonial-nav-inactive");
+        }
+        if (next) {
+            if (swiper.isEnd) next.classList.add("testimonial-nav-inactive"); else next.classList.remove("testimonial-nav-inactive");
+        }
+    }
 });
 
 // Project Slider Functionality
@@ -110,7 +129,8 @@ document.addEventListener("DOMContentLoaded", function () {
             title: "Saya Gold Avenue",
             location: "Indirapuram, Ghaziabad",
             desc: "A unique address with upstretched 3 & 4 BHK units and luxury penthouses.",
-            image: baseUrl + "images/new_theme/saya_desktop_banner1.jpg",
+            image: baseUrl + "images/new_theme/goldavenueslider.jpg",
+            url: baseUrl + "new-project-page.php?project=gold-avenue",
             type: "residential",
         },
         {
@@ -119,6 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
             location: "Greater Noida West",
             desc: "Contemporary homes designed with a focus on refined comfort and effortless living.",
             image: baseUrl + "images/new_theme/main_slider2.jpg",
+            url: baseUrl + "new-project-page.php?project=saya-zion",
             type: "residential",
         },
         {
@@ -127,6 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
             location: "Indirapuram, Ghaziabad",
             desc: "Beautifully designed ready-to-move residences with a focus on spacious living, elegance, and connectivity.",
             image: baseUrl + "images/new_theme/saya_zenith.jpg",
+            url: baseUrl + "new-project-page.php?project=saya-zenith",
             type: "residential",
         },
         {
@@ -135,6 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
             location: "Indirapuram, Ghaziabad",
             desc: "Comfort-oriented residences located in a well-established area, designed for easy living.",
             image: baseUrl + "images/new_theme/sldierdesireimage.jpg",
+            url: baseUrl + "new-project-page.php?project=saya-desire-residency",
             type: "residential",
         },
         {
@@ -143,6 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
             location: "Greater Noida West",
             desc: "A landmark high-street destination redefining premium retail, dining, and business experiences.",
             image: baseUrl + "images/new_theme/sayasouthx.jpg",
+            url: baseUrl + "new-project-page.php",
             type: "commercial",
         },
         {
@@ -150,7 +174,8 @@ document.addEventListener("DOMContentLoaded", function () {
             title: "Saya Biztop",
             location: "Greater Noida West",
             desc: "An iconic commercial tower designed for modern enterprises, exceptional visibility, and high-growth potential.",
-            image: baseUrl + "images/new_theme/sayasouthx.jpg",
+            image: baseUrl + "images/new_theme/Biztophomeslider.jpg",
+            url: baseUrl + "new-project-page.php?project=saya-biztop",
             type: "commercial",
         },
         {
@@ -159,6 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
             location: "Greater Noida West",
             desc: "A vibrant retail and entertainment hub curated for dynamic experiences and strong investment value.",
             image: baseUrl + "images/new_theme/sayapiazza.jpg",
+            url: baseUrl + "new-project-page.php?project=saya-piazza",
             type: "commercial",
         },
     ];
@@ -182,6 +208,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const slideLabelTitle = document.getElementById("slide-label-title");
     const mobileNav = document.getElementById("mobile-nav");
     const desktopNav = document.getElementById("desktop-nav");
+    const projectLeftContent = document.querySelector(".project-slider-left-content");
+    const projectImageWrapper = document.querySelector(".project-slider-image-wrapper");
 
     // Check if elements exist before proceeding (slideLine optional - may be commented in HTML)
     if (
@@ -197,6 +225,23 @@ document.addEventListener("DOMContentLoaded", function () {
         !desktopNav
     ) {
         return; // Exit if elements don't exist
+    }
+
+    function redirectToActiveProject() {
+        const currentSlide = slides[active];
+        if (currentSlide && currentSlide.url) {
+            window.location.href = currentSlide.url;
+        }
+    }
+
+    if (projectLeftContent) {
+        projectLeftContent.style.cursor = "pointer";
+        projectLeftContent.addEventListener("click", redirectToActiveProject);
+    }
+
+    if (projectImageWrapper) {
+        projectImageWrapper.style.cursor = "pointer";
+        projectImageWrapper.addEventListener("click", redirectToActiveProject);
     }
 
     // Animation helper function - simplified for right-to-left slide only
@@ -488,7 +533,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const projectsLink = document.querySelector(
-        'a.new-header-nav-link.header-our-projects-trigger',
+        "a.new-header-nav-link.header-our-projects-trigger",
     );
     const hoverProjectHeaderContainer = document.querySelector(
         ".hover-project-header-container",
@@ -504,13 +549,13 @@ document.addEventListener("DOMContentLoaded", function () {
         : [];
     const projectHeadings = hoverProjectHeaderContainer
         ? hoverProjectHeaderContainer.querySelectorAll(
-            ".projects-popup-heading",
-        )
+              ".projects-popup-heading",
+          )
         : [];
     const projectHeaderSocialIcons = hoverProjectHeaderContainer
         ? hoverProjectHeaderContainer.querySelectorAll(
-            ".header-social-icon-bottom",
-        )
+              ".header-social-icon-bottom",
+          )
         : [];
     const projectHeaderSocialLinkLeft = hoverProjectHeaderContainer
         ? hoverProjectHeaderContainer.querySelector(".header-social-link-left")
@@ -602,7 +647,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to close projects menu
     function closeProjectsMenu() {
-        if (!isProjectMenuOpen || !projectMenuTimeline) return;
+        if (!isProjectMenuOpen) return;
 
         if (projectMenuTimeline) {
             projectMenuTimeline.kill();
@@ -630,11 +675,26 @@ document.addEventListener("DOMContentLoaded", function () {
             },
         });
 
-        closeTimeline.to(hoverProjectHeaderContent, {
-            y: "-100%",
-            duration: 0.6,
-            ease: "power2.in",
-        });
+        if (hoverProjectHeaderBg) {
+            closeTimeline.to(
+                hoverProjectHeaderBg,
+                {
+                    yPercent: -100,
+                    duration: 1,
+                    ease: "power2.in",
+                },
+                0,
+            );
+        }
+        closeTimeline.to(
+            hoverProjectHeaderContent,
+            {
+                y: "-100%",
+                duration: 1,
+                ease: "power2.in",
+            },
+            0,
+        );
 
         closeTimeline.to(
             hoverProjectHeaderContainer,
@@ -643,7 +703,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 visibility: "hidden",
                 duration: 0.2,
             },
-            "-=0.3",
+            "-=0.2",
         );
     }
 
@@ -674,6 +734,15 @@ document.addEventListener("DOMContentLoaded", function () {
             e.stopPropagation();
             closeProjectsMenu();
         });
+        projectHeaderClose.addEventListener(
+            "touchstart",
+            function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                closeProjectsMenu();
+            },
+            { passive: false },
+        );
     }
 
     // Close when clicking on container backdrop (empty area)
@@ -800,11 +869,11 @@ document.addEventListener("DOMContentLoaded", function () {
             var otherTrigger =
                 projectType === "residential"
                     ? document.querySelector(
-                        '.hover-header-container .header-nav-projects-trigger[data-project-type="commercial"]',
-                    )
+                          '.hover-header-container .header-nav-projects-trigger[data-project-type="commercial"]',
+                      )
                     : document.querySelector(
-                        '.hover-header-container .header-nav-projects-trigger[data-project-type="residential"]',
-                    );
+                          '.hover-header-container .header-nav-projects-trigger[data-project-type="residential"]',
+                      );
 
             if (!dropdown) return;
 
@@ -830,6 +899,9 @@ document.addEventListener("DOMContentLoaded", function () {
     var hoverHeaderClose = document.getElementById("hoverHeaderClose");
     if (hoverHeaderClose) {
         hoverHeaderClose.addEventListener("click", closeAllProjectDropdowns);
+        hoverHeaderClose.addEventListener("touchstart", closeAllProjectDropdowns, {
+            passive: true,
+        });
     }
 
     var mobileMenuToggle = document.getElementById("mobileMenuToggle");
@@ -1109,7 +1181,9 @@ $(document).ready(function () {
     const section4PlayIcon = document.getElementById("section4PlayIcon");
     const section4BgVideo = document.getElementById("section4BgVideo");
     const section4VideoPlayer = document.getElementById("section4VideoPlayer");
-    const section4PauseOverlay = document.getElementById("section4PauseOverlay");
+    const section4PauseOverlay = document.getElementById(
+        "section4PauseOverlay",
+    );
     const section4PauseIcon = document.getElementById("section4PauseIcon");
 
     if (!section4PlayIcon || !section4BgVideo) return;
@@ -1130,7 +1204,7 @@ $(document).ready(function () {
         section4BgVideo.loop = false;
         section4BgVideo.currentTime = 0;
         showPauseState();
-        section4BgVideo.play().catch(function () { });
+        section4BgVideo.play().catch(function () {});
     });
 
     if (section4PauseIcon) {
