@@ -8,7 +8,9 @@ if ($project_slug === 'gold-avenue') {
     $project_overview_location = 'Indirapuram, Ghaziabad';
     $project_hero_breadcrumb_cat = 'RESIDENTIAL';
     $project_hero_breadcrumb_current = 'SAYA GOLD AVENUE';
-    $project_page_title = 'Saya Gold Avenue | Residential | Saya Homes';
+    $project_page_title = 'Saya Gold Avenue | 2/3/4 BHK Luxury Apartments in Indirapuram';
+    $project_meta_description = 'Saya Gold Avenue offers ready to move in 2/3/4 BHK Luxury Apartments in Indirapuram, Ghaziabad. Best 2/3/4 BHK Flats for sale in Indirapuram, Ghaziabad.';
+    $project_meta_keywords = 'saya gold avenue, saya gold avenue indirapuram, 2 bhk apartments in indirapuram, 3 bhk apartments in indirapuram, 4 bhk apartments in indirapuram, ready to move in apartments in indirapuram, 2 bhk flats in indirapuram, 3 bhk flats in indirapuram, 4 bhk flats in indirapuram, best property in indirapuram, residential property in indirapuram';
     $project_hero_desc = 'Discover a perfect blend of <b> modern luxury, comfort, and affordability </b> at Saya Gold Avenue. With carefully designed homes, premium amenities, and a semi-olympic sized swimming pool, this residential paradise offers effortless connectivity and ultimate convenience. Situated next to  <b> North India Mall and NH-9 </b>, Saya Gold Avenue brings to you a truly luxurious living experience.';
     $project_hero_btn_text = 'Book a Site Visit';
     $project_section2_img = 'section-2gold-avenue.png';
@@ -24,7 +26,9 @@ if ($project_slug === 'gold-avenue') {
     $project_overview_location = 'Sector- 4, Greater Noida (W)';
     $project_hero_breadcrumb_cat = 'RESIDENTIAL';
     $project_hero_breadcrumb_current = 'SAYA ZION';
-    $project_page_title = 'Saya Zion | Residential | Saya Homes';
+    $project_page_title = 'Saya Zion | 2/3/4 BHK Luxury Apartment in Greater Noida West';
+    $project_meta_description = 'Saya Zion offers 2/3/4 BHK Luxury Apartments in Greater Noida West. Explore premium 2/3/4 BHK Flats for sale in Greater Noida West.';
+    $project_meta_keywords = 'saya zion, 2 bhk apartments in greater noida west, 3 bhk apartments in greater noida west, 4 bhk apartments in greater noida west, 2 bhk flats in greater noida west, top 2 bhk flats in greater noida west, 3 bhk flats in greater noida west, 4 bhk flats in greater noida west, best flats in greater noida west, luxury apartments in greater noida west';
     $project_hero_desc = 'Experience <b> Luxury Living at Saya Zion </b> in <b> Greater Noida West</b>
 Saya Zion combines luxurious living with a vast green environment, providing a life of tranquility and ease. Saya Zion, surrounded by <b> lush greenery </b>,combines <b>nature with luxurious living</b>. Unwind in lush green gardens, let your kids play in vast open spaces, and live a healthy and green life every day at Saya Zion.';
     $project_hero_btn_text = 'Book a Site Visit';
@@ -42,7 +46,9 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
     $project_overview_location = 'Indirapuram, Ghaziabad';
     $project_hero_breadcrumb_cat = 'RESIDENTIAL';
     $project_hero_breadcrumb_current = 'SAYA ZENITH';
-    $project_page_title = 'Saya Zenith | Residential | Saya Homes';
+    $project_page_title = 'Saya zenith | 2/3/4 BHK Luxury Flats in Indirapuram, Ghaziabad';
+    $project_meta_description = 'Saya Zenith offers premium 2/3/4 BHK flats in Indirapuram, Ghaziabad. Enjoy modern living with top-notch amenities, spacious layouts, vibrant community.';
+    $project_meta_keywords = 'saya zenith, saya zenith indirapuram, 2 bhk flats in indirapuram, 3 bhk flats in indirapuram, 4 bhk flats in indirapuram, flats in ghaziabad, 2 bhk apartments in indirapuram, 3 bhk apartments in indirapuram, 4 bhk apartments in indirapuram, best residential property in indirapuram, residential property in ghaziabad';
     $project_hero_desc = 'Discover spacious sized <b> 2, 3, & 4 BHK  apartments </b> at Saya Zenith, where each home has been carefully crafted for the discerning buyer. Illuminated with natural light and designed with exceptional craftsmanship, these residemces offer a <b>luxurious lifestyle experience</b> in the heart of <b>Indirapuram</b>.';
 
     $project_hero_btn_text = 'Book a Site Visit';
@@ -60,7 +66,9 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
     $project_overview_location = 'Indirapuram, Ghaziabad';
     $project_hero_breadcrumb_cat = 'RESIDENTIAL';
     $project_hero_breadcrumb_current = 'SAYA DESIRE RESIDENCY';
-    $project_page_title = 'Saya Desire Residency | Residential | Saya Homes';
+    $project_page_title = 'Saya Desire Residency | 2/3/4 BHK Apartments in Ghaziabad';
+    $project_meta_description = 'Saya Desire Residency offers top 2/3/4 BHK luxury apartments in Indirapuram, Ghaziabad. Experience modern amenities, spacious designs, prime location.';
+    $project_meta_keywords = 'saya desire residency, luxury 2 bhk flats in indirapuram, top 3 bhk flats in indirapuram, best 4 bhk flats in indirapuram, luxury flats in ghaziabad, 2 bhk apartments in indirapuram, luxury 3 bhk apartments in indirapuram, luxury 4 bhk apartments in indirapuram, residential property in indirapuram, top residential property in ghaziabad';
     $project_hero_desc = 'Live Your Dream Life at Saya Desire Residency
 , with luxurious  <b>2, 3, and 4 BHK residential apartment </b> with a perfect blend of luxury and comfort. Enjoy stunning views of <b>Indirapuram </b> from your <b> 3-side open plot</b>, unwind in <b> lush landscaped greens</b>, and revitalize yourself in the <b>yoga centers</b>. A vibrant community is waiting for you at Saya Desire Residency.';
     $project_hero_btn_text = 'Book a Site Visit';
@@ -78,7 +86,9 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
     $project_overview_location = 'Sector Ecotech-1, Greater Noida (W)';
     $project_hero_breadcrumb_cat = 'COMMERCIAL';
     $project_hero_breadcrumb_current = 'SAYA BIZTOP';
-    $project_page_title = 'Saya Biztop | Commercial | Saya Homes';
+    $project_page_title = 'Saya Biztop | Luxury Business Suites in Greater Noida West';
+    $project_meta_description = 'Saya Biztop offers top luxury business suites for sale in Greater Noida West. Buy best Furnished studio Apartments in Greater Noida West.';
+    $project_meta_keywords = 'biztop at saya southx, saya biztop, business suites in greater noida west, studio apartments in greater noida west, fully furnished business suites in greater noida west, fully furnished studio apartments in greater noida west, top studio apartments in greater noida west, business suites for sale in greater noida west, Saya SouthX, Biztop at Saya SouthX, Saya Biztop, Business Suites in Greater Noida West, Business Class Suites in Greater Noida West, Business Suites in Greater Noida , Best business suites in greater noida west, Saya Biztop Studio Apartment, Saya SouthX Biztop Studio Apartment, Studio Apartment in Greater Noida West, Studio Apartment in Greater Noida, Saya Biztop Greater Noida West, Saya SouthX commercial project, Saya Biztop price list, Saya Biztop amenities, Saya Biztop RERA project, Saya Biztop construction update, Saya Biztop Gaur Chowk, Saya Biztop NH-24 connectivity, Saya Biztop fully furnished business suite';
     $project_hero_desc = 'Live your dream work-life at Saya Biztop – <b> premium fully furnished business suites </b> designed for excellence. With stunning views, dedicated floors, luxurious amenities, and a seamless blend of elegance and innovation, Biztop offers the perfect environment for corporate excellence and personal relaxation.';
     $project_hero_btn_text = 'Read More';
     $project_section2_img = 'biztopsection-2.png';
@@ -93,7 +103,9 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
     $project_overview_location = 'Sector 131';
     $project_hero_breadcrumb_cat = 'COMMERCIAL';
     $project_hero_breadcrumb_current = 'SAYA PIAZZA';
-    $project_page_title = 'Saya Piazza | Commercial | Saya Homes';
+    $project_page_title = 'Saya Piazza | Top Retail Shops in on Noida Expressway';
+    $project_meta_description = 'Saya Piazza offers Luxury commercial retail spaces in Sector 131, Noida Expressway. Explore premium commercial shops on Noida Expressway.';
+    $project_meta_keywords = 'saya piazza, commercial spaces on nida expressway, retail spaces on nida expressway, shops on nida expressway, commercial spaces on nida expressway, top commercial spaces on nida expressway, retail spaces for sale in sector 131, noida';
     $project_hero_desc = 'Experience Saya Piazza, <b>ultimate shopping destination spot </b> in Noida\'s most desirable location. With ready-to-fit-out commercial units, Saya Piazza is crafted to take your business to the next level, with thriving communities and best-in-class amenities all around.';
     $project_hero_btn_text = 'Read More';
     $project_section2_img = 'piazzasec-2.png';
@@ -108,7 +120,9 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
     $project_overview_location = 'Sector Ecotech-1, Greater Noida (W)';
     $project_hero_breadcrumb_cat = 'COMMERCIAL';
     $project_hero_breadcrumb_current = 'SAYA-SOUTHX';
-    $project_page_title = 'Saya South X | Commercial | Saya Homes';
+    $project_page_title = 'Saya South X: Shops & Offices in Greater Noida West';
+    $project_meta_description = 'Discover Saya South X - premium retail shops, office spaces & business suites in Greater Noida West. Luxury high-street destination with multiplex, dining & great connectivity. Nearing possession.';
+    $project_meta_keywords = 'saya south x, saya southx, commercial space in greater noida west, commercial shops in greater noida west, shops in greater noida west, retail space in greater noida west, food court in greater noida west, shops for sale in greater noida west, Biztop at Saya SouthX, Saya Biztop, Business Suites in Greater Noida West, Business Class Suites in Greater Noida West, Business Suites in Greater Noida , Best business suites in greater noida west, Saya Biztop Studio Apartment, Saya SouthX Biztop Studio Apartment, Studio Apartment in Greater Noida West, Studio Apartment in Greater Noida, Saya Biztop Greater Noida West, Saya SouthX commercial project, Saya Biztop price list, Saya Biztop amenities, Saya Biztop RERA project, Saya Biztop construction update, Saya Biztop Gaur Chowk, Saya Biztop NH-24 connectivity, Saya Biztop fully furnished business suite';
     $project_hero_desc = 'Experience your shopping to the next level at Saya South X – a <b> luxury shopping destination </b> that provides a unique blend of high-end brands, lush landscaping, and contemporary facilities. Spanning over <b> 12,000+ sq.m </b> of retail space with an estimated footfall of <b> 200K+ </b>, Saya South X is set to deliver the ultimate shopping, leisure, and convenience experience for you.';
     $project_hero_btn_text = 'Read More';
     $project_section2_img = 'ppsec-2pg.jpg';
@@ -125,6 +139,8 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= htmlspecialchars($project_page_title) ?></title>
+    <meta name="description" content="<?= htmlspecialchars($project_meta_description) ?>">
+    <meta name="keywords" content="<?= htmlspecialchars($project_meta_keywords) ?>">
     <?php include_once('new-css.php') ?>
     <link rel="stylesheet" href="css/new_projectpage.css">
     <!-- GSAP - required for Our Projects dropdown (same as home) -->
@@ -1499,9 +1515,9 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
             <!-- Gallery lightbox popup: click image = open with that image first, then slide through all -->
             <div id="projectGalleryLightbox" class="project-gallery-lightbox" aria-hidden="true">
                 <div class="project-gallery-lightbox-backdrop"></div>
-                <button type="button" class="project-gallery-lightbox-close" aria-label="Close">&times;</button>
-                <button type="button" class="project-gallery-lightbox-prev" aria-label="Previous"><img src="<?= $base_url ?>/images/svg/leftarrowaldier.svg" alt=""></button>
-                <button type="button" class="project-gallery-lightbox-next" aria-label="Next"><img src="<?= $base_url ?>/images/svg/rightarrowslider.svg" alt=""></button>
+                <button type="button" class="project-gallery-lightbox-close" aria-label="Close"><img src="<?= $base_url ?>/images/svg/gallerycross.svg" alt="" style="height: 25px;"></button>
+                <button type="button" class="project-gallery-lightbox-prev" aria-label="Previous"><img src="<?= $base_url ?>/images/svg/medialeftarrow.svg" alt="" style="height: 25px;"></button>
+                <button type="button" class="project-gallery-lightbox-next" aria-label="Next"><img src="<?= $base_url ?>/images/svg/mediarightarrow.svg" alt="" style="height: 25px;"></button>
                 <div class="project-gallery-lightbox-content">
                     <div class="project-gallery-lightbox-track"></div>
                 </div>
@@ -2032,15 +2048,6 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                 if (video.paused) {
                     video.play();
                     playBtn.classList.add('is-playing');
-                } else {
-                    video.pause();
-                    playBtn.classList.remove('is-playing');
-                }
-            });
-            video.addEventListener('click', function() {
-                if (!video.paused) {
-                    video.pause();
-                    playBtn.classList.remove('is-playing');
                 }
             });
             video.addEventListener('pause', function() { playBtn.classList.remove('is-playing'); });
@@ -2048,27 +2055,48 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
         }
     })();
 
-    /* Project video - pause button (show when playing, hide when paused) */
+    /* Project video controls: hide after play, show pause on hover */
     (function() {
         var video = document.getElementById('projectVideo');
         var playBtn = document.getElementById('projectVideoPlayBtn');
         var pauseBtn = document.getElementById('projectVideoPauseBtn');
         var overlay = document.querySelector('.project-video-overlay');
+        var wrap = document.querySelector('.project-video-wrap');
         if (!video || !playBtn || !pauseBtn) return;
         function showPlayHidePause() {
             playBtn.style.display = '';
             pauseBtn.style.display = 'none';
             if (overlay) overlay.style.display = '';
         }
-        function hidePlayShowPause() {
+        function hideAllControls() {
+            playBtn.style.display = 'none';
+            pauseBtn.style.display = 'none';
+            if (overlay) overlay.style.display = 'none';
+        }
+        function showPauseOnHover() {
+            if (video.paused) return;
             playBtn.style.display = 'none';
             pauseBtn.style.display = 'flex';
             if (overlay) overlay.style.display = 'none';
         }
-        video.addEventListener('play', hidePlayShowPause);
+        video.addEventListener('play', hideAllControls);
         video.addEventListener('pause', showPlayHidePause);
         video.addEventListener('ended', showPlayHidePause);
+        video.addEventListener('click', function() {
+            if (video.paused) {
+                video.play();
+                setTimeout(showPauseOnHover, 0);
+            } else {
+                video.pause();
+            }
+        });
         pauseBtn.addEventListener('click', function() { video.pause(); });
+        if (wrap) {
+            wrap.addEventListener('mouseenter', showPauseOnHover);
+            wrap.addEventListener('mouseleave', function() {
+                if (!video.paused) hideAllControls();
+            });
+        }
     })();
 
     (function() {
@@ -2435,20 +2463,24 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                     item.classList.add(openClass);
                     btn.setAttribute('aria-expanded', 'true');
                     panel.style.maxHeight = panel.scrollHeight + 'px';
-                    // Saya South X: update right section image when accordion item is opened (with fade transition)
+                    // Commercial amenities: update right section image with right-to-left motion
                     var amenityImg = item.getAttribute('data-amenity-image');
                     if (amenityImg) {
                         var rightImg = document.querySelector('.project-section-8-right img');
                         if (rightImg) {
+                            rightImg.style.transition = 'opacity 300ms ease, transform 300ms ease';
                             rightImg.style.opacity = '0';
+                            rightImg.style.transform = 'translateX(28px)';
                             var duration = 300;
                             setTimeout(function() {
                                 rightImg.src = amenityImg;
-                                if (rightImg.complete) {
+                                var showImage = function() {
                                     rightImg.style.opacity = '1';
-                                } else {
-                                    rightImg.onload = function() { rightImg.style.opacity = '1'; };
-                                }
+                                    rightImg.style.transform = 'translateX(0)';
+                                    rightImg.onload = null;
+                                };
+                                rightImg.onload = showImage;
+                                if (rightImg.complete) showImage();
                             }, duration);
                         }
                     }

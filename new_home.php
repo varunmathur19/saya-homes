@@ -5,11 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saya Homes - Top Luxury Real Estate Developers in Noida</title>
-    <meta name="description"
-        content="Saya Homes is the most trusted real estate developer in Delhi-NCR, We are delivering premium residential & commercial projects in Greater Noida, Ghaziabad." />
-    <meta name="keywords"
-        content="saya homes, property in noida, best property in greater noida, property for sale in noida, luxury residential property in greater noida, residential property in ghaziabad, residential projects in noida, apartments in greater noida, commercial projects in greater noida west, housing projects in ghaziabad, construction company in noida" />
+    <?php $meta_title = (isset($_GET['about']) && $_GET['about'] == '1')
+        ? 'Saya Homes | Top Real Estate Builders in Noida, Ghaziabad'
+        : 'Saya Homes - Top Luxury Real Estate Developers in Noida'; ?>
+    <?php $meta_description = (isset($_GET['about']) && $_GET['about'] == '1')
+        ? 'Saya Homes is a top real estate builders in Noida with 25 years of legacy. We delivered residential & commercial property in Greater Noida, Ghaziabad.'
+        : 'Saya Homes is the most trusted real estate developer in Delhi-NCR, We are delivering premium residential & commercial projects in Greater Noida, Ghaziabad.'; ?>
+    <?php $meta_keywords = (isset($_GET['about']) && $_GET['about'] == '1')
+        ? 'saya homes, builders in noida, builders in greater noida, top real estate builders in noida, best real estate builder in noida, luxury real estate builder in noida'
+        : 'saya homes, property in noida, best property in greater noida, property for sale in noida, luxury residential property in greater noida, residential property in ghaziabad, residential projects in noida, apartments in greater noida, commercial projects in greater noida west, housing projects in ghaziabad, construction company in noida'; ?>
+    <title><?= $meta_title ?></title>
+    <meta name="description" content="<?= $meta_description ?>" />
+    <meta name="keywords" content="<?= $meta_keywords ?>" />
     <meta name="language" content="English" />
     <meta name="Publisher" content="Saya Homes" />
     <meta name="Author" content="Saya Homes" />

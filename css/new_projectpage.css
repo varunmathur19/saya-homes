@@ -1946,7 +1946,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: auto; /* 181.25% */
-    padding-bottom: 15px;
+    /* padding-bottom: 15px; */
 }
 
 /* Button: same styling as hero Read More (blue default, orange + arrow on hover) - always fully visible */
@@ -3481,7 +3481,7 @@ body.gallery-lightbox-open .new-header {
 .project-gallery-lightbox-prev img,
 .project-gallery-lightbox-next img {
     display: block;
-    width: 10px !important;
+    /* width: 10px !important; */
     height: auto;
     pointer-events: none;
 }

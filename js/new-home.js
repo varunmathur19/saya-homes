@@ -1181,6 +1181,9 @@ $(document).ready(function () {
     const section4PlayIcon = document.getElementById("section4PlayIcon");
     const section4BgVideo = document.getElementById("section4BgVideo");
     const section4VideoPlayer = document.getElementById("section4VideoPlayer");
+    const section4Wrap = section4BgVideo
+        ? section4BgVideo.closest(".section-4")
+        : null;
     const section4PauseOverlay = document.getElementById(
         "section4PauseOverlay",
     );
@@ -1198,14 +1201,29 @@ $(document).ready(function () {
         if (section4PauseOverlay) section4PauseOverlay.style.display = "flex";
     }
 
-    section4PlayIcon.addEventListener("click", function (e) {
-        e.preventDefault();
+    function hideControlsWhilePlaying() {
+        if (section4VideoPlayer) section4VideoPlayer.style.display = "none";
+        if (section4PauseOverlay) section4PauseOverlay.style.display = "none";
+    }
+
+    function playSection4Video() {
         section4BgVideo.muted = false;
         section4BgVideo.loop = false;
-        section4BgVideo.currentTime = 0;
-        showPauseState();
+        hideControlsWhilePlaying();
         section4BgVideo.play().catch(function () {});
+    }
+
+    section4PlayIcon.addEventListener("click", function (e) {
+        e.preventDefault();
+        playSection4Video();
     });
+
+    if (section4VideoPlayer) {
+        section4VideoPlayer.addEventListener("click", function (e) {
+            e.preventDefault();
+            playSection4Video();
+        });
+    }
 
     if (section4PauseIcon) {
         section4PauseIcon.addEventListener("click", function (e) {
@@ -1228,11 +1246,23 @@ $(document).ready(function () {
 
     section4BgVideo.addEventListener("click", function (e) {
         e.stopPropagation();
-        if (!section4BgVideo.paused) {
+        if (section4BgVideo.paused) {
+            section4BgVideo.play().catch(function () {});
+            hideControlsWhilePlaying();
+        } else {
             section4BgVideo.pause();
             showPlayState();
         }
     });
+
+    if (section4Wrap) {
+        section4Wrap.addEventListener("mouseenter", function () {
+            if (!section4BgVideo.paused) showPauseState();
+        });
+        section4Wrap.addEventListener("mouseleave", function () {
+            if (!section4BgVideo.paused) hideControlsWhilePlaying();
+        });
+    }
 
     section4BgVideo.addEventListener("ended", function () {
         section4BgVideo.muted = true;

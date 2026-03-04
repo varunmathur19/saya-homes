@@ -4,8 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Media Page</title>
-    <meta name="description" content="Saya Group clears ₹1,500 crore debt - Read the full coverage from Realty+, The Economic Times and other leading media outlets." />
+    <?php $meta_title = (isset($_GET['page']) && $_GET['page'] === 'career')
+        ? 'Saya Homes Careers | Why Work With Saya?'
+        : ((isset($_GET['page']) && $_GET['page'] === 'contact')
+            ? 'Contact Us | Saya Homes | Get in Touch Today'
+            : 'In the Media | Saya Homes | Featured in Press & News'); ?>
+    <?php $meta_description = (isset($_GET['page']) && $_GET['page'] === 'career')
+        ? "Join Saya Homes' careers. Openings in sales, marketing, finance, design & more in Greater Noida. Grow with a leading real estate team. Apply today."
+        : ((isset($_GET['page']) && $_GET['page'] === 'contact')
+            ? 'Contact us at Saya Homes. Get in touch for luxury residential & commercial inquiries in Greater Noida West. Use our form or call today.'
+            : 'Know more about Saya Homes, about our newly launched residential and commercial projects, community initiatives, and achievements.'); ?>
+    <?php $meta_keywords = (isset($_GET['page']) && $_GET['page'] === 'career')
+        ? 'careers, careers at saya homes'
+        : ((isset($_GET['page']) && $_GET['page'] === 'contact')
+            ? 'contact us, get in touch, inquiries'
+            : 'in the media, print media, digital media'); ?>
+    <title><?= $meta_title ?></title>
+    <meta name="description" content="<?= $meta_description ?>" />
+    <meta name="keywords" content="<?= $meta_keywords ?>" />
     <?php include_once('new-css.php') ?>
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -525,25 +541,6 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
     </section>
     <?php else: ?>
     <!-- News & Media Section: title, tabs, sort by year (template layout) -->
-    <section class="news-media-section media-two-news-section">
-        <div class="news-media-inner">
-            <h2 class="news-media-title">News & Media</h2>
-            <div class="news-media-controls">
-                <div class="news-media-tabs-wrap">
-                    <nav class="news-media-tabs" role="tablist" aria-label="Media type">
-                        <button type="button" class="news-media-tab news-media-tab--active" role="tab" aria-selected="true" data-tab="digital">Digital Media</button>
-                        <button type="button" class="news-media-tab" role="tab" aria-selected="false" data-tab="pr">PR Coverage</button>
-                        <button type="button" class="news-media-tab" role="tab" aria-selected="false" data-tab="print">Print Media</button>
-                        <div class="news-media-separator" aria-hidden="true">
-                            <span class="news-media-separator-track"></span>
-                            <span class="news-media-separator-indicator"></span>
-                        </div>
-                    </nav>
-                </div>
-                
-            </div>
-        </div>
-    </section>
     <section>
          <div class="news-media-sort-row">
                     <div class="news-media-sort-wrap">
@@ -1243,7 +1240,7 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                             <span class="media-template-date">2025</span>
                         </div>
                         <h3 class="media-template-title">Industry Experts See Affordable Housing Push from GST Cuts</h3>
-                        <span class="media-template-readmore">Read More</span>
+                        <span class="media-first-card-readmore">Read More</span>
                     </a>
                 </div>
                 <!-- Column 3 -->
@@ -1303,7 +1300,7 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                             <span class="media-template-date">2025</span>
                         </div>
                         <h3 class="media-template-title">Uttar Pradesh approves GIS-based Master Plan 2031 for Ghaziabad region with focus on transit-oriented development</h3>
-                        <span class="media-template-readmore">Read More</span>
+                        <span class="media-first-card-readmore">Read More</span>
                     </a>
                 </div>
                 <!-- Column 4 - extra boxes for Digital Media -->
@@ -1316,7 +1313,7 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                             <span class="media-template-date">2025</span>
                         </div>
                         <h3 class="media-template-title">Will the government's proposal for two GST slabs—5% and 18%—under a revamped tax regime benefit homebuyers?</h3>
-                        <span class="media-template-readmore">Read More</span>
+                        <span class="media-first-card-readmore">Read More</span>
                     </a>
                     <!-- Eighth card: slider with 9 Saya SouthX F&B/Entertainment articles – each slide links to its article -->
                     <div class="media-first-card-slider" id="mediaEighthCardSlider">
@@ -1405,7 +1402,7 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                             <span class="media-template-date">2025</span>
                         </div>
                         <h3 class="media-template-title">जाएं तो जाएं कहां, किराया भी महंगा, नए घर भी महंगे, Delhi NCR में कैसे पिस रहा है मिडिल क्लास</h3>
-                        <span class="media-template-readmore">Read More</span>
+                        <span class="media-first-card-readmore">Read More</span>
                     </a>
                     <!-- Eleventh card: slider with 9 Saya Gold Avenue Penthouse / Indirapuram articles -->
                     <div class="media-first-card-slider" id="mediaEleventhCardSlider">
@@ -1798,6 +1795,7 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
         (function () {
             var tabs = document.querySelectorAll('.news-media-tab');
             var indicator = document.querySelector('.news-media-separator-indicator');
+            var track = document.querySelector('.news-media-separator-track');
             var separator = document.querySelector('.news-media-separator');
             var grid = document.querySelector('.media-template-grid');
             var digitalOnlyCol = document.querySelector('.media-template-col--digital-only');
@@ -1812,6 +1810,15 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 var textEl = active.querySelector('.news-media-tab-text') || active;
                 var sepRect = separator.getBoundingClientRect();
                 var textRect = textEl.getBoundingClientRect();
+
+                if (track && tabs.length) {
+                    var firstTabText = (tabs[0].querySelector('.news-media-tab-text') || tabs[0]).getBoundingClientRect();
+                    var lastTabText = (tabs[tabs.length - 1].querySelector('.news-media-tab-text') || tabs[tabs.length - 1]).getBoundingClientRect();
+                    track.style.left = (firstTabText.left - sepRect.left) + 'px';
+                    track.style.width = (lastTabText.right - firstTabText.left) + 'px';
+                    track.style.right = 'auto';
+                }
+
                 var left = textRect.left - sepRect.left;
                 indicator.style.left = left + 'px';
                 indicator.style.width = textRect.width + 'px';
