@@ -541,8 +541,28 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
     </section>
     <?php else: ?>
     <!-- News & Media Section: title, tabs, sort by year (template layout) -->
-    <section>
-         <div class="news-media-sort-row">
+    <section class="news-media-section">
+        <div class="news-media-inner">
+            <h2 class="news-media-title">News &amp; Media</h2>
+            <div class="news-media-controls">
+                <div class="news-media-tabs-wrap">
+                    <div class="news-media-tabs" role="tablist" aria-label="Media categories">
+                        <button type="button" class="news-media-tab news-media-tab--active" data-tab="digital" role="tab" aria-selected="true">
+                            <span class="news-media-tab-text">Digital Media</span>
+                        </button>
+                        <button type="button" class="news-media-tab" data-tab="pr" role="tab" aria-selected="false">
+                            <span class="news-media-tab-text">PR Coverage</span>
+                        </button>
+                        <button type="button" class="news-media-tab" data-tab="print" role="tab" aria-selected="false">
+                            <span class="news-media-tab-text">Print Media</span>
+                        </button>
+                    </div>
+                    <div class="news-media-separator" aria-hidden="true">
+                        <span class="news-media-separator-track"></span>
+                        <span class="news-media-separator-indicator"></span>
+                    </div>
+                </div>
+                <div class="news-media-sort-row">
                     <div class="news-media-sort-wrap">
                         <span class="news-media-sort-label" id="sort-by-year-label">2025</span>
                         <select class="news-media-sort-select" id="sort-by-year-media" aria-label="Sort by year">
@@ -559,7 +579,9 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                         </span>
                     </div>
                 </div>
-         </section>
+            </div>
+        </div>
+    </section>
 
     <!-- News & Media Template Grid: 3 columns, 2 boxes per column (3x2) -->
     <section class="media-article-section media-template-section">
@@ -1669,11 +1691,16 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
     <script>
         // GSAP ScrollTrigger – section animations (same style as home)
         (function() {
-            if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+            if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
             gsap.registerPlugin(ScrollTrigger);
 
+            function animateIfPresent(selector, vars) {
+                if (!document.querySelector(selector)) return;
+                gsap.from(selector, vars);
+            }
+
             // Banner content – fade up
-            gsap.from(".media-banner-content", {
+            animateIfPresent(".media-banner-content", {
                 duration: 1,
                 y: 40,
                 opacity: 0,
@@ -1681,7 +1708,7 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
             });
 
             // News ticker – fade up when in view
-            gsap.from(".media-news-ticker", {
+            animateIfPresent(".media-news-ticker", {
                 scrollTrigger: { trigger: ".media-news-ticker", start: "top 85%", toggleActions: "play none none none" },
                 duration: 0.8,
                 y: 30,
@@ -1690,14 +1717,14 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
             });
 
             // News & Media section – fade up
-            gsap.from(".news-media-section", {
+            animateIfPresent(".news-media-section", {
                 scrollTrigger: { trigger: ".news-media-section", start: "top 85%", toggleActions: "play none none none" },
                 duration: 1,
                 y: 50,
                 opacity: 0,
                 ease: "power2.out"
             });
-            gsap.from(".news-media-title", {
+            animateIfPresent(".news-media-title", {
                 scrollTrigger: { trigger: ".news-media-section", start: "top 85%", toggleActions: "play none none none" },
                 duration: 0.6,
                 y: 20,
@@ -1706,18 +1733,52 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 delay: 0.2
             });
 
-            // Media article section – stagger fade up (like home section cards)
-            gsap.from(".media-template-col", {
-                scrollTrigger: { trigger: ".media-article-section", start: "top 80%", toggleActions: "play none none none" },
-                duration: 0.8,
-                y: 50,
-                opacity: 0,
-                stagger: 0.15,
-                ease: "power2.out"
-            });
+            function animateVisibleCardsIn(containerSelector, cardSelector) {
+                var container = document.querySelector(containerSelector);
+                if (!container) return;
+                var cards = Array.prototype.filter.call(container.querySelectorAll(cardSelector), function(card) {
+                    return card.offsetParent !== null;
+                });
+                if (!cards.length) return;
+                gsap.killTweensOf(cards);
+                gsap.set(cards, { clearProps: "transform,opacity" });
+                gsap.from(cards, {
+                    duration: 0.95,
+                    x: 70,
+                    opacity: 0,
+                    stagger: 0.12,
+                    ease: "power3.out"
+                });
+            }
+
+            // Media page – all visible cards move in from right
+            window.runMediaCardAnimation = function(tabKey) {
+                if (document.body.classList.contains("new-event-page")) return;
+                if (tabKey === "pr") {
+                    animateVisibleCardsIn("#media-pr-coverage-wrap", ".media-template-box");
+                    return;
+                }
+                if (tabKey === "print") {
+                    animateVisibleCardsIn("#media-print-coverage-wrap", ".media-template-box");
+                    return;
+                }
+                animateVisibleCardsIn(".media-template-grid", ".media-template-box");
+            };
+            if (document.querySelector(".media-article-section")) {
+                ScrollTrigger.create({
+                    trigger: ".media-article-section",
+                    start: "top 80%",
+                    once: true,
+                    onEnter: function() {
+                        if (typeof window.runMediaCardAnimation === "function") {
+                            window.runMediaCardAnimation("digital");
+                        }
+                    }
+                });
+            }
 
             // Get To Know banner – fade up
-            gsap.from(".get-to-know-banner-wrap", {
+            animateIfPresent(".get-to-know-banner-wrap", {
                 scrollTrigger: { trigger: ".get-to-know-banner-wrap", start: "top 85%", toggleActions: "play none none none" },
                 duration: 1,
                 y: 40,
@@ -1726,14 +1787,14 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
             });
 
             // Section 10 (Request a Call Back) – same as home: section fade up, content fade down, form zoom-in
-            gsap.from(".section-10", {
+            animateIfPresent(".section-10", {
                 scrollTrigger: { trigger: ".section-10", start: "top 85%", toggleActions: "play none none none" },
                 duration: 1,
                 y: 40,
                 opacity: 0,
                 ease: "power2.out"
             });
-            gsap.from(".section-10-content", {
+            animateIfPresent(".section-10-content", {
                 scrollTrigger: { trigger: ".section-10", start: "top 85%", toggleActions: "play none none none" },
                 duration: 0.6,
                 y: 25,
@@ -1742,7 +1803,7 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 delay: 0.15
             });
             /* Only animate the form inside .section-10 (media page), not the contact page form */
-            gsap.from(".section-10 .section-10-contact-us-form", {
+            animateIfPresent(".section-10 .section-10-contact-us-form", {
                 scrollTrigger: { trigger: ".section-10", start: "top 85%", toggleActions: "play none none none" },
                 duration: 0.8,
                 scale: 0.95,
@@ -1750,6 +1811,98 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 ease: "power2.out",
                 delay: 0.3
             });
+
+            // Event page – title and cards stagger animation
+            if (document.body.classList.contains("new-event-page")) {
+                animateIfPresent(".event-page-title", {
+                    scrollTrigger: { trigger: ".event-page-section", start: "top 85%", toggleActions: "play none none none" },
+                    duration: 0.7,
+                    y: 24,
+                    opacity: 0,
+                    ease: "power2.out"
+                });
+                ScrollTrigger.create({
+                    trigger: ".event-page-grid",
+                    start: "top 82%",
+                    once: true,
+                    onEnter: function() {
+                        animateVisibleCardsIn(".event-page-grid", ".event-page-card");
+                    }
+                });
+            }
+
+            // Career page – cards reveal from right (same feel as media/event cards)
+            if (document.body.classList.contains("new-career-page")) {
+                animateIfPresent(".career-section-inner", {
+                    scrollTrigger: { trigger: ".career-section-main", start: "top 85%", toggleActions: "play none none none" },
+                    duration: 0.8,
+                    y: 30,
+                    opacity: 0,
+                    ease: "power2.out"
+                });
+                if (document.querySelector(".career-cards-grid")) {
+                    ScrollTrigger.create({
+                        trigger: ".career-cards-section",
+                        start: "top 82%",
+                        once: true,
+                        onEnter: function() {
+                            animateVisibleCardsIn(".career-cards-grid", ".career-card");
+                        }
+                    });
+                }
+                if (document.querySelector(".career-jobs-grid")) {
+                    ScrollTrigger.create({
+                        trigger: ".career-openings-section",
+                        start: "top 85%",
+                        once: true,
+                        onEnter: function() {
+                            animateVisibleCardsIn(".career-jobs-grid", ".career-job-card");
+                        }
+                    });
+                }
+            }
+
+            // Contact page – details + map reveal animations
+            if (document.body.classList.contains("new-contact-page")) {
+                animateIfPresent(".contact-details-section", {
+                    scrollTrigger: { trigger: ".contact-details-section", start: "top 85%", toggleActions: "play none none none" },
+                    duration: 0.8,
+                    y: 40,
+                    opacity: 0,
+                    ease: "power2.out"
+                });
+                animateIfPresent(".contact-details-left", {
+                    scrollTrigger: { trigger: ".contact-details-section", start: "top 82%", toggleActions: "play none none none" },
+                    duration: 0.9,
+                    x: -50,
+                    opacity: 0,
+                    ease: "power3.out"
+                });
+                animateIfPresent(".contact-details-right", {
+                    scrollTrigger: { trigger: ".contact-details-section", start: "top 82%", toggleActions: "play none none none" },
+                    duration: 0.9,
+                    x: 50,
+                    opacity: 0,
+                    ease: "power3.out",
+                    delay: 0.08
+                });
+                animateIfPresent(".contact-details-item", {
+                    scrollTrigger: { trigger: ".contact-details-section", start: "top 80%", toggleActions: "play none none none" },
+                    duration: 0.6,
+                    x: 35,
+                    opacity: 0,
+                    stagger: 0.1,
+                    ease: "power2.out",
+                    delay: 0.12
+                });
+                animateIfPresent(".contact-page-map-wrap", {
+                    scrollTrigger: { trigger: ".contact-page-map-section", start: "top 85%", toggleActions: "play none none none" },
+                    duration: 0.9,
+                    y: 35,
+                    opacity: 0,
+                    ease: "power2.out"
+                });
+            }
         })();
     </script>
 
@@ -1866,6 +2019,9 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                         });
                         textOnlyBoxes.forEach(function (el) { el.style.display = ''; });
                     }
+                }
+                if (typeof window.runMediaCardAnimation === 'function') {
+                    window.runMediaCardAnimation(tabKey);
                 }
             }
             tabs.forEach(function (tab) {
@@ -2027,6 +2183,9 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 updateLabel();
                 ensureReadMoreForYearCards();
                 updateFirstBoxByYear();
+                if (typeof window.runMediaCardAnimation === 'function') {
+                    window.runMediaCardAnimation('digital');
+                }
             });
             updateLabel();
             ensureReadMoreForYearCards();
