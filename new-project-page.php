@@ -385,7 +385,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                         <img src="<?= $base_url ?>/images/svg/projectpiazzalogo.svg" alt="<?= htmlspecialchars($project_display_name) ?>" class="project-overview-logo">
                     </div>
                     <p class="project-overview-gold-text">Saya Piazza is ready to take your shopping experience to the next level, featuring diverse luxury brands and landscaped surroundings.</p>
-                    <div class="project-overview-gold-cards">
+                    <div class="project-overview-gold-cards" style="flex-wrap: wrap !important; row-gap: 20px;">
                         <div class="project-overview-gold-card">
                             <span class="project-overview-gold-card-num">1162+ Acres</span>
                             <span class="project-overview-gold-card-label">Integrated Township</span>
@@ -398,7 +398,8 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                             <span class="project-overview-gold-card-num">100K+</span>
                             <span class="project-overview-gold-card-label">People Working in MNCs</span>
                         </div>
-                        <div class="project-overview-gold-card">
+                        <div style="flex: 0 0 100%; width: 100%; height: 0;"></div>
+                        <div class="project-overview-gold-card" style="flex: 0 0 266px;">
                             <span class="project-overview-gold-card-num">200 Acre</span>
                             <span class="project-overview-gold-card-label">18+9 Hole Golf Course</span>
                         </div>

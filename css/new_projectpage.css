@@ -1381,7 +1381,7 @@
 @media (max-width: 631px) {
     .project-overview-left--gold .project-overview-gold-text {
         font-size: 24px;
-        line-height: 26px;
+        line-height: auto;
     }
     .project-overview-left--gold .project-overview-gold-club {
         font-size: 24px;
@@ -2308,7 +2308,8 @@
     border-bottom: none;
 }
 /* Saya Zion: Event Space & Amphitheatre (second-last) also gets underline */
-.project-section-8--saya-zion .project-section-8-gold-icon-item:nth-last-child(2) {
+.project-section-8--saya-zion
+    .project-section-8-gold-icon-item:nth-last-child(2) {
     border-bottom: 2px solid #dddddd;
 }
 
