@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
             location: "Indirapuram, Ghaziabad",
             desc: "A unique address with upstretched 3 & 4 BHK units and luxury penthouses.",
             image: baseUrl + "images/new_theme/goldavenueslider.jpg",
-            url: baseUrl + "new-project-page.php?project=gold-avenue",
+            url: baseUrl + "saya-gold-avenue",
             type: "residential",
         },
         {
@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
             location: "Greater Noida West",
             desc: "Contemporary homes designed with a focus on refined comfort and effortless living.",
             image: baseUrl + "images/new_theme/main_slider2.jpg",
-            url: baseUrl + "new-project-page.php?project=saya-zion",
+            url: baseUrl + "saya-zion",
             type: "residential",
         },
         {
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
             location: "Indirapuram, Ghaziabad",
             desc: "Beautifully designed ready-to-move residences with a focus on spacious living, elegance, and connectivity.",
             image: baseUrl + "images/new_theme/saya_zenith.jpg",
-            url: baseUrl + "new-project-page.php?project=saya-zenith",
+            url: baseUrl + "saya-zenith",
             type: "residential",
         },
         {
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
             location: "Indirapuram, Ghaziabad",
             desc: "Comfort-oriented residences located in a well-established area, designed for easy living.",
             image: baseUrl + "images/new_theme/sldierdesireimage.jpg",
-            url: baseUrl + "new-project-page.php?project=saya-desire-residency",
+            url: baseUrl + "saya-desire-residency",
             type: "residential",
         },
         {
@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
             location: "Greater Noida West",
             desc: "A landmark high-street destination redefining premium retail, dining, and business experiences.",
             image: baseUrl + "images/new_theme/sayasouthx.jpg",
-            url: baseUrl + "new-project-page.php",
+            url: baseUrl + "saya-southX",
             type: "commercial",
         },
         {
@@ -175,16 +175,16 @@ document.addEventListener("DOMContentLoaded", function () {
             location: "Greater Noida West",
             desc: "An iconic commercial tower designed for modern enterprises, exceptional visibility, and high-growth potential.",
             image: baseUrl + "images/new_theme/Biztophomeslider.jpg",
-            url: baseUrl + "new-project-page.php?project=saya-biztop",
+            url: baseUrl + "saya-biztop",
             type: "commercial",
         },
         {
             id: "03",
             title: "Saya Piazza",
             location: "Greater Noida West",
-            desc: "A vibrant retail and entertainment hub curated for dynamic experiences and strong investment value.",
+            desc: "The ultimate shopping destination and entertainment hub curated for dynamic experiences and strong investment value.",
             image: baseUrl + "images/new_theme/sayapiazza.jpg",
-            url: baseUrl + "new-project-page.php?project=saya-piazza",
+            url: baseUrl + "saya-piazza",
             type: "commercial",
         },
     ];
@@ -524,12 +524,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Projects Header Click Handler
 document.addEventListener("DOMContentLoaded", function () {
-    // Check if GSAP is available
-    if (typeof gsap === "undefined") {
+    // Keep dropdown working even if GSAP fails to load.
+    const hasGsap = typeof gsap !== "undefined";
+    if (!hasGsap) {
         console.warn(
-            "GSAP is not loaded. Projects header animation will not work.",
+            "GSAP is not loaded. Falling back to basic projects dropdown.",
         );
-        return;
     }
 
     const projectsLink = document.querySelector(
@@ -576,17 +576,22 @@ document.addEventListener("DOMContentLoaded", function () {
     let isProjectMenuOpen = false;
 
     // Set initial states
-    gsap.set(hoverProjectHeaderContainer, {
-        opacity: 0,
-        visibility: "hidden",
-    });
+    if (hasGsap) {
+        gsap.set(hoverProjectHeaderContainer, {
+            opacity: 0,
+            visibility: "hidden",
+        });
 
-    // Background image: starts above (upar), will animate down (niche) in 2s
-    if (hoverProjectHeaderBg) {
-        gsap.set(hoverProjectHeaderBg, { yPercent: -100 });
+        // Background image: starts above (upar), will animate down (niche) in 2s
+        if (hoverProjectHeaderBg) {
+            gsap.set(hoverProjectHeaderBg, { yPercent: -100 });
+        }
+
+        gsap.set(hoverProjectHeaderContent, { y: "-100%" });
+    } else {
+        hoverProjectHeaderContainer.style.opacity = "0";
+        hoverProjectHeaderContainer.style.visibility = "hidden";
     }
-
-    gsap.set(hoverProjectHeaderContent, { y: "-100%" });
 
     // Function to open projects menu
     function openProjectsMenu() {
@@ -596,6 +601,11 @@ document.addEventListener("DOMContentLoaded", function () {
         hoverProjectHeaderContainer.classList.add("active");
         body.classList.add("menu-open");
         body.style.overflow = "hidden";
+        if (!hasGsap) {
+            hoverProjectHeaderContainer.style.visibility = "visible";
+            hoverProjectHeaderContainer.style.opacity = "1";
+            return;
+        }
 
         projectMenuTimeline = gsap.timeline({
             defaults: {
@@ -648,6 +658,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to close projects menu
     function closeProjectsMenu() {
         if (!isProjectMenuOpen) return;
+        if (!hasGsap) {
+            hoverProjectHeaderContainer.classList.remove("active");
+            body.classList.remove("menu-open");
+            body.style.overflow = "";
+            isProjectMenuOpen = false;
+            projectMenuTimeline = null;
+            hoverProjectHeaderContainer.style.opacity = "0";
+            hoverProjectHeaderContainer.style.visibility = "hidden";
+            return;
+        }
 
         if (projectMenuTimeline) {
             projectMenuTimeline.kill();

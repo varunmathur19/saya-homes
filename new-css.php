@@ -12,10 +12,19 @@ $host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : (isset($_SERVER['
 
 // Get the base path (subdirectory if exists)
 $script_dir = dirname($_SERVER['SCRIPT_NAME']);
+
+// On some Windows + rewrite cases SCRIPT_NAME can be a filesystem path (C:/...).
+// If that happens, derive web base path from REQUEST_URI instead.
+if (strpos($script_dir, ':') !== false) {
+    $request_path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
+    $script_dir = dirname($request_path ?: '/');
+}
+
 $base_path = ($script_dir === '/' || $script_dir === '\\') ? '' : rtrim($script_dir, '/');
 
 // Build base URL
 $base_url = $protocol . $host . $base_path;
+$asset_version = '20260305';
 
 
 // Remove the .php extension
@@ -68,8 +77,8 @@ $page_title = ucwords(str_replace('-', ' ', $page_title));
 <link href="<?= $base_url ?>/images/favicon.png" rel="shortcut icon" type="image/png">
 
 <!-- Critical CSS - Load immediately for above-the-fold content -->
-<link rel="stylesheet" href="<?= $base_url ?>/css/bootstrap.min.css" />
-<link rel="stylesheet" href="<?= $base_url ?>/css/new_layout.css" />
+<link rel="stylesheet" href="<?= $base_url ?>/css/bootstrap.min.css?v=<?= $asset_version ?>" />
+<link rel="stylesheet" href="<?= $base_url ?>/css/new_layout.css?v=<?= $asset_version ?>" />
 <!-- <link rel="stylesheet" href="<?= $base_url ?>/css/custom-9-jul.css" /> -->
 
 <!-- Non-critical CSS - Load with media="print" then switch to "all" for async loading -->
@@ -78,9 +87,9 @@ $page_title = ucwords(str_replace('-', ' ', $page_title));
     <link rel="stylesheet" href="<?= $base_url ?>/css/all.min.css">
 </noscript> -->
 
-<link rel="stylesheet" href="<?= $base_url ?>/css/swiper-bundle.min.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="<?= $base_url ?>/css/swiper-bundle.min.css?v=<?= $asset_version ?>" media="print" onload="this.media='all'">
 <noscript>
-    <link rel="stylesheet" href="<?= $base_url ?>/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="<?= $base_url ?>/css/swiper-bundle.min.css?v=<?= $asset_version ?>">
 </noscript>
 
 <!-- <link rel="stylesheet" href="<?= $base_url ?>/css/jquery.magnify.css" media="print" onload="this.media='all'">

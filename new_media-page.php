@@ -49,6 +49,8 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
         <div class="media-banner-image media-banner-image-mobile" style="background-image: url('<?= $base_url ?>/images/new_theme/media-mobile.jpg');"></div>
         <?php elseif ($is_contact_page): ?>
         <div class="media-banner-image media-banner-image-mobile" style="background-image: url('<?= $base_url ?>/images/new_theme/mobile- contact.jpg');"></div>
+        <?php elseif ($is_career_page): ?>
+        <div class="media-banner-image media-banner-image-mobile" style="background-image: url('<?= $base_url ?>/images/new_theme/carrermobilebanner.jpg');"></div>
         <?php elseif ($is_event_page): ?>
         <div class="media-banner-image media-banner-image-mobile" style="background-image: url('<?= $base_url ?>/images/new_theme/evnetmobilebanner.jpg');"></div>
         <?php endif; ?>
@@ -300,12 +302,12 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 <article class="career-job-card">
                     <div class="career-job-card-top">
                         <span class="career-job-card-new-badge">NEW</span>
-                        <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                        <!-- <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg> -->
                     </div>
                     <h3 class="career-job-card-title">Manager / Sr. Manager Sales</h3>
                     <p class="career-job-card-dept">Sales Support</p>
                     <div class="career-job-card-details">
-                        <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span>
+                        <!-- <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span> -->
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>03 - 12 yrs Experience</span>
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Full-time</span>
                     </div>
@@ -317,12 +319,12 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 <article class="career-job-card">
                     <div class="career-job-card-top">
                         <span class="career-job-card-new-badge career-job-card-new-badge--hide"></span>
-                        <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                        <!-- <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg> -->
                     </div>
                     <h3 class="career-job-card-title">Guest Relation Executive</h3>
                     <p class="career-job-card-dept">Reception/GRE Department</p>
                     <div class="career-job-card-details">
-                        <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span>
+                        <!-- <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span> -->
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>03 - 06 yrs Experience</span>
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Full-time</span>
                     </div>
@@ -334,12 +336,12 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 <article class="career-job-card">
                     <div class="career-job-card-top">
                         <span class="career-job-card-new-badge career-job-card-new-badge--hide"></span>
-                        <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                        <!-- <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg> -->
                     </div>
                     <h3 class="career-job-card-title">Pre Sales / Tele Caller</h3>
                     <p class="career-job-card-dept">Sales Support</p>
                     <div class="career-job-card-details">
-                        <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span>
+                        <!-- <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span> -->
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>03 - 06 yrs Experience</span>
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Full-time</span>
                     </div>
@@ -351,12 +353,12 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 <article class="career-job-card">
                     <div class="career-job-card-top">
                         <span class="career-job-card-new-badge career-job-card-new-badge--hide"></span>
-                        <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                        <!-- <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg> -->
                     </div>
                     <h3 class="career-job-card-title">Functional Area</h3>
                     <p class="career-job-card-dept">Finance &amp; Accounts</p>
                     <div class="career-job-card-details">
-                        <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span>
+                        <!-- <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span> -->
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>05 - 12 yrs Experience</span>
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Full-time</span>
                     </div>
@@ -368,12 +370,12 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 <article class="career-job-card">
                     <div class="career-job-card-top">
                         <span class="career-job-card-new-badge career-job-card-new-badge--hide"></span>
-                        <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                        <!-- <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg> -->
                     </div>
                     <h3 class="career-job-card-title">Functional Area</h3>
                     <p class="career-job-card-dept">Finance &amp; Accounts</p>
                     <div class="career-job-card-details">
-                        <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span>
+                        <!-- <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span> -->
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>03 - 09 yrs Experience</span>
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Full-time</span>
                     </div>
@@ -385,12 +387,12 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 <article class="career-job-card">
                     <div class="career-job-card-top">
                         <span class="career-job-card-new-badge career-job-card-new-badge--hide"></span>
-                        <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                        <!-- <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg> -->
                     </div>
                     <h3 class="career-job-card-title">Functional Area</h3>
                     <p class="career-job-card-dept">CRM</p>
                     <div class="career-job-card-details">
-                        <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span>
+                        <!-- <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span> -->
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>08 - 15 yrs Experience</span>
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Full-time</span>
                     </div>
@@ -402,12 +404,12 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 <article class="career-job-card">
                     <div class="career-job-card-top">
                         <span class="career-job-card-new-badge career-job-card-new-badge--hide"></span>
-                        <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                        <!-- <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg> -->
                     </div>
                     <h3 class="career-job-card-title">Functional Area</h3>
                     <p class="career-job-card-dept">CRM</p>
                     <div class="career-job-card-details">
-                        <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span>
+                        <!-- <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span> -->
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>01 - 05 yrs Experience</span>
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Full-time</span>
                     </div>
@@ -419,12 +421,12 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 <article class="career-job-card">
                     <div class="career-job-card-top">
                         <span class="career-job-card-new-badge career-job-card-new-badge--hide"></span>
-                        <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                        <!-- <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg> -->
                     </div>
                     <h3 class="career-job-card-title">Functional Area</h3>
                     <p class="career-job-card-dept">Legal</p>
                     <div class="career-job-card-details">
-                        <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span>
+                        <!-- <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span> -->
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>03 - 09 yrs Experience</span>
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Full-time</span>
                     </div>
@@ -436,12 +438,12 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 <article class="career-job-card">
                     <div class="career-job-card-top">
                         <span class="career-job-card-new-badge career-job-card-new-badge--hide"></span>
-                        <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                        <!-- <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg> -->
                     </div>
                     <h3 class="career-job-card-title">Functional Area</h3>
                     <p class="career-job-card-dept">CRM</p>
                     <div class="career-job-card-details">
-                        <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span>
+                        <!-- <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span> -->
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>01-03 yrs Experience</span>
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Full-time</span>
                     </div>
@@ -453,12 +455,12 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 <article class="career-job-card">
                     <div class="career-job-card-top">
                         <span class="career-job-card-new-badge career-job-card-new-badge--hide"></span>
-                        <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                        <!-- <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg> -->
                     </div>
                     <h3 class="career-job-card-title">Functional Area</h3>
                     <p class="career-job-card-dept">Real Estate</p>
                     <div class="career-job-card-details">
-                        <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span>
+                        <!-- <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span> -->
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>07 - 12 yrs Experience</span>
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Full-time</span>
                     </div>
@@ -470,12 +472,12 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 <article class="career-job-card">
                     <div class="career-job-card-top">
                         <span class="career-job-card-new-badge career-job-card-new-badge--hide"></span>
-                        <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                        <!-- <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg> -->
                     </div>
                     <h3 class="career-job-card-title">Functional Area</h3>
                     <p class="career-job-card-dept">Real Estate</p>
                     <div class="career-job-card-details">
-                        <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span>
+                        <!-- <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span> -->
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>04 - 09 yrs Experience</span>
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Full-time</span>
                     </div>
@@ -487,12 +489,12 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 <article class="career-job-card">
                     <div class="career-job-card-top">
                         <span class="career-job-card-new-badge career-job-card-new-badge--hide"></span>
-                        <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                        <!-- <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg> -->
                     </div>
                     <h3 class="career-job-card-title">Functional Area</h3>
                     <p class="career-job-card-dept">Leasing</p>
                     <div class="career-job-card-details">
-                        <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span>
+                        <!-- <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span> -->
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>03 - 07 yrs Experience</span>
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Full-time</span>
                     </div>
@@ -504,12 +506,12 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 <article class="career-job-card">
                     <div class="career-job-card-top">
                         <span class="career-job-card-new-badge career-job-card-new-badge--hide"></span>
-                        <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                        <!-- <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg> -->
                     </div>
                     <h3 class="career-job-card-title">Functional Area</h3>
                     <p class="career-job-card-dept">Commercial/ Luxury Sales</p>
                     <div class="career-job-card-details">
-                        <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span>
+                        <!-- <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span> -->
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>07 -12 yrs Experience</span>
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Full-time</span>
                     </div>
@@ -521,12 +523,12 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 <article class="career-job-card">
                     <div class="career-job-card-top">
                         <span class="career-job-card-new-badge career-job-card-new-badge--hide"></span>
-                        <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                        <!-- <svg class="career-job-card-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg> -->
                     </div>
                     <h3 class="career-job-card-title">Functional Area</h3>
                     <p class="career-job-card-dept">Sales Support</p>
                     <div class="career-job-card-details">
-                        <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span>
+                        <!-- <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Indirapuram, Ghaziabad</span> -->
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>01 - 05 yrs Experience</span>
                         <span class="career-job-card-detail-row"><svg class="career-job-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Full-time</span>
                     </div>
@@ -562,29 +564,29 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                         <span class="news-media-separator-indicator"></span>
                     </div>
                 </div>
-                <div class="news-media-sort-row">
-                    <div class="news-media-sort-wrap">
-                        <span class="news-media-sort-label" id="sort-by-year-label">2025</span>
-                        <select class="news-media-sort-select" id="sort-by-year-media" aria-label="Sort by year">
-                            <option value="2025" selected>2025</option>
-                            <option value="2024">2024</option>
-                            <option value="2023">2023</option>
-                            <option value="2022">2022</option>
-                            <option value="2021">2021</option>
-                            <option value="2020">2020</option>
-                            <option value="2019">2019</option>
-                        </select>
-                        <span class="news-media-sort-arrow" aria-hidden="true">
-                            <img src="<?= $base_url ?>/images/svg/mediadownarrow.svg" alt="" class="news-media-sort-arrow-img">
-                        </span>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- News & Media Template Grid: 3 columns, 2 boxes per column (3x2) -->
     <section class="media-article-section media-template-section">
+        <div class="news-media-sort-row">
+            <div class="news-media-sort-wrap">
+                <span class="news-media-sort-label" id="sort-by-year-label">2025</span>
+                <select class="news-media-sort-select" id="sort-by-year-media" aria-label="Sort by year">
+                    <option value="2025" selected>2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                </select>
+                <span class="news-media-sort-arrow" aria-hidden="true">
+                    <img src="<?= $base_url ?>/images/svg/mediadownarrow.svg" alt="" class="news-media-sort-arrow-img">
+                </span>
+            </div>
+        </div>
         <div class="media-article-inner">
             <!-- PR Coverage: shown only when PR Coverage tab is active; 4 cards in one row -->
             <div class="media-pr-coverage-wrap" id="media-pr-coverage-wrap" style="display: none;">
@@ -1689,220 +1691,91 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
     <?php include_once('inc-script.php') ?>
 
     <script>
-        // GSAP ScrollTrigger – section animations (same style as home)
+        // GSAP ScrollTrigger – Media cards + Career + Contact page
         (function() {
-            if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+            if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
             gsap.registerPlugin(ScrollTrigger);
 
-            function animateIfPresent(selector, vars) {
-                if (!document.querySelector(selector)) return;
-                gsap.from(selector, vars);
+            // Media page – cards slide from right, one by one (Digital, PR Coverage, Print Media)
+            function animateMediaCards() {
+                var containers = [".media-template-grid", "#media-pr-coverage-wrap", "#media-print-coverage-wrap"];
+                containers.forEach(function(sel) {
+                    var el = document.querySelector(sel);
+                    if (!el || el.offsetParent === null) return;
+                    var cards = [].filter.call(el.querySelectorAll(".media-template-box"), function(c) { return c.offsetParent !== null; });
+                    if (cards.length) {
+                        gsap.killTweensOf(cards);
+                        gsap.set(cards, { clearProps: "transform,opacity" });
+                        gsap.from(cards, {
+                            duration: 0.95,
+                            x: 70,
+                            opacity: 0,
+                            stagger: 0.12,
+                            ease: "power3.out"
+                        });
+                    }
+                });
+            }
+            window.runMediaCardAnimation = animateMediaCards;
+
+            if (!document.body.classList.contains('new-event-page') && !document.body.classList.contains('new-contact-page') && !document.body.classList.contains('new-career-page')) {
+                ScrollTrigger.create({
+                    trigger: ".media-article-section",
+                    start: "top 85%",
+                    once: true,
+                    onEnter: animateMediaCards
+                });
             }
 
-            // Banner content – fade up
-            animateIfPresent(".media-banner-content", {
-                duration: 1,
+            // Career page animations
+            gsap.from(".career-section-main .career-section-inner", {
+                scrollTrigger: { trigger: ".career-section-main", start: "top 85%", toggleActions: "play none none none" },
+                duration: 0.9,
                 y: 40,
                 opacity: 0,
                 ease: "power2.out"
             });
+            gsap.from(".career-card", {
+                scrollTrigger: { trigger: ".career-cards-section", start: "top 85%", toggleActions: "play none none none" },
+                duration: 0.75,
+                y: 35,
+                opacity: 0,
+                stagger: 0.12,
+                ease: "power2.out"
+            });
+            gsap.from(".career-job-card", {
+                scrollTrigger: { trigger: ".career-openings-section", start: "top 85%", toggleActions: "play none none none" },
+                duration: 0.75,
+                y: 35,
+                opacity: 0,
+                stagger: 0.12,
+                ease: "power2.out"
+            });
 
-            // News ticker – fade up when in view
-            animateIfPresent(".media-news-ticker", {
-                scrollTrigger: { trigger: ".media-news-ticker", start: "top 85%", toggleActions: "play none none none" },
+            // Contact page animations
+            gsap.from(".contact-details-item", {
+                scrollTrigger: { trigger: ".contact-details-section", start: "top 85%", toggleActions: "play none none none" },
+                duration: 0.7,
+                y: 28,
+                opacity: 0,
+                stagger: 0.1,
+                ease: "power2.out"
+            });
+            gsap.from(".contact-details-right-container", {
+                scrollTrigger: { trigger: ".contact-details-section", start: "top 82%", toggleActions: "play none none none" },
                 duration: 0.8,
+                x: 24,
+                opacity: 0,
+                ease: "power2.out",
+                delay: 0.1
+            });
+            gsap.from(".contact-page-map-wrap", {
+                scrollTrigger: { trigger: ".contact-page-map-section", start: "top 85%", toggleActions: "play none none none" },
+                duration: 0.9,
                 y: 30,
                 opacity: 0,
                 ease: "power2.out"
             });
-
-            // News & Media section – fade up
-            animateIfPresent(".news-media-section", {
-                scrollTrigger: { trigger: ".news-media-section", start: "top 85%", toggleActions: "play none none none" },
-                duration: 1,
-                y: 50,
-                opacity: 0,
-                ease: "power2.out"
-            });
-            animateIfPresent(".news-media-title", {
-                scrollTrigger: { trigger: ".news-media-section", start: "top 85%", toggleActions: "play none none none" },
-                duration: 0.6,
-                y: 20,
-                opacity: 0,
-                ease: "power2.out",
-                delay: 0.2
-            });
-
-            function animateVisibleCardsIn(containerSelector, cardSelector) {
-                var container = document.querySelector(containerSelector);
-                if (!container) return;
-                var cards = Array.prototype.filter.call(container.querySelectorAll(cardSelector), function(card) {
-                    return card.offsetParent !== null;
-                });
-                if (!cards.length) return;
-                gsap.killTweensOf(cards);
-                gsap.set(cards, { clearProps: "transform,opacity" });
-                gsap.from(cards, {
-                    duration: 0.95,
-                    x: 70,
-                    opacity: 0,
-                    stagger: 0.12,
-                    ease: "power3.out"
-                });
-            }
-
-            // Media page – all visible cards move in from right
-            window.runMediaCardAnimation = function(tabKey) {
-                if (document.body.classList.contains("new-event-page")) return;
-                if (tabKey === "pr") {
-                    animateVisibleCardsIn("#media-pr-coverage-wrap", ".media-template-box");
-                    return;
-                }
-                if (tabKey === "print") {
-                    animateVisibleCardsIn("#media-print-coverage-wrap", ".media-template-box");
-                    return;
-                }
-                animateVisibleCardsIn(".media-template-grid", ".media-template-box");
-            };
-            if (document.querySelector(".media-article-section")) {
-                ScrollTrigger.create({
-                    trigger: ".media-article-section",
-                    start: "top 80%",
-                    once: true,
-                    onEnter: function() {
-                        if (typeof window.runMediaCardAnimation === "function") {
-                            window.runMediaCardAnimation("digital");
-                        }
-                    }
-                });
-            }
-
-            // Get To Know banner – fade up
-            animateIfPresent(".get-to-know-banner-wrap", {
-                scrollTrigger: { trigger: ".get-to-know-banner-wrap", start: "top 85%", toggleActions: "play none none none" },
-                duration: 1,
-                y: 40,
-                opacity: 0,
-                ease: "power2.out"
-            });
-
-            // Section 10 (Request a Call Back) – same as home: section fade up, content fade down, form zoom-in
-            animateIfPresent(".section-10", {
-                scrollTrigger: { trigger: ".section-10", start: "top 85%", toggleActions: "play none none none" },
-                duration: 1,
-                y: 40,
-                opacity: 0,
-                ease: "power2.out"
-            });
-            animateIfPresent(".section-10-content", {
-                scrollTrigger: { trigger: ".section-10", start: "top 85%", toggleActions: "play none none none" },
-                duration: 0.6,
-                y: 25,
-                opacity: 0,
-                ease: "power2.out",
-                delay: 0.15
-            });
-            /* Only animate the form inside .section-10 (media page), not the contact page form */
-            animateIfPresent(".section-10 .section-10-contact-us-form", {
-                scrollTrigger: { trigger: ".section-10", start: "top 85%", toggleActions: "play none none none" },
-                duration: 0.8,
-                scale: 0.95,
-                opacity: 0,
-                ease: "power2.out",
-                delay: 0.3
-            });
-
-            // Event page – title and cards stagger animation
-            if (document.body.classList.contains("new-event-page")) {
-                animateIfPresent(".event-page-title", {
-                    scrollTrigger: { trigger: ".event-page-section", start: "top 85%", toggleActions: "play none none none" },
-                    duration: 0.7,
-                    y: 24,
-                    opacity: 0,
-                    ease: "power2.out"
-                });
-                ScrollTrigger.create({
-                    trigger: ".event-page-grid",
-                    start: "top 82%",
-                    once: true,
-                    onEnter: function() {
-                        animateVisibleCardsIn(".event-page-grid", ".event-page-card");
-                    }
-                });
-            }
-
-            // Career page – cards reveal from right (same feel as media/event cards)
-            if (document.body.classList.contains("new-career-page")) {
-                animateIfPresent(".career-section-inner", {
-                    scrollTrigger: { trigger: ".career-section-main", start: "top 85%", toggleActions: "play none none none" },
-                    duration: 0.8,
-                    y: 30,
-                    opacity: 0,
-                    ease: "power2.out"
-                });
-                if (document.querySelector(".career-cards-grid")) {
-                    ScrollTrigger.create({
-                        trigger: ".career-cards-section",
-                        start: "top 82%",
-                        once: true,
-                        onEnter: function() {
-                            animateVisibleCardsIn(".career-cards-grid", ".career-card");
-                        }
-                    });
-                }
-                if (document.querySelector(".career-jobs-grid")) {
-                    ScrollTrigger.create({
-                        trigger: ".career-openings-section",
-                        start: "top 85%",
-                        once: true,
-                        onEnter: function() {
-                            animateVisibleCardsIn(".career-jobs-grid", ".career-job-card");
-                        }
-                    });
-                }
-            }
-
-            // Contact page – details + map reveal animations
-            if (document.body.classList.contains("new-contact-page")) {
-                animateIfPresent(".contact-details-section", {
-                    scrollTrigger: { trigger: ".contact-details-section", start: "top 85%", toggleActions: "play none none none" },
-                    duration: 0.8,
-                    y: 40,
-                    opacity: 0,
-                    ease: "power2.out"
-                });
-                animateIfPresent(".contact-details-left", {
-                    scrollTrigger: { trigger: ".contact-details-section", start: "top 82%", toggleActions: "play none none none" },
-                    duration: 0.9,
-                    x: -50,
-                    opacity: 0,
-                    ease: "power3.out"
-                });
-                animateIfPresent(".contact-details-right", {
-                    scrollTrigger: { trigger: ".contact-details-section", start: "top 82%", toggleActions: "play none none none" },
-                    duration: 0.9,
-                    x: 50,
-                    opacity: 0,
-                    ease: "power3.out",
-                    delay: 0.08
-                });
-                animateIfPresent(".contact-details-item", {
-                    scrollTrigger: { trigger: ".contact-details-section", start: "top 80%", toggleActions: "play none none none" },
-                    duration: 0.6,
-                    x: 35,
-                    opacity: 0,
-                    stagger: 0.1,
-                    ease: "power2.out",
-                    delay: 0.12
-                });
-                animateIfPresent(".contact-page-map-wrap", {
-                    scrollTrigger: { trigger: ".contact-page-map-section", start: "top 85%", toggleActions: "play none none none" },
-                    duration: 0.9,
-                    y: 35,
-                    opacity: 0,
-                    ease: "power2.out"
-                });
-            }
         })();
     </script>
 
@@ -2020,9 +1893,6 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                         textOnlyBoxes.forEach(function (el) { el.style.display = ''; });
                     }
                 }
-                if (typeof window.runMediaCardAnimation === 'function') {
-                    window.runMediaCardAnimation(tabKey);
-                }
             }
             tabs.forEach(function (tab) {
                 tab.addEventListener('click', function () {
@@ -2035,11 +1905,26 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                     tab.setAttribute('aria-selected', 'true');
                     updateIndicator();
                     setVisibilityByTab(tabKey);
+                    if (typeof window.runMediaCardAnimation === 'function') {
+                        setTimeout(function () { window.runMediaCardAnimation(); }, 50);
+                    }
                 });
             });
             window.addEventListener('resize', updateIndicator);
             updateIndicator();
-            setVisibilityByTab('digital');
+            var urlTab = (new URLSearchParams(window.location.search)).get('tab');
+            var initialTab = (urlTab === 'pr' || urlTab === 'print') ? urlTab : 'digital';
+            var targetTab = Array.prototype.find.call(tabs, function (t) { return t.getAttribute('data-tab') === initialTab; });
+            if (targetTab) {
+                tabs.forEach(function (t) {
+                    t.classList.remove('news-media-tab--active');
+                    t.setAttribute('aria-selected', 'false');
+                });
+                targetTab.classList.add('news-media-tab--active');
+                targetTab.setAttribute('aria-selected', 'true');
+                updateIndicator();
+            }
+            setVisibilityByTab(initialTab);
         })();
     </script>
     <script>
@@ -2184,7 +2069,7 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 ensureReadMoreForYearCards();
                 updateFirstBoxByYear();
                 if (typeof window.runMediaCardAnimation === 'function') {
-                    window.runMediaCardAnimation('digital');
+                    requestAnimationFrame(function () { window.runMediaCardAnimation(); });
                 }
             });
             updateLabel();

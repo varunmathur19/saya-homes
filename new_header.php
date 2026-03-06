@@ -5,6 +5,10 @@ if (!isset($base_url)) {
     $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://';
     $host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : (isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : 'localhost');
     $script_dir = dirname($_SERVER['SCRIPT_NAME']);
+    if (strpos($script_dir, ':') !== false) {
+        $request_path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
+        $script_dir = dirname($request_path ?: '/');
+    }
     $base_path = ($script_dir === '/' || $script_dir === '\\') ? '' : rtrim($script_dir, '/');
     $base_url = $protocol . $host . $base_path;
 }
@@ -14,7 +18,7 @@ if (!isset($base_url)) {
         <!-- Left Section - Logo -->
         <div class="new-header-left">
             <div class="new-header-logo">
-                <a href="<?= $base_url ?>/new_home.php" class="new-header-logo-link">
+                <a href="<?= $base_url ?>/" class="new-header-logo-link">
                     <img src="<?= $base_url ?>/images/logo.svg" alt="Saya Homes Logo" class="new-header-logo-img">
                 </a>
             </div>
@@ -25,7 +29,7 @@ if (!isset($base_url)) {
         <div class="new-header-right">
             <!-- Navigation Links -->
             <nav class="new-header-nav">
-                <a href="<?= $base_url ?>/new_home.php?about=1" class="new-header-nav-link">OUR STORY</a>
+                <a href="<?= $base_url ?>/about-us" class="new-header-nav-link">OUR STORY</a>
                 <a href="#" class="new-header-nav-link header-our-projects-trigger">OUR PROJECTS</a>
             </nav>
 
@@ -65,7 +69,7 @@ if (!isset($base_url)) {
                     <!-- Main Navigation Links (Left Column) -->
                     <nav class="header-links">
                         <a href="<?= $base_url ?>/" class="header-nav-item-main">HOME</a>
-                        <a href="<?= $base_url ?>/new_home.php?about=1" class="header-nav-item-main">ABOUT US</a>
+                        <a href="<?= $base_url ?>/about-us" class="header-nav-item-main">ABOUT US</a>
                         <!-- Desktop/tablet: OUR PROJECTS (opens popup) -->
                         <a href="#" class="header-nav-item-main header-nav-our-projects-link">OUR PROJECTS</a>
                         <!-- Mobile: RESIDENTIAL / COMMERCIAL with inline dropdown -->
@@ -84,10 +88,10 @@ if (!isset($base_url)) {
                             </a>
                             <div class="header-nav-dropdown" id="dropdown-residential">
                                 <div class="header-nav-dropdown-inner">
-                                    <a href="<?= $base_url ?>/new-project-page.php?project=gold-avenue" class="header-nav-dropdown-item">Saya Gold Avenue</a>
-                                    <a href="<?= $base_url ?>/new-project-page.php?project=saya-zion" class="header-nav-dropdown-item">Saya Zion</a>
-                                    <a href="<?= $base_url ?>/new-project-page.php?project=saya-zenith" class="header-nav-dropdown-item">Saya Zenith</a>
-                                    <a href="<?= $base_url ?>/new-project-page.php?project=saya-desire-residency" class="header-nav-dropdown-item">Saya Desire Residency</a>
+                                    <a href="<?= $base_url ?>/saya-gold-avenue" class="header-nav-dropdown-item">Saya Gold Avenue</a>
+                                    <a href="<?= $base_url ?>/saya-zion" class="header-nav-dropdown-item">Saya Zion</a>
+                                    <a href="<?= $base_url ?>/saya-zenith" class="header-nav-dropdown-item">Saya Zenith</a>
+                                    <a href="<?= $base_url ?>/saya-desire-residency" class="header-nav-dropdown-item">Saya Desire Residency</a>
                                 </div>
                             </div>
                         </div>
@@ -106,15 +110,15 @@ if (!isset($base_url)) {
                             </a>
                             <div class="header-nav-dropdown" id="dropdown-commercial">
                                 <div class="header-nav-dropdown-inner">
-                                    <a href="<?= $base_url ?>/new-project-page.php" class="header-nav-dropdown-item">Saya SouthX</a>
-                                    <a href="<?= $base_url ?>/new-project-page.php?project=saya-biztop" class="header-nav-dropdown-item">Saya Biztop</a>
-                                    <a href="<?= $base_url ?>/new-project-page.php?project=saya-piazza" class="header-nav-dropdown-item">Saya Piazza</a>
+                                    <a href="<?= $base_url ?>/saya-southX" class="header-nav-dropdown-item">Saya SouthX</a>
+                                    <a href="<?= $base_url ?>/saya-biztop" class="header-nav-dropdown-item">Saya Biztop</a>
+                                    <a href="<?= $base_url ?>/saya-piazza" class="header-nav-dropdown-item">Saya Piazza</a>
                                 </div>
                             </div>
                         </div>
-                        <a href="<?= $base_url ?>/new_media-page.php" class="header-nav-item-main">MEDIA</a>
-                        <a href="<?= $base_url ?>/new_media-page.php?page=event" class="header-nav-item-main">EVENTS</a>
-                        <a href="<?= $base_url ?>/new-blog-page.php" class="header-nav-item-main">BLOGS</a>
+                        <a href="<?= $base_url ?>/in-the-media" class="header-nav-item-main">MEDIA</a>
+                        <a href="<?= $base_url ?>/events" class="header-nav-item-main">EVENTS</a>
+                        <a href="<?= $base_url ?>/blogs" class="header-nav-item-main">BLOGS</a>
                         <a href="<?= $base_url ?>/nri-corner" class="header-nav-item-main">NRI CORNER</a>
                     </nav>
 
@@ -123,8 +127,8 @@ if (!isset($base_url)) {
                         <a href="<?= $base_url ?>/construction-update" class="header-nav-item-secondary">Construction Update</a>
                         <a href="<?= $base_url ?>/csr" class="header-nav-item-secondary">CSR</a>
                         <a href="<?= $base_url ?>/awards-and-recognition" class="header-nav-item-secondary">Awards & Recognition</a>
-                        <a href="<?= $base_url ?>/new_media-page.php?page=career" class="header-nav-item-secondary">Careers</a>
-                        <a href="<?= $base_url ?>/new_media-page.php?page=contact" class="header-nav-item-secondary">Contact Us</a>
+                        <a href="<?= $base_url ?>/careers" class="header-nav-item-secondary">Careers</a>
+                        <a href="<?= $base_url ?>/contact-us" class="header-nav-item-secondary">Contact Us</a>
                     </nav>
                 </div>
             </div>
@@ -193,18 +197,18 @@ if (!isset($base_url)) {
                     <div class="projects-popup-col">
                         <p class="projects-popup-heading">RESIDENTIAL</p>
                         <nav class="header-links">
-                            <a href="<?= $base_url ?>/new-project-page.php?project=gold-avenue" class="header-nav-item-main">Saya Gold Avenue</a>
-                            <a href="<?= $base_url ?>/new-project-page.php?project=saya-zion" class="header-nav-item-main">Saya Zion</a>
-                            <a href="<?= $base_url ?>/new-project-page.php?project=saya-zenith" class="header-nav-item-main">Saya Zenith</a>
-                            <a href="<?= $base_url ?>/new-project-page.php?project=saya-desire-residency" class="header-nav-item-main">Saya Desire Residency</a>
+                            <a href="<?= $base_url ?>/saya-gold-avenue" class="header-nav-item-main">Saya Gold Avenue</a>
+                            <a href="<?= $base_url ?>/saya-zion" class="header-nav-item-main">Saya Zion</a>
+                            <a href="<?= $base_url ?>/saya-zenith" class="header-nav-item-main">Saya Zenith</a>
+                            <a href="<?= $base_url ?>/saya-desire-residency" class="header-nav-item-main">Saya Desire Residency</a>
                         </nav>
                     </div>
                     <div class="projects-popup-col">
                         <p class="projects-popup-heading">COMMERCIAL</p>
                         <nav class="header-links-text">
-                            <a href="<?= $base_url ?>/new-project-page.php" class="header-nav-item-main">Saya SouthX</a>
-                            <a href="<?= $base_url ?>/new-project-page.php?project=saya-biztop" class="header-nav-item-main">Saya Biztop</a>
-                            <a href="<?= $base_url ?>/new-project-page.php?project=saya-piazza" class="header-nav-item-main">Saya Piazza</a>
+                            <a href="<?= $base_url ?>/saya-southX" class="header-nav-item-main">Saya SouthX</a>
+                            <a href="<?= $base_url ?>/saya-biztop" class="header-nav-item-main">Saya Biztop</a>
+                            <a href="<?= $base_url ?>/saya-piazza" class="header-nav-item-main">Saya Piazza</a>
                         </nav>
                     </div>
                     <div class="search-container">

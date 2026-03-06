@@ -929,7 +929,7 @@
 .media-two-page .news-media-section {
     width: 100%;
     background: #fff;
-    padding: 56px 50px;
+    padding: 56px 50px 0px;
     box-sizing: border-box;
 }
 
@@ -1003,10 +1003,11 @@
 /* Sort by Year: below tabs, right-aligned */
 .media-two-page .news-media-sort-row {
     padding-right: 50px;
+    padding-bottom: 24px;
+    margin-bottom: 16px;
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    /* margin-top: 1rem; */
 }
 
 @media (max-width: 769px) {
@@ -1322,7 +1323,7 @@
     flex: 0 0 calc(25% - 18px);
     min-width: 0;
     box-sizing: border-box;
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 16px;
 }
 @media (max-width: 1024px) {
@@ -1366,7 +1367,7 @@
     flex: 0 0 calc(25% - 18px);
     min-width: 0;
     box-sizing: border-box;
-    padding: 10px;
+    
 }
 @media (max-width: 1024px) {
     .media-two-page
@@ -1649,6 +1650,23 @@ body.media-print-image-lightbox-open .new-header {
     padding: 0;
     transition: background 0.2s ease;
 }
+@media (max-width: 518px) {
+    .media-gallery-lightbox-prev,
+    .media-gallery-lightbox-next {
+        width: 35px;
+        height: 35px;
+    }
+    .media-gallery-lightbox-close {
+        width: 35px;
+        height: 35px;
+    }
+}
+@media (max-width: 410px) {
+    .media-gallery-lightbox-img {
+        width: 180px !important;
+    }
+}
+
 .media-gallery-lightbox-prev .media-gallery-lightbox-arrow-img,
 .media-gallery-lightbox-next .media-gallery-lightbox-arrow-img {
     width: 24px;
@@ -1977,7 +1995,7 @@ body.media-print-image-lightbox-open {
         height: 10px;
     }
     .media-two-page .media-first-card-slide {
-        padding: 24px 44px 20px;
+        padding: 24px 24px 20px;
     }
     .media-two-page .media-first-card-headline {
         font-size: 15px;
@@ -2161,7 +2179,11 @@ body.media-print-image-lightbox-open {
     right: 0;
     bottom: 0;
     height: 45%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.38) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.38) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
     pointer-events: none;
 }
 
@@ -2688,6 +2710,19 @@ body.media-print-image-lightbox-open {
 @media (max-width: 518px) {
     .new-career-page .career-openings-inner {
         padding: 30px 10px !important;
+    }
+    .new-career-page .contact-details-header-right {
+        width: 100%;
+        flex-direction: column;
+    }
+    .new-career-page .contact-details-header-search-wrap,
+    .new-career-page .contact-details-header-dropdown-wrap {
+        width: 100%;
+    }
+    .new-career-page .contact-details-header-search,
+    .new-career-page .contact-details-header-dropdown {
+        width: 100%;
+        min-width: 0;
     }
 }
 

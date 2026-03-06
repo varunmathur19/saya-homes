@@ -142,10 +142,19 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
     <meta name="description" content="<?= htmlspecialchars($project_meta_description) ?>">
     <meta name="keywords" content="<?= htmlspecialchars($project_meta_keywords) ?>">
     <?php include_once('new-css.php') ?>
-    <link rel="stylesheet" href="css/new_projectpage.css">
+    <link rel="stylesheet" href="<?= $base_url ?>/css/new_projectpage.css?v=20260305">
     <!-- GSAP - required for Our Projects dropdown (same as home) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        (function() {
+            var path = window.location.pathname || "";
+            if (/\/saya-southx\/$/i.test(path)) {
+                var normalizedPath = path.replace(/\/$/, "");
+                window.history.replaceState({}, "", normalizedPath + window.location.search + window.location.hash);
+            }
+        })();
+    </script>
 </head>
 <body class="new-project-page<?= $is_gold_layout ? ' new-project-page--gold' : '' ?>">
     <?php include_once('new_header.php') ?>
@@ -177,7 +186,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                     </div>
                     <div class="project-hero-right">
                         <p class="project-hero-desc"><?= $project_hero_desc ?></p>
-                        <a href="<?= $base_url ?>/new_media-page.php?page=contact" class="project-hero-readmore">
+                        <a href="<?= $base_url ?>/contact-us" class="project-hero-readmore">
                             <span class="project-hero-readmore-text">Book a Site Visit</span>
                             <div>
                                 <img src="<?= $base_url ?>/images/new_theme/icons/button_hover_icon.svg" alt="Arrow Right">
@@ -215,7 +224,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                     <!-- <a href="#floor-layout"><?= $is_gold_layout ? 'Project Layout' : 'Floor Layout' ?></a> -->
                 </nav>
                 <div class="project-detail-nav-right">
-                    <a href="<?= $base_url ?>/new_media-page.php?page=contact">Contact With Us</a>
+                    <a href="<?= $base_url ?>/contact-us">Contact With Us</a>
                 </div>
             </div>
          </section>
@@ -237,18 +246,10 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                 <div class="project-gold-header-bar-right">
                     <div class="project-gold-header-bar-logo-wrap">
                         <?php
-                        $header_bar_logo_src = ($project_slug === 'saya-zion') ? $base_url . '/images/svg/projectzionlogo.svg' : (($project_slug === 'saya-zenith') ? $base_url . '/images/svg/zenithprojectlogo.svg' : (($project_slug === 'saya-desire-residency') ? $base_url . '/images/svg/resireprojectlogo.svg' : $base_url . '/images/new_theme/' . $project_gold_logo));
-                        if ($project_slug === 'saya-desire-residency') {
-                            $desire_logo_path = __DIR__ . '/images/svg/resireprojectlogo.svg';
-                            $desire_logo_inline = is_file($desire_logo_path) ? file_get_contents($desire_logo_path) : '';
-                            $desire_logo_inline = preg_replace('/<\?xml[^?]*\?>\s*/', '', $desire_logo_inline);
-                            $desire_logo_inline = preg_replace('/<svg/', '<svg width="180" height="60" preserveAspectRatio="xMidYMid meet" style="display:block;max-height:60px" ', $desire_logo_inline, 1);
-                        }
+                        $header_bar_logo_src = ($project_slug === 'saya-zion') ? $base_url . '/images/svg/projectzionlogo.svg' : (($project_slug === 'saya-zenith') ? $base_url . '/images/svg/zenithprojectlogo.svg' : (($project_slug === 'saya-desire-residency') ? $base_url . '/images/new_theme/saya-desire-residencylogo.png' : $base_url . '/images/new_theme/' . $project_gold_logo));
                         ?>
-                        <?php if ($project_slug === 'saya-desire-residency' && !empty($desire_logo_inline)) { ?>
-                        <span class="project-gold-header-bar-logo project-gold-header-bar-logo--desire" style="display:inline-block;width:180px;height:60px;vertical-align:middle"><?= $desire_logo_inline ?></span>
-                        <?php } elseif ($project_slug === 'saya-desire-residency') { ?>
-                        <img src="<?= $base_url ?>/images/svg/resireprojectlogo.svg" alt="<?= htmlspecialchars($project_gold_display_name) ?>" class="project-gold-header-bar-logo" width="180" height="60" style="object-fit:contain">
+                        <?php if ($project_slug === 'saya-desire-residency') { ?>
+                        <img src="<?= $base_url ?>/images/new_theme/saya-desire-residencylogo.png" alt="<?= htmlspecialchars($project_gold_display_name) ?>" class="project-gold-header-bar-logo" width="180" height="60" style="object-fit:contain">
                         <?php } else { ?>
                         <img src="<?= $header_bar_logo_src ?>" alt="<?= htmlspecialchars($project_gold_display_name) ?>" class="project-gold-header-bar-logo" width="160" height="55" loading="eager">
                         <?php } ?>
@@ -264,7 +265,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                     <p class="project-gold-about-label">About</p>
                     <h2 class="project-gold-about-title"><?= htmlspecialchars($project_gold_about_heading ?? $project_gold_display_name) ?></h2>
                     <p class="project-gold-about-desc"><?= nl2br(htmlspecialchars($project_gold_about_desc ?? '')) ?></p><?php if (isset($project_gold_about_desc_2) && $project_gold_about_desc_2 !== ''): ?><p class="project-gold-about-desc-2" style="margin-top: 10px;"><?= htmlspecialchars($project_gold_about_desc_2) ?></p><?php endif; ?>
-                    <a href="<?= $base_url ?>/new_media-page.php?page=contact" class="project-gold-about-btn">
+                    <a href="<?= $base_url ?>/contact-us" class="project-gold-about-btn">
                         <span class="project-gold-about-btn-text">Book a Site Visit</span>
                         <div class="project-gold-about-btn-arrow">
                             <img src="<?= $base_url ?>/images/new_theme/icons/button_hover_icon.svg" alt="">
@@ -382,7 +383,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                     </div>
                     <?php } elseif ($project_slug === 'saya-piazza') { ?>
                     <div class="project-overview-brand">
-                        <img src="<?= $base_url ?>/images/svg/projectpiazzalogo.svg" alt="<?= htmlspecialchars($project_display_name) ?>" class="project-overview-logo">
+                        <img src="<?= $base_url ?>/images/new_theme/sayapiazzalogo.jpg" alt="<?= htmlspecialchars($project_display_name) ?>" class="project-overview-logo">
                     </div>
                     <p class="project-overview-gold-text">Saya Piazza is ready to take your shopping experience to the next level, featuring diverse luxury brands and landscaped surroundings.</p>
                     <div class="project-overview-gold-cards" style="flex-wrap: wrap !important; row-gap: 20px;">
@@ -398,8 +399,8 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                             <span class="project-overview-gold-card-num">100K+</span>
                             <span class="project-overview-gold-card-label">People Working in MNCs</span>
                         </div>
-                        <div style="flex: 0 0 100%; width: 100%; height: 0;"></div>
-                        <div class="project-overview-gold-card" style="flex: 0 0 266px;">
+                        <div class="project-overview-gold-card-break" style="flex: 0 0 100%; width: 100%; height: 0;"></div>
+                        <div class="project-overview-gold-card">
                             <span class="project-overview-gold-card-num">200 Acre</span>
                             <span class="project-overview-gold-card-label">18+9 Hole Golf Course</span>
                         </div>
@@ -504,7 +505,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                                         <span class="project-features-card-label">Building Frontage</span>
                                     </div>
                                 </div>
-                                <div class="project-features-card">
+                                <!-- <div class="project-features-card">
                                     <div class="project-features-card-img-wrap">
                                         <img src="<?= $base_url ?>/images/new_theme/family.png" alt="Premium Retail" class="project-features-card-img">
                                     </div>
@@ -512,7 +513,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                                         <span class="project-features-card-num">Premium</span>
                                         <span class="project-features-card-label">Retail Space</span>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -560,7 +561,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                     <h2 class="project-section-5-title">An Uber Luxury High Street Retail Destination</h2>
                     <p class="project-section-5-desc">Catch The Latest Flix, Meet Your Friends For A Cup Of Coffee, Shop For The Latest Trends, Or Take Your Family On A Culinary Journey. Capture Every Beautiful Moment And Rejoice In The Joys Of Retail Therapy. With <?= htmlspecialchars($project_display_name) ?>, You Can Explore A Mix Of Retail, Restaurants And Entertainment Pulsating With Style And Energy. No Limit, No End To Fun & Excitement At <?= htmlspecialchars($project_display_name) ?>.</p>
                     <?php } ?>
-                    <a href="<?= $base_url ?>/new_media-page.php?page=contact" class="project-section-5-readmore project-hero-readmore">
+                    <a href="<?= $base_url ?>/contact-us" class="project-section-5-readmore project-hero-readmore">
                         <span class="project-hero-readmore-text">Book a Site Visit</span>
                         <div>
                             <img src="<?= $base_url ?>/images/new_theme/icons/button_hover_icon.svg" alt="Arrow Right">
@@ -703,7 +704,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                             <img src="<?= $base_url ?>/images/svg/clubhouse.svg" alt="" class="project-section-8-gold-icon-img">
                             <span class="project-section-8-gold-icon-label">Multipurpose Hall</span>
                         </div>
-                        <div class="project-section-8-gold-icon-item">
+                        <div class="project-section-8-gold-icon-item project-section-8-gold-icon-item--mobile-underline">
                             <img src="<?= $base_url ?>/images/svg/gazebos.svg" alt="" class="project-section-8-gold-icon-img">
                             <span class="project-section-8-gold-icon-label">Event Space & Amphitheatre</span>
                         </div>
@@ -744,7 +745,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                             <img src="<?= $base_url ?>/images/svg/parking.svg" alt="" class="project-section-8-gold-icon-img">
                             <span class="project-section-8-gold-icon-label">Open Car Parking</span>
                         </div>
-                        <div class="project-section-8-gold-icon-item">
+                        <div class="project-section-8-gold-icon-item project-section-8-gold-icon-item--mobile-underline">
                             <img src="<?= $base_url ?>/images/svg/rink.svg" alt="" class="project-section-8-gold-icon-img">
                             <span class="project-section-8-gold-icon-label">Skating Rink</span>
                         </div>
@@ -785,7 +786,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                             <img src="<?= $base_url ?>/images/svg/clubhouse.svg" alt="" class="project-section-8-gold-icon-img">
                             <span class="project-section-8-gold-icon-label">Multipurpose Hall</span>
                         </div>
-                        <div class="project-section-8-gold-icon-item">
+                        <div class="project-section-8-gold-icon-item project-section-8-gold-icon-item--mobile-underline">
                             <img src="<?= $base_url ?>/images/svg/gazebos.svg" alt="" class="project-section-8-gold-icon-img">
                             <span class="project-section-8-gold-icon-label">Event Space & Amphitheatre</span>
                         </div>
@@ -2037,7 +2038,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
     </style>
 
     <?php include_once('inc-script.php') ?>
-    <script data-base-url="<?= $base_url ?>/" src="js/new-home.js"></script>
+    <script data-base-url="<?= $base_url ?>/" src="<?= $base_url ?>/js/new-home.js?v=20260305"></script>
     <!-- Same slide menu as home: hamburger opens .hover-header-container -->
     <script>
     /* Project video - play button */
@@ -2382,6 +2383,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
         var nudgeStep = 280;
         var rafId = null;
         var isPaused = false;
+        var nudgeAnim = null;
 
         function getHalfWidth() {
             return track.scrollWidth / 2;
@@ -2389,12 +2391,35 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
 
         function loop() {
             if (!isPaused) {
-                position += speed;
+                if (nudgeAnim) {
+                    var elapsed = Date.now() - nudgeAnim.startTime;
+                    var progress = Math.min(elapsed / nudgeAnim.duration, 1);
+                    var eased = 1 - Math.pow(1 - progress, 3);
+                    position = nudgeAnim.from + (nudgeAnim.to - nudgeAnim.from) * eased;
+                    if (progress >= 1) {
+                        position = nudgeAnim.to;
+                        nudgeAnim = null;
+                    }
+                } else {
+                    position += speed;
+                }
                 if (halfWidth > 0 && position >= halfWidth) position -= halfWidth;
                 if (halfWidth > 0 && position < 0) position += halfWidth;
                 track.style.transform = 'translateX(-' + position + 'px)';
             }
             rafId = requestAnimationFrame(loop);
+        }
+
+        function smoothNudge(delta) {
+            var to = position + delta;
+            if (halfWidth > 0 && to >= halfWidth) to -= halfWidth;
+            if (halfWidth > 0 && to < 0) to += halfWidth;
+            nudgeAnim = {
+                from: position,
+                to: to,
+                startTime: Date.now(),
+                duration: 420
+            };
         }
 
         function init() {
@@ -2404,12 +2429,10 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
         }
 
         prevBtn.addEventListener('click', function() {
-            position -= nudgeStep;
-            if (halfWidth > 0 && position < 0) position += halfWidth;
+            smoothNudge(-nudgeStep);
         });
         nextBtn.addEventListener('click', function() {
-            position += nudgeStep;
-            if (halfWidth > 0 && position >= halfWidth) position -= halfWidth;
+            smoothNudge(nudgeStep);
         });
 
         var marquee = track.closest('.project-section-7-marquee');
@@ -2509,12 +2532,26 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
         function getCardsPerView() {
             var w = window.innerWidth;
             if (w >= 769) return 2;
-            return 1;
+            return 2;
         }
 
         function updateLayout() {
+            var isSmallMobile = window.innerWidth < 518;
             var cardsPerView = getCardsPerView();
             var gap = getGap();
+
+            if (isSmallMobile) {
+                viewport.style.overflow = 'visible';
+                track.style.flexDirection = 'column';
+                track.style.width = '100%';
+                track.style.gap = gap + 'px';
+                track.style.transform = 'none';
+                for (var m = 0; m < cards.length; m++) cards[m].style.width = '100%';
+                return;
+            }
+
+            viewport.style.overflow = 'hidden';
+            track.style.flexDirection = 'row';
             var viewportWidth = viewport.offsetWidth;
             var cardWidth = (viewportWidth - gap * (cardsPerView - 1)) / cardsPerView;
             for (var i = 0; i < cards.length; i++) cards[i].style.width = cardWidth + 'px';
@@ -2576,6 +2613,20 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
             currentIndex = Math.min(currentIndex, maxIndex);
             var offset = currentIndex * (cardWidth + gap);
             track.style.transform = 'translateX(-' + offset + 'px)';
+            updateArrowState(maxIndex);
+        }
+
+        function updateArrowState(maxIndex) {
+            var isPrevActive = currentIndex > 0;
+            var isNextActive = currentIndex < maxIndex;
+
+            prevBtn.classList.toggle('active', isPrevActive);
+            prevBtn.classList.toggle('unactive', !isPrevActive);
+            prevBtn.setAttribute('aria-disabled', isPrevActive ? 'false' : 'true');
+
+            nextBtn.classList.toggle('active', isNextActive);
+            nextBtn.classList.toggle('unactive', !isNextActive);
+            nextBtn.setAttribute('aria-disabled', isNextActive ? 'false' : 'true');
         }
 
         prevBtn.addEventListener('click', function() {
@@ -2693,6 +2744,19 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
         function update() {
             var offset = currentIndex * slidePct;
             track.style.transform = 'translateX(-' + offset + '%)';
+            updateArrowState();
+        }
+        function updateArrowState() {
+            var isPrevActive = currentIndex > 0;
+            var isNextActive = currentIndex < total - 1;
+
+            prevBtn.classList.toggle('active', isPrevActive);
+            prevBtn.classList.toggle('unactive', !isPrevActive);
+            prevBtn.setAttribute('aria-disabled', isPrevActive ? 'false' : 'true');
+
+            nextBtn.classList.toggle('active', isNextActive);
+            nextBtn.classList.toggle('unactive', !isNextActive);
+            nextBtn.setAttribute('aria-disabled', isNextActive ? 'false' : 'true');
         }
         prevBtn.addEventListener('click', function() {
             currentIndex = Math.max(0, currentIndex - 1);
@@ -3058,6 +3122,22 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
             var offsetPct = (currentIndex / total) * 100;
             track.style.transform = 'translateX(-' + offsetPct + '%)';
             updateActiveThumb();
+            updateLightboxNavState();
+        }
+
+        function updateLightboxNavState() {
+            if (prevBtn) {
+                var isPrevActive = currentIndex > 0;
+                prevBtn.classList.toggle('active', isPrevActive);
+                prevBtn.classList.toggle('unactive', !isPrevActive);
+                prevBtn.setAttribute('aria-disabled', isPrevActive ? 'false' : 'true');
+            }
+            if (nextBtn) {
+                var isNextActive = currentIndex < total - 1;
+                nextBtn.classList.toggle('active', isNextActive);
+                nextBtn.classList.toggle('unactive', !isNextActive);
+                nextBtn.setAttribute('aria-disabled', isNextActive ? 'false' : 'true');
+            }
         }
 
         var scrollPosition = 0;

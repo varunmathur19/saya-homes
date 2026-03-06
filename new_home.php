@@ -236,7 +236,7 @@
                     <div class="section-2-content-right-inner">
                         <p>Saya Group,  <b>founded 25 years ago</b>, is a pioneer in the real estate sector with a significant presence in the <b>Delhi NCR region</b>. Saya Group has been known for its pioneering efforts in  <b> luxury residential and commercial projects</b>.The group started off with the development of low-rise floors and luxury villas and soon expanded to high-rise luxury homes and commercial properties. Saya Group is a reliable real estate developer in the Delhi NCR region.</p>
                         <div class="section-2-content-right-inner-button">
-                            <a href="<?= $base_url ?>/new_home.php?about=1" class="btn1212">
+                            <a href="<?= $base_url ?>/about-us" class="btn1212">
                                 <p>Read More</p>
                                 <div>
                                     <img src="<?= $base_url ?>/images/new_theme/icons/button_hover_icon.svg" alt="Arrow Right">
@@ -781,7 +781,7 @@
                         <h2>Leading Innovations Catching the Spotlight</h2>
                     </div>
                     <div>
-                        <button class="btn1212" type="button" onclick="window.location.href='<?= $base_url ?>/new_media-page.php';">
+   <button class="btn1212" type="button" onclick="window.location.href='<?= $base_url ?>/in-the-media?tab=pr';">
                             <p>View All</p>
                             <div>
                                 <img src="<?= $base_url ?>/images/new_theme/icons/button_hover_icon.svg" alt="Arrow Right">
@@ -837,7 +837,7 @@ Saya Group Clears Rs 1,500 Cr Debt, Signals Debt-Free Growth Across NCR
 
                     <span>Explore stories and insights of  those who treated our properties home, and experience the difference yourself.</span>
                     <div class="section-8-btn-wrap mt-3">
-                        <a href="<?= $base_url ?>/new-blog-page.php" class="btn1212" style="text-decoration: none;">
+                        <a href="<?= $base_url ?>/blogs" class="btn1212" style="text-decoration: none;">
                             <span class="btn1212-text">Read Blogs</span>
                             <div>
                                 <img src="<?= $base_url ?>/images/new_theme/icons/button_hover_icon.svg" alt="Arrow Right">
@@ -976,9 +976,9 @@ Saya Group Clears Rs 1,500 Cr Debt, Signals Debt-Free Growth Across NCR
         <div class="get-to-know-banner-wrap">
             <section class="get-to-know-banner" data-aos="fade-up" data-aos-duration="1000" style="background-image: url('<?= $base_url ?>/images/new_theme/contactusbg.jpg');">
                 <div class="get-to-know-banner-inner">
-                    <h2 class="get-to-know-banner-title">Get To Know About Sayahomes Realty</h2>
-                    <a href="<?= $base_url ?>/contact-us" class="btn1212" style="text-decoration: none;">
-                        <span class="btn1212-text">Contact Us</span>
+                    <h2 class="get-to-know-banner-title">Get To Know About Saya Homes Realty</h2>
+                    <a href="<?= $base_url ?>/about-us" class="btn1212" style="text-decoration: none;">
+                        <span class="btn1212-text">Read More</span>
                         <div>
                             <img src="<?= $base_url ?>/images/new_theme/icons/button_hover_icon.svg" alt="Arrow Right">
                         </div>
@@ -1857,9 +1857,9 @@ Saya Group Clears Rs 1,500 Cr Debt, Signals Debt-Free Growth Across NCR
 
         // Redirect from footer arrow/project name to active project page
         const heroProjectLinks = {
-            'Saya Gold Avenue': '<?= $base_url ?>/new-project-page.php?project=gold-avenue',
-            'Saya South X': '<?= $base_url ?>/new-project-page.php',
-            'Saya Piazza': '<?= $base_url ?>/new-project-page.php?project=saya-piazza'
+            'Saya Gold Avenue': '<?= $base_url ?>/saya-gold-avenue',
+            'Saya South X': '<?= $base_url ?>/saya-southX',
+            'Saya Piazza': '<?= $base_url ?>/saya-piazza'
         };
         const heroFooterProjectInfo = document.querySelector('#heroSliderFooter .slide-project-info');
         if (heroFooterProjectInfo) {
