@@ -4111,7 +4111,11 @@ body.scroll-hero-visible .section-5-enquire-btn {
     transform: translateY(-2px);
     z-index: 9;
 }
-
+@media (min-width: 768px) and (max-width: 890px) {
+    .scroll-to-hero-btn {
+        display: none !important;
+    }
+}
 /* Tablet: scroll-to-hero 44px, right: 20px – default enquiry usi jagah; visible par left shift */
 @media (max-width: 1024px) {
     .section-5-enquire-btn {
@@ -8097,7 +8101,7 @@ body.menu-open {
 /* Tablet Landscape (768px - 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
     .hero-slider-container {
-        height: 75vh;
+        height: 50vh;
         min-height: 550px;
     }
 
@@ -9953,7 +9957,7 @@ img {
     }
 
     .hero-slider-container {
-        height: 70vh;
+        height: 50vh;
         min-height: 500px;
     }
 

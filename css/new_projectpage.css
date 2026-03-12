@@ -1369,6 +1369,60 @@
     }
 }
 
+/* 768px–860px: card horizontal layout (left + right side by side), stat cards in row */
+@media (min-width: 768px) and (max-width: 860px) {
+    .project-overview-container {
+        grid-template-columns: 1fr minmax(260px, 380px);
+        gap: 20px;
+        justify-items: stretch;
+        text-align: left;
+    }
+    .project-overview-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .project-overview-right {
+        justify-content: flex-end;
+    }
+    .project-overview--gold .project-overview-container {
+        grid-template-columns: 1fr minmax(260px, 380px);
+        padding: 40px 24px;
+        gap: 20px;
+        align-items: stretch;
+        justify-items: stretch;
+    }
+    .project-overview--gold .project-overview-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .project-overview--gold .project-overview-gold-text {
+        text-align: left;
+    }
+    .project-overview--gold .project-overview-gold-club {
+        justify-content: flex-start;
+    }
+    .project-overview--gold .project-overview-right {
+        justify-content: flex-end;
+    }
+    /* Stat cards (1162+ Acres, 50,000+, etc.) – horizontal row, 2 per row */
+    .project-overview--gold .project-overview-gold-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
+        width: 100%;
+    }
+    .project-overview--gold .project-overview-gold-card {
+        flex: 1 1 calc(50% - 6px);
+        min-width: 120px;
+        max-width: none;
+        box-sizing: border-box;
+    }
+}
+
 @media (max-width: 969px) {
     .project-overview-left--gold .project-overview-gold-text {
         font-size: 24px;
@@ -1976,7 +2030,7 @@
 
 @media (max-width: 768px) {
     .project-section-5 {
-        padding: 24px 30px 40px;
+        padding: 0px 30px 40px;
     }
     .project-section-5-inner {
         padding: 36px 28px 40px;
@@ -3331,7 +3385,7 @@
 
 @media (max-width: 768px) {
     .project-section-12-gallery {
-        padding: 50px 30px 55px;
+        padding: 0px 30px 55px;
     }
     .project-section-12-gallery-header {
         margin-bottom: 28px;

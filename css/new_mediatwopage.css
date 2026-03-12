@@ -3318,3 +3318,10 @@ body.media-print-image-lightbox-open {
         padding: 30px 10px;
     }
 }
+/* 768px screen par banner properly show */
+@media (min-width: 768px) and (max-width: 1197px) {
+    .new-media-page .media-banner-section {
+        min-height: 59vh;
+        max-height: 520px;
+    }
+}
