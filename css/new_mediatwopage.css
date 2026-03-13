@@ -1202,7 +1202,7 @@
 .media-two-page .media-pr-coverage-wrap .media-template-readmore-pr {
     order: 4;
     margin-top: auto;
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 /* PR cards: max 2 lines, ellipsis */
 .media-two-page .media-pr-coverage-wrap .media-template-title,

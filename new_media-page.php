@@ -1608,7 +1608,7 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
         <section class="get-to-know-banner" style="background-image: url('<?= $base_url ?>/images/new_theme/contactusbg.jpg');">
             <div class="get-to-know-banner-inner">
                 <h2 class="get-to-know-banner-title">Get To Know About Saya Homes Realty</h2>
-                <a href="<?= $base_url ?>/new_home.php?about=1" class="btn1212" style="text-decoration: none;">
+                <a href="<?= $base_url ?>/about-us" class="btn1212" style="text-decoration: none;">
                     <span class="btn1212-text">Read More</span>
                     <div>
                         <img src="<?= $base_url ?>/images/new_theme/icons/button_hover_icon.svg" alt="Arrow Right">

@@ -32,7 +32,7 @@
     </section>
 
     <main class="blog-main">
-        <div class="blog-layout">
+        <div class="blog-layout" style="position: relative;">
             <div class="blog-content">
                 <div class="blog-grid">
                     <article class="blog-card">
@@ -95,7 +95,8 @@
                 </nav>
             </div>
 
-            <aside class="blog-sidebar">
+            <aside class="blog-sidebar" style="position: relative;">
+                <div class="blog-sidebar-sticky-wrap" style="position: relative;">
                 <div class="blog-sidebar-widget blog-widget-search">
                     <form role="search" class="blog-search-form">
                         <input type="search" placeholder="Search..." class="blog-search-input" aria-label="Search">
@@ -162,6 +163,7 @@
                             <span class="blog-latest-property-tag">Latest Property</span>
                         </div>
                     </div>
+                </div>
                 </div>
             </aside>
         </div>
@@ -481,6 +483,12 @@
             btn.addEventListener('click', function() {
                 var isOpen = item.classList.contains(openClass);
 
+                // Ek opened item ko close karke "sab band" state avoid karo
+                // taaki section height/background jump na ho.
+                if (isOpen) {
+                    return;
+                }
+
                 // Sabhi items band karo (amenities wali tarah)
                 items.forEach(function(other) {
                     var otherBtn = other.querySelector('.faqs-accordion-head');
@@ -492,14 +500,11 @@
                     if (otherIcon) otherIcon.textContent = '+';
                 });
 
-                // Agar clicked item pehle band tha, toh kolo
-                if (!isOpen) {
-                    item.classList.add(openClass);
-                    btn.setAttribute('aria-expanded', 'true');
-                    panel.style.maxHeight = panel.scrollHeight + 'px';
-                    var icon = btn.querySelector('.faqs-accordion-icon');
-                    if (icon) icon.textContent = '−';
-                }
+                item.classList.add(openClass);
+                btn.setAttribute('aria-expanded', 'true');
+                panel.style.maxHeight = panel.scrollHeight + 'px';
+                var icon = btn.querySelector('.faqs-accordion-icon');
+                if (icon) icon.textContent = '−';
             });
         });
     })();

@@ -349,16 +349,14 @@ html:has(body.new-blog-page) {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 90px;
+    position: relative;
     align-self: start;
     z-index: 5;
 }
 
 .new-blog-page .blog-sidebar.is-stuck {
-    position: fixed !important;
-    top: 90px !important;
+    position: relative;
+    top: auto;
     box-sizing: border-box;
     /* left & width set by JS for correct position */
 }
