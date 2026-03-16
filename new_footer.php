@@ -114,11 +114,11 @@ if (!isset($base_url)) {
                         <img src="<?= $base_url ?>/images/svg/facebook.svg" alt="Facebook" width="8" height="8">
 
                     </a>
-                    <a href="https://twitter.com/sayahomes" target="_blank" class="new-footer-social-icon" aria-label="Twitter">
+                    <!-- <a href="https://twitter.com/sayahomes" target="_blank" class="new-footer-social-icon" aria-label="Twitter">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                         </svg>
-                    </a>
+                    </a> -->
                     <a href="https://www.linkedin.com/company/saya-group-official/" target="_blank" class="new-footer-social-icon" aria-label="LinkedIn">
                         <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3.00004 1.50068C2.99976 2.11141 2.62924 2.661 2.06318 2.89028C1.49713 3.11957 0.84858 2.98277 0.423352 2.54439C-0.00187504 2.10601 -0.11886 1.45359 0.127553 0.894785C0.373973 0.335975 0.934583 -0.017643 1.54504 0.000679464C2.35584 0.025017 3.00041 0.68951 3.00004 1.50068ZM3.04504 4.11068H0.0450374V13.5007H3.04504V4.11068ZM7.78505 4.11068H4.80004V13.5007H7.75505V8.57316C7.75505 5.82816 11.3326 5.57316 11.3326 8.57316V13.5007H14.2951V7.55316C14.2951 2.92568 9.00005 3.09818 7.75505 5.37066L7.78505 4.11068Z" fill="white"/>
@@ -144,3 +144,547 @@ if (!isset($base_url)) {
         </div>
     </div>
 </footer>
+
+<style>
+    .new-enquire-modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(7, 24, 54, 0.28);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        z-index: 10050;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+
+    .new-enquire-modal-overlay.is-open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .new-enquire-modal {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0.96);
+        width: min(920px, calc(100% - 24px));
+        background: #ffffff;
+        border-radius: 12px;
+        border: 0;
+        box-shadow: 0 22px 54px rgba(6, 22, 50, 0.26);
+        z-index: 10060;
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.25s ease, opacity 0.25s ease, visibility 0.25s ease;
+        overflow: hidden;
+    }
+
+    .new-enquire-modal.is-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    .new-enquire-modal-dialog {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .new-enquire-modal-side {
+        flex: 0 0 50%;
+        background: #111;
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+        display: block;
+        min-height: 0;
+    }
+
+    .new-enquire-modal-side::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(41, 43, 49, 0.8) 0%, rgba(16, 19, 34, 0) 50%, rgba(16, 19, 34, 0) 100%);
+        pointer-events: none;
+    }
+
+    .new-enquire-side-image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .new-enquire-modal-side h6 {
+        display: none;
+    }
+
+    .new-enquire-promise {
+        display: none;
+    }
+
+    .new-enquire-promise img {
+        width: 22px;
+        height: 22px;
+    }
+
+    .new-enquire-promise span {
+        font-size: 14px;
+        line-height: 1.35;
+        font-weight: 700;
+        color: #f6f8fc;
+    }
+
+    .new-enquire-modal-main {
+        flex: 0 0 50%;
+        position: relative;
+        padding: 60px 30px;
+        /* min-height: 708px; */
+        overflow-y: visible;
+        background: #101322;
+        border: 0;
+        outline: 0;
+        box-shadow: none;
+        
+
+    }
+
+    .new-enquire-modal-close {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        width: 30px;
+        height: 30px;
+        border: 0;
+        border-radius: 8px;
+        background: transparent;
+        color: #94A3B8;
+        font-size: 32px;
+        line-height: 1;
+        cursor: pointer;
+    }
+
+    .new-enquire-modal-close:hover {
+        color: #f18a3d;
+    }
+
+    .new-enquire-modal-title {
+        margin: 0 40px 8px 0;
+        font-family: "Lato", sans-serif;
+        font-size: 36px;
+        line-height: normal;
+        letter-spacing: 0;
+        color: #F1F5F9;
+        font-weight: 700;
+    }
+
+    .new-enquire-modal-sub {
+        margin: 0 0 26px;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: normal;
+        letter-spacing: 0;
+        color: #B9B7B7;
+    }
+
+    .new-enquire-status {
+        display: none;
+        margin: 0 0 14px;
+        padding: 10px 12px;
+        border-radius: 8px;
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .new-enquire-status.show {
+        display: block;
+    }
+
+    .new-enquire-status.success {
+        color: #bbf7d0;
+        background: rgba(9, 76, 37, 0.45);
+    }
+
+    .new-enquire-status.error {
+        color: #fecdd3;
+        background: rgba(130, 24, 40, 0.46);
+    }
+
+    .new-enquire-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .new-enquire-field {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .new-enquire-field.full {
+        grid-column: 1 / -1;
+    }
+
+    .new-enquire-field label {
+        display: none;
+    }
+
+    .new-enquire-field input,
+    .new-enquire-field textarea {
+        width: 100%;
+        border: 0;
+        border-radius: 10px;
+        padding: 14px 14px;
+        outline: 0;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0;
+        color: #111111;
+        background: #F9F9F9;
+    }
+
+    .new-enquire-field input::placeholder,
+    .new-enquire-field textarea::placeholder {
+        color: #00000099;
+        opacity: 1;
+    }
+
+    .new-enquire-field input:focus,
+    .new-enquire-field textarea:focus {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.25);
+        background: #ffffff;
+    }
+
+    .new-enquire-consent {
+        display: none;
+    }
+
+    .new-enquire-consent input {
+        margin-top: 2px;
+        accent-color: #f6883e;
+    }
+
+    .new-enquire-actions {
+        margin-top: 16px;
+    }
+
+    .new-enquire-submit {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        width: 100%;
+        border: 0;
+        border-radius: 12px;
+        padding: 18px 18px;
+        background: #f18a3d;
+        color: #fff;
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 100%;
+        letter-spacing: 0;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: background 0.2s ease;
+        box-shadow: none;
+    }
+
+    .new-enquire-submit-text,
+    .new-enquire-submit-arrow {
+        position: relative;
+        z-index: 1;
+    }
+
+    .new-enquire-submit::before {
+        display: none;
+    }
+
+    .new-enquire-submit:hover::before {
+        left: 0;
+    }
+
+    .new-enquire-submit:hover {
+        background: #ea7c2a;
+        animation: none;
+        box-shadow: none;
+    }
+
+    .new-enquire-submit-arrow {
+        display: none;
+    }
+
+    .new-enquire-submit-arrow::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: #ffffff;
+        border-radius: 50%;
+        transform: scale(1);
+        transition: transform 0.5s;
+    }
+
+    .new-enquire-submit-arrow img {
+        width: 14px;
+        height: 20px;
+        transform: translate(-100%, 100%);
+        transition: transform 0.5s;
+        position: relative;
+        z-index: 1;
+        display: block;
+    }
+
+    .new-enquire-submit:hover .new-enquire-submit-arrow::before {
+        transform: scale(3);
+    }
+
+    .new-enquire-submit:hover .new-enquire-submit-arrow img {
+        transform: translate(0%, 0%);
+    }
+
+    .new-enquire-submit:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+    .new-enquire-submit:disabled::before,
+    .new-enquire-submit:disabled:hover::before {
+        left: -100%;
+    }
+
+    .new-enquire-submit:disabled:hover .new-enquire-submit-arrow::before {
+        transform: scale(1);
+    }
+
+    .new-enquire-submit:disabled:hover .new-enquire-submit-arrow img {
+        transform: translate(-100%, 100%);
+    }
+
+    @media (max-width: 900px) {
+        .new-enquire-modal-dialog {
+            min-height: 500px;
+        }
+
+        .new-enquire-modal-side {
+            flex-basis: 44%;
+            display: block;
+        }
+
+        .new-enquire-modal-main {
+            flex-basis: 56%;
+            padding: 24px 20px 20px;
+        }
+
+        .new-enquire-modal-title {
+            font-size: clamp(26px, 3vw, 34px);
+            
+        }
+
+        .new-enquire-modal-sub {
+            font-size: clamp(14px, 1.8vw, 18px);
+            margin-bottom: 18px;
+        }
+
+        .new-enquire-submit {
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .new-enquire-modal {
+            width: calc(100% - 16px);
+            max-height: calc(100vh - 16px);
+            border-radius: 12px;
+        }
+
+        .new-enquire-modal-dialog {
+            flex-direction: column;
+            min-height: auto;
+            max-height: none;
+        }
+
+        .new-enquire-modal-side {
+            display: none;
+        }
+
+        .new-enquire-modal-main {
+            padding: 45px 14px ;
+        }
+
+        .new-enquire-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .new-enquire-modal-title { font-size: 24px; line-height: normal; }
+        .new-enquire-modal-sub { font-size: 18px; line-height: normal; }
+        .new-enquire-submit { font-size: 16px; }
+    }
+</style>
+
+<style>
+    body.new-enquire-open .section-5-enquire-btn {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+</style>
+
+<div class="new-enquire-modal-overlay" id="newEnquireOverlay" aria-hidden="true"></div>
+<div class="new-enquire-modal" id="newEnquireModal" role="dialog" aria-modal="true" aria-labelledby="newEnquireTitle" aria-hidden="true">
+    <div class="new-enquire-modal-dialog">
+        <aside class="new-enquire-modal-side">
+            <img src="<?= $base_url ?>/images/new_theme/enquirepopupform.jpg" alt="Modern interior" class="new-enquire-side-image">
+        </aside>
+        <div class="new-enquire-modal-main">
+            <button type="button" class="new-enquire-modal-close" id="newEnquireClose" aria-label="Close">×</button>
+            <h4 class="new-enquire-modal-title" id="newEnquireTitle">Book Your Dream Home Today !</h4>
+            <p class="new-enquire-modal-sub">Experience modern living in a location that connects you to everything.</p>
+            <div class="new-enquire-status" id="newEnquireStatus"></div>
+
+            <form id="newEnquireForm" novalidate>
+                <div class="new-enquire-grid">
+                    <div class="new-enquire-field">
+                        <label for="newMname">Name*</label>
+                        <input type="text" name="mname" id="newMname" placeholder="Name *" required>
+                    </div>
+                    <div class="new-enquire-field">
+                        <label for="newMemail">Email*</label>
+                        <input type="email" name="memail" id="newMemail" placeholder="Email *" required>
+                    </div>
+                    <div class="new-enquire-field full">
+                        <label for="newMmobile">Mobile*</label>
+                        <input type="tel" name="mmobile" id="newMmobile" placeholder="Mobile *" required>
+                    </div>
+                    <div class="new-enquire-field full">
+                        <label for="newMquery">Query</label>
+                        <textarea name="mquery" id="newMquery" rows="4" placeholder="Query *"></textarea>
+                    </div>
+                </div>
+
+                <label class="new-enquire-consent" for="newAgree">
+                    <input type="checkbox" id="newAgree">
+                    <span>I authorise Saya Group and its representatives to call, SMS, RCS, email or WhatsApp me about its projects and offers. This consent overrides any registration for DNC / NDNC.</span>
+                </label>
+
+                <input type="hidden" name="query_nature" value="modal">
+                <input type="hidden" name="mpagename" value="<?= isset($pagename) && $pagename !== '' ? $pagename : preg_replace('/\.php$/i', '', basename((string) parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH))) ?>">
+                <input type="hidden" name="msource" id="newMsource" value="Common Enquiry">
+
+                <div class="new-enquire-actions">
+                    <button type="submit" class="new-enquire-submit" id="newEnquireSubmit">
+                        <span class="new-enquire-submit-text">Get a Call Back</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function() {
+        var modal = document.getElementById('newEnquireModal');
+        var overlay = document.getElementById('newEnquireOverlay');
+        var closeBtn = document.getElementById('newEnquireClose');
+        var form = document.getElementById('newEnquireForm');
+        var statusBox = document.getElementById('newEnquireStatus');
+        var submitBtn = document.getElementById('newEnquireSubmit');
+        var sourceInput = document.getElementById('newMsource');
+        if (!modal || !overlay || !form || !statusBox || !submitBtn || !sourceInput) return;
+
+        function showStatus(message, type) {
+            statusBox.className = 'new-enquire-status show ' + type;
+            statusBox.textContent = message;
+        }
+
+        function toggleEnquireTrigger(isVisible) {
+            var triggers = document.querySelectorAll('.section-5-enquire-btn');
+            triggers.forEach(function(trigger) {
+                trigger.style.display = isVisible ? '' : 'none';
+            });
+        }
+
+        function openModal(sourceText) {
+            sourceInput.value = sourceText || 'Common Enquiry';
+            modal.classList.add('is-open');
+            overlay.classList.add('is-open');
+            modal.setAttribute('aria-hidden', 'false');
+            overlay.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            document.body.classList.add('new-enquire-open');
+            toggleEnquireTrigger(false);
+        }
+
+        function closeModal() {
+            modal.classList.remove('is-open');
+            overlay.classList.remove('is-open');
+            modal.setAttribute('aria-hidden', 'true');
+            overlay.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            document.body.classList.remove('new-enquire-open');
+            toggleEnquireTrigger(true);
+        }
+
+        document.addEventListener('click', function(e) {
+            var trigger = e.target.closest('.section-5-enquire-btn');
+            if (!trigger) return;
+            e.preventDefault();
+            var src = trigger.getAttribute('data-bs-source') || trigger.getAttribute('data-source') || 'Common Enquiry';
+            openModal(src);
+        });
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', closeModal);
+        }
+        overlay.addEventListener('click', closeModal);
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+                closeModal();
+            }
+        });
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="new-enquire-submit-text">Please Wait...</span>';
+            showStatus('Processing...', 'success');
+
+            var payload = new FormData(form);
+            fetch('<?= $base_url ?>/controller/form_integration.php', {
+                method: 'POST',
+                body: payload
+            })
+            .then(function(res) {
+                return res.json();
+            })
+            .then(function(response) {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<span class="new-enquire-submit-text">Get a Call Back</span>';
+                if (response && response.status === 'success') {
+                    showStatus(response.message || 'Your enquiry has been submitted successfully.', 'success');
+                    form.reset();
+                    setTimeout(function() {
+                        window.location.href = 'thank-you';
+                    }, 1400);
+                    return;
+                }
+                showStatus((response && response.message) || 'Something went wrong. Please try again.', 'error');
+            })
+            .catch(function() {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<span class="new-enquire-submit-text">Get a Call Back</span>';
+                showStatus('Something went wrong. Please try again.', 'error');
+            });
+        });
+    })();
+</script>

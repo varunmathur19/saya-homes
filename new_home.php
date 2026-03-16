@@ -1,3 +1,6 @@
+<?php
+include_once "admin-panel-ecorp/config.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -110,7 +113,7 @@
 
 <body class="new-home-page">
     <?php include_once('new_header.php') ?>
-    <a href="<?= $base_url ?>/new_media-page.php?page=contact" class="section-5-enquire-btn">ENQUIRE NOW</a>
+    <a href="<?= $base_url ?>/new_media-page.php?page=contact" class="section-5-enquire-btn" data-source="Common Enquiry">ENQUIRE NOW</a>
     <main>
         <?php $show_about_hero = isset($_GET['about']) && $_GET['about'] == '1'; ?>
         <?php if ($show_about_hero): ?>
@@ -293,14 +296,14 @@
                             <h2>Residential & Commercial Developments</h2>
                             <p>From premium homes in Ghaziabad to strategic commercial assets in Greater Noida West, discover spaces that enrich your  lifestyle and investment vision.</p>
                         </div>
-                        <div class="section-3-content-top-right">
+                        <!-- <div class="section-3-content-top-right">
                             <button class="btn1212">
                                 <p>Know More</p>
                                 <div>
                                     <img src="<?= $base_url ?>/images/new_theme/icons/button_hover_icon.svg" alt="Arrow Right">
                                 </div>
                             </button>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="section-3-content-top-left-buttons" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
                         <button class="project-filter-btn active" data-type="residential" style="background-color: #F6883E; color: #fff; border: none;">Residential</button>
@@ -828,14 +831,32 @@ Saya Group Clears Rs 1,500 Cr Debt, Signals Debt-Free Growth Across NCR
                 </div>
             </div>
         </div>
+        <?php
+        $home_recent_blog = mysqli_query($link, "SELECT * FROM `blogs` WHERE `status`='1' ORDER BY `date` DESC, `id` DESC LIMIT 1");
+        $home_recent_blog_row = ($home_recent_blog && mysqli_num_rows($home_recent_blog) > 0) ? mysqli_fetch_assoc($home_recent_blog) : null;
+        $home_recent_blog_heading = '';
+        $home_recent_blog_desc = '';
+        if ($home_recent_blog_row) {
+            $home_recent_blog_heading = str_replace('&rsquo;', "'", (string) ($home_recent_blog_row['heading'] ?? ''));
+        }
+        if ($home_recent_blog_row && !empty($home_recent_blog_row['content'])) {
+            $home_recent_blog_desc = str_replace('&rsquo;', "'", trim(strip_tags($home_recent_blog_row['content'])));
+            if (strlen($home_recent_blog_desc) > 180) {
+                $home_recent_blog_desc = substr($home_recent_blog_desc, 0, 180) . '...';
+            }
+        }
+        ?>
         <div class="section-8" data-aos="fade-up" data-aos-duration="1000">
             <div class="section-8-content">
                 <div class="section-8-content-inner-left" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">
                     <h2>Blogs</h2>
-                    <p>Latest Stories & Insights</p>
-                    <span>Unlock an extraordinary living experience with Saya Homes. Each project is beautifully designed to ensure safety, serenity, and thoughtful amenities created from a perspective of convenience or luxury.</span>
-
-                    <span>Explore stories and insights of  those who treated our properties home, and experience the difference yourself.</span>
+                    <?php if ($home_recent_blog_row): ?>
+                    <p title="<?= htmlspecialchars($home_recent_blog_heading) ?>" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;"><?= htmlspecialchars($home_recent_blog_heading) ?></p>
+                    <?php if ($home_recent_blog_desc !== ''): ?>
+                    <span title="<?= htmlspecialchars($home_recent_blog_desc) ?>"><?= htmlspecialchars($home_recent_blog_desc) ?></span>
+                    <?php endif; ?>
+                    <span style="font-style: italic; font-weight: 700; color: #000;">Date: <?= date("d-m-Y", strtotime($home_recent_blog_row['date'])) ?></span>
+                    <?php endif; ?>
                     <div class="section-8-btn-wrap mt-3">
                         <a href="<?= $base_url ?>/blogs" class="btn1212" style="text-decoration: none;">
                             <span class="btn1212-text">Read Blogs</span>
@@ -846,7 +867,14 @@ Saya Group Clears Rs 1,500 Cr Debt, Signals Debt-Free Growth Across NCR
                     </div>
                 </div>
                 <div class="section-8-content-inner-middle" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200" style="width: 100%;">
+                    <?php if ($home_recent_blog_row): ?>
+                    <?php $home_recent_blog_image = !empty($home_recent_blog_row['image']) ? ($base_url . '/uploads/blog-images/' . $home_recent_blog_row['image']) : ($base_url . '/images/new_theme/blogimage.jpg'); ?>
+                    <a href="<?= $base_url ?>/blogs/<?= htmlspecialchars($home_recent_blog_row['slugurl']) ?>" target="_blank" style="text-decoration: none; color: inherit; display: block;">
+                        <img src="<?= htmlspecialchars($home_recent_blog_image) ?>" alt="<?= htmlspecialchars($home_recent_blog_heading) ?>" style="width: 100%; height: auto; display: block;" onerror="this.onerror=null;this.src='<?= $base_url ?>/images/new_theme/blogimage.jpg';">
+                    </a>
+                    <?php else: ?>
                     <img src="<?= $base_url ?>/images/new_theme/blogimage.jpg" alt="Blog" style="width: 100%; height: auto; display: block;">
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -972,7 +1000,7 @@ Saya Group Clears Rs 1,500 Cr Debt, Signals Debt-Free Growth Across NCR
         <?php endif; ?>
 
         <!-- Get To Know Banner - about page only -->
-        <?php if ($show_about_hero): ?>
+        <!-- <?php if ($show_about_hero): ?>
         <div class="get-to-know-banner-wrap">
             <section class="get-to-know-banner" data-aos="fade-up" data-aos-duration="1000" style="background-image: url('<?= $base_url ?>/images/new_theme/contactusbg.jpg');">
                 <div class="get-to-know-banner-inner">
@@ -986,7 +1014,7 @@ Saya Group Clears Rs 1,500 Cr Debt, Signals Debt-Free Growth Across NCR
                 </div>
             </section>
         </div>
-        <?php endif; ?>
+        <?php endif; ?> -->
 
         <div class="section-10" data-aos="fade-up" data-aos-duration="1000">
             <div class="section-10-contact-us">

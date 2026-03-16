@@ -126,7 +126,7 @@
 
 <div class="button-top"><i class="fa fa-chevron-up"></i></div>
 
-<!-- <div class="modal fade bd-example-modal-lg" id="formModal">
+<div class="modal fade bd-example-modal-lg" id="formModal">
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
         <div class="modal-content">
             <button type="button" class="close d-flex align-items-center justify-content-center" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="ion-ios-close">×</span></button>
@@ -189,4 +189,4 @@
             </div>
         </div>
     </div>
-</div> -->
+</div>

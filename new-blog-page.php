@@ -1,3 +1,4 @@
+<?php include_once('admin-panel-ecorp/config.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +15,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="new-blog-page new-blog-two-page">
+    <?php
+    $sidebarSearchTerm = isset($_GET['blog_search']) ? trim((string) $_GET['blog_search']) : '';
+    $hasSidebarSearch = ($sidebarSearchTerm !== '');
+    ?>
     <?php include_once('new_header.php') ?>
     <a href="<?= $base_url ?>/new_media-page.php?page=contact" class="section-5-enquire-btn">ENQUIRE NOW</a>
 
@@ -32,104 +37,192 @@
     </section>
 
     <main class="blog-main">
-        <div class="blog-layout" style="position: relative;">
+        <div class="blog-layout">
             <div class="blog-content">
                 <div class="blog-grid">
+                    <?php
+                    $blogsPerPage = 4;
+                    $currentPage = isset($_GET['blog_page']) ? (int) $_GET['blog_page'] : 1;
+                    if ($currentPage < 1) {
+                        $currentPage = 1;
+                    }
+
+                    $totalBlogs = 0;
+                    $totalBlogsQuery = mysqli_query($link, "SELECT COUNT(*) AS total FROM `blogs` WHERE `status`='1'");
+                    if ($totalBlogsQuery) {
+                        $totalBlogsRow = mysqli_fetch_assoc($totalBlogsQuery);
+                        $totalBlogs = isset($totalBlogsRow['total']) ? (int) $totalBlogsRow['total'] : 0;
+                    }
+
+                    $totalPages = max(1, (int) ceil($totalBlogs / $blogsPerPage));
+                    if ($currentPage > $totalPages) {
+                        $currentPage = $totalPages;
+                    }
+
+                    $offset = ($currentPage - 1) * $blogsPerPage;
+                    $blogData = mysqli_query($link, "SELECT * FROM `blogs` WHERE `status`='1' ORDER BY `id` DESC LIMIT $offset, $blogsPerPage");
+
+                    if ($blogData && mysqli_num_rows($blogData) > 0) {
+                        while ($blog = mysqli_fetch_assoc($blogData)) {
+                            $blogTitle = !empty($blog['heading']) ? $blog['heading'] : '';
+                            $blogDate = !empty($blog['date']) ? date('M j, Y', strtotime($blog['date'])) : '';
+                            $blogDateAttr = !empty($blog['date']) ? date('Y-m-d', strtotime($blog['date'])) : '';
+                            $blogImage = !empty($blog['image']) ? $base_url . '/uploads/blog-images/' . $blog['image'] : $base_url . '/images/new_theme/ocblog.jpg';
+                            $blogLink = $base_url . '/blogs/' . $blog['slugurl'];
+                            $blogContent = !empty($blog['content']) ? trim(strip_tags($blog['content'])) : '';
+                            $blogExcerpt = mb_substr($blogContent, 0, 220);
+                            if (!empty($blogContent) && mb_strlen($blogContent) > 220) {
+                                $blogExcerpt .= '...';
+                            }
+                    ?>
                     <article class="blog-card">
-                        <div class="blog-card-image-link">
-                            <img src="<?= $base_url ?>/images/new_theme/ocblog.jpg" alt="OC Occupancy Certificate" class="blog-card-img">
-                        </div>
+                        <a href="<?= $blogLink ?>" class="blog-card-image-link" target="_blank" rel="noopener noreferrer">
+                            <img src="<?= $blogImage ?>" alt="<?= htmlspecialchars($blogTitle) ?>" class="blog-card-img">
+                        </a>
                         <div class="blog-card-body">
-                            <time class="blog-card-date" datetime="2026-01-06">Jan 6, 2026</time>
-                            <h2 class="blog-card-title">How Will 2026 Homes Be Different from Today’s Living Spaces?</h2>
-                            <p class="blog-card-excerpt">There are just a few weeks left before we step into 2026, and you might have already noticed how our living spaces are quietly transforming around us. From the way we connect to how we unwind at home, every corner seems to speak of a smarter, calmer, and more connected lifestyle…</p>
-                            <span class="blog-card-readmore">Read More <img src="<?= $base_url ?>/images/new_theme/readmorearrow.svg" alt="" class="blog-readmore-arrow" aria-hidden="true"></span>
+                            <time class="blog-card-date" datetime="<?= $blogDateAttr ?>"><?= $blogDate ?></time>
+                            <h2 class="blog-card-title"><?= htmlspecialchars($blogTitle) ?></h2>
+                            <p class="blog-card-excerpt"><?= htmlspecialchars($blogExcerpt) ?></p>
+                            <a href="<?= $blogLink ?>" class="blog-card-readmore" target="_blank" rel="noopener noreferrer">Read More <img src="<?= $base_url ?>/images/new_theme/readmorearrow.svg" alt="" class="blog-readmore-arrow" aria-hidden="true"></a>
                         </div>
                     </article>
+                    <?php
+                        }
+                    } else {
+                    ?>
                     <article class="blog-card">
-                        <div class="blog-card-image-link">
-                            <img src="<?= $base_url ?>/images/new_theme/ocblog.jpg" alt="Blog" class="blog-card-img">
-                        </div>
                         <div class="blog-card-body">
-                            <time class="blog-card-date" datetime="2025-12-15">Dec 15, 2025</time>
-                            <h2 class="blog-card-title">Why Is Ghaziabad Becoming the Ultimate Hub for Luxury Living?</h2>
-                            <p class="blog-card-excerpt">Have you noticed how Ghaziabad is changing around you? From bustling streets to rising towers, the city is becoming a place where life is alive and full of opportunity. With the current estimated population of 2,411,000, there’s a sense of energy that you can observe in every neighborhood and community…</p>
-                            <span class="blog-card-readmore">Read More <img src="<?= $base_url ?>/images/new_theme/readmorearrow.svg" alt="" class="blog-readmore-arrow" aria-hidden="true"></span>
+                            <h2 class="blog-card-title">No blogs found.</h2>
                         </div>
                     </article>
-                    <article class="blog-card">
-                        <div class="blog-card-image-link">
-                            <img src="<?= $base_url ?>/images/new_theme/ocblog.jpg" alt="Blog" class="blog-card-img">
-                        </div>
-                        <div class="blog-card-body">
-                            <time class="blog-card-date" datetime="2025-11-20">Nov 20, 2025</time>
-                            <h2 class="blog-card-title">Importance of Occupancy Certificate in RERA-Approved Projects</h2>
-                            <p class="blog-card-excerpt">When you invest in a home, one of the most important documents is the Occupancy Certificate (OC) as legal safety and compliance matter just as much as luxury. This certificate plays a crucial role in protecting your rights as a homeowner…</p>
-                            <span class="blog-card-readmore">Read More <img src="<?= $base_url ?>/images/new_theme/readmorearrow.svg" alt="" class="blog-readmore-arrow" aria-hidden="true"></span>
-                        </div>
-                    </article>
-                    <article class="blog-card">
-                        <div class="blog-card-image-link">
-                            <img src="<?= $base_url ?>/images/new_theme/ocblog.jpg" alt="Blog" class="blog-card-img">
-                        </div>
-                        <div class="blog-card-body">
-                            <time class="blog-card-date" datetime="2025-10-18">Oct 18, 2025</time>
-                            <h2 class="blog-card-title">OC Applied Best Commercial Property in Noida & Gr. Noida – High ROI in NCR</h2>
-                            <p class="blog-card-excerpt">The commercial real estate market in Noida NCR is buzzing with opportunity and Saya Group is leading the way with its two iconic developments: Saya South X in Greater Noida West and Saya Piazza at Noida Expressway. ..</p>
-                            <span class="blog-card-readmore">Read More <img src="<?= $base_url ?>/images/new_theme/readmorearrow.svg" alt="" class="blog-readmore-arrow" aria-hidden="true"></span>
-                        </div>
-                    </article>
+                    <?php
+                    }
+                    ?>
                 </div>
                 <nav class="blog-pagination" aria-label="Blog pagination">
+                    <?php
+                    $paginationBase = $base_url . '/new-blog-page.php?blog_page=';
+                    $previousPage = $currentPage - 1;
+                    $nextPage = $currentPage + 1;
+                    ?>
+                    <?php if ($currentPage > 1): ?>
+                    <a href="<?= $paginationBase . $previousPage ?>" class="blog-pagination-prev" aria-label="Previous">
+                        <img src="<?= $base_url ?>/images/svg/leftarrowaldier.svg" alt="">
+                    </a>
+                    <?php else: ?>
                     <span class="blog-pagination-prev" aria-label="Previous">
                         <img src="<?= $base_url ?>/images/svg/leftarrowaldier.svg" alt="">
                     </span>
-                    <span class="blog-pagination-num is-active" aria-current="page">1</span>
-                    <span class="blog-pagination-num">2</span>
-                    <span class="blog-pagination-dots">...</span>
-                    <span class="blog-pagination-num">9</span>
-                    <span class="blog-pagination-num">10</span>
+                    <?php endif; ?>
+
+                    <?php
+                    $startPage = max(1, $currentPage - 1);
+                    $endPage = min($totalPages, $currentPage + 1);
+                    if ($startPage > 1) {
+                        echo '<a href="' . $paginationBase . '1" class="blog-pagination-num">1</a>';
+                        if ($startPage > 2) {
+                            echo '<span class="blog-pagination-dots">...</span>';
+                        }
+                    }
+
+                    for ($pageNo = $startPage; $pageNo <= $endPage; $pageNo++) {
+                        if ($pageNo === $currentPage) {
+                            echo '<span class="blog-pagination-num is-active" aria-current="page">' . $pageNo . '</span>';
+                        } else {
+                            echo '<a href="' . $paginationBase . $pageNo . '" class="blog-pagination-num">' . $pageNo . '</a>';
+                        }
+                    }
+
+                    if ($endPage < $totalPages) {
+                        if ($endPage < $totalPages - 1) {
+                            echo '<span class="blog-pagination-dots">...</span>';
+                        }
+                        echo '<a href="' . $paginationBase . $totalPages . '" class="blog-pagination-num">' . $totalPages . '</a>';
+                    }
+                    ?>
+
+                    <?php if ($currentPage < $totalPages): ?>
+                    <a href="<?= $paginationBase . $nextPage ?>" class="blog-pagination-next" aria-label="Next">
+                        <img src="<?= $base_url ?>/images/svg/rightarrowslider.svg" alt="">
+                    </a>
+                    <?php else: ?>
                     <span class="blog-pagination-next" aria-label="Next">
                         <img src="<?= $base_url ?>/images/svg/rightarrowslider.svg" alt="">
                     </span>
+                    <?php endif; ?>
                 </nav>
             </div>
 
-            <aside class="blog-sidebar" style="position: relative;">
-                <div class="blog-sidebar-sticky-wrap" style="position: relative;">
+            <aside class="blog-sidebar">
+                <div class="blog-sidebar-sticky-wrap">
                 <div class="blog-sidebar-widget blog-widget-search">
-                    <form role="search" class="blog-search-form">
-                        <input type="search" placeholder="Search..." class="blog-search-input" aria-label="Search">
+                    <form role="search" class="blog-search-form" method="get" action="<?= $base_url ?>/new-blog-page.php">
+                        <input type="search" name="blog_search" value="<?= htmlspecialchars($sidebarSearchTerm, ENT_QUOTES, 'UTF-8') ?>" placeholder="Search by blog title..." class="blog-search-input" aria-label="Search by blog title">
                         <button type="submit" class="blog-search-btn" aria-label="Search">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
                         </button>
                     </form>
                 </div>
+                <?php if ($sidebarSearchTerm !== ''): ?>
+                <div class="blog-sidebar-widget blog-widget-recent-posts">
+                    <h3 class="blog-sidebar-heading">Search Results</h3>
+                    <ul class="blog-recent-list">
+                        <?php
+                        $escapedSearch = mysqli_real_escape_string($link, $sidebarSearchTerm);
+                        $searchBlogData = mysqli_query($link, "SELECT * FROM `blogs` WHERE `status`='1' AND `heading` LIKE '%$escapedSearch%' ORDER BY `id` DESC");
+                        if ($searchBlogData && mysqli_num_rows($searchBlogData) > 0) {
+                            while ($searchBlog = mysqli_fetch_assoc($searchBlogData)) {
+                                $searchTitle = !empty($searchBlog['heading']) ? $searchBlog['heading'] : '';
+                                $searchDate = !empty($searchBlog['date']) ? date('M j, Y', strtotime($searchBlog['date'])) : '';
+                                $searchImage = !empty($searchBlog['image']) ? $base_url . '/uploads/blog-images/' . $searchBlog['image'] : $base_url . '/images/new_theme/homeblog.jpg';
+                                $searchLink = $base_url . '/blogs/' . $searchBlog['slugurl'];
+                        ?>
+                        <li class="blog-recent-item">
+                            <a href="<?= $searchLink ?>" class="blog-recent-thumb" target="_blank" rel="noopener noreferrer"><img src="<?= $searchImage ?>" alt="<?= htmlspecialchars($searchTitle) ?>"></a>
+                            <div class="blog-recent-info">
+                                <a href="<?= $searchLink ?>" class="blog-recent-title" target="_blank" rel="noopener noreferrer"><?= htmlspecialchars($searchTitle) ?></a>
+                                <time class="blog-recent-date"><?= $searchDate ?></time>
+                            </div>
+                        </li>
+                        <?php
+                            }
+                        } else {
+                        ?>
+                        <li class="blog-recent-item">
+                            <div class="blog-recent-info">
+                                <span class="blog-recent-title">No blogs found for "<?= htmlspecialchars($sidebarSearchTerm, ENT_QUOTES, 'UTF-8') ?>".</span>
+                            </div>
+                        </li>
+                        <?php
+                        }
+                        ?>
+                    </ul>
+                </div>
+                <?php endif; ?>
+
                 <div class="blog-sidebar-widget blog-widget-recent-posts">
                     <h3 class="blog-sidebar-heading">Recent Posts</h3>
                     <ul class="blog-recent-list">
+                        <?php
+                        $recentBlogData = mysqli_query($link, "SELECT * FROM `blogs` WHERE `status`='1' ORDER BY `date` DESC, `id` DESC LIMIT 3");
+                        if ($recentBlogData && mysqli_num_rows($recentBlogData) > 0) {
+                            while ($recentBlog = mysqli_fetch_assoc($recentBlogData)) {
+                                $recentTitle = !empty($recentBlog['heading']) ? $recentBlog['heading'] : '';
+                                $recentDate = !empty($recentBlog['date']) ? date('M j, Y', strtotime($recentBlog['date'])) : '';
+                                $recentImage = !empty($recentBlog['image']) ? $base_url . '/uploads/blog-images/' . $recentBlog['image'] : $base_url . '/images/new_theme/homeblog.jpg';
+                                $recentLink = $base_url . '/blogs/' . $recentBlog['slugurl'];
+                        ?>
                         <li class="blog-recent-item">
-                            <span class="blog-recent-thumb"><img src="<?= $base_url ?>/images/new_theme/homeblog.jpg" alt=""></span>
+                            <a href="<?= $recentLink ?>" class="blog-recent-thumb" target="_blank" rel="noopener noreferrer"><img src="<?= $recentImage ?>" alt="<?= htmlspecialchars($recentTitle) ?>"></a>
                             <div class="blog-recent-info">
-                                <span class="blog-recent-title">Saya Group Clears ₹1,500 Crore Debt: A Testament to Financial Strength and Sustainable Growth.</span>
-                                <time class="blog-recent-date">October 18, 2019</time>
+                                <a href="<?= $recentLink ?>" class="blog-recent-title" target="_blank" rel="noopener noreferrer"><?= htmlspecialchars($recentTitle) ?></a>
+                                <time class="blog-recent-date"><?= $recentDate ?></time>
                             </div>
                         </li>
-                        <li class="blog-recent-item">
-                            <span class="blog-recent-thumb"><img src="<?= $base_url ?>/images/new_theme/homeblog.jpg" alt=""></span>
-                            <div class="blog-recent-info">
-                                <span class="blog-recent-title">Why Is Ghaziabad Becoming the Ultimate Hub for Luxury Living?</span>
-                                <time class="blog-recent-date">Jan 6, 2026</time>
-                            </div>
-                        </li>
-                        <li class="blog-recent-item">
-                            <span class="blog-recent-thumb"><img src="<?= $base_url ?>/images/new_theme/homeblog.jpg" alt=""></span>
-                            <div class="blog-recent-info">
-                                <span class="blog-recent-title">How Will 2026 Homes Be Different from Today’s Living Spaces?
-</span>
-                                <time class="blog-recent-date">Nov 20, 2025</time>
-                            </div>
-                        </li>
+                        <?php
+                            }
+                        }
+                        ?>
                     </ul>
                 </div>
                 <!-- <div class="blog-sidebar-widget blog-widget-recent-comments">
@@ -459,6 +552,15 @@
         })();
     </script>
     <script src="<?= $base_url ?>/js/new-blog.js"></script>
+    <?php if ($hasSidebarSearch): ?>
+    <script>
+        (function () {
+            if (window.history && window.history.replaceState) {
+                window.history.replaceState({}, document.title, "<?= $base_url ?>/new-blog-page.php");
+            }
+        })();
+    </script>
+    <?php endif; ?>
     <script>
     (function() {
         var section = document.querySelector('.faqs-section');
@@ -483,12 +585,6 @@
             btn.addEventListener('click', function() {
                 var isOpen = item.classList.contains(openClass);
 
-                // Ek opened item ko close karke "sab band" state avoid karo
-                // taaki section height/background jump na ho.
-                if (isOpen) {
-                    return;
-                }
-
                 // Sabhi items band karo (amenities wali tarah)
                 items.forEach(function(other) {
                     var otherBtn = other.querySelector('.faqs-accordion-head');
@@ -500,14 +596,18 @@
                     if (otherIcon) otherIcon.textContent = '+';
                 });
 
-                item.classList.add(openClass);
-                btn.setAttribute('aria-expanded', 'true');
-                panel.style.maxHeight = panel.scrollHeight + 'px';
-                var icon = btn.querySelector('.faqs-accordion-icon');
-                if (icon) icon.textContent = '−';
+                // Agar clicked item pehle band tha, toh kolo
+                if (!isOpen) {
+                    item.classList.add(openClass);
+                    btn.setAttribute('aria-expanded', 'true');
+                    panel.style.maxHeight = panel.scrollHeight + 'px';
+                    var icon = btn.querySelector('.faqs-accordion-icon');
+                    if (icon) icon.textContent = '−';
+                }
             });
         });
     })();
     </script>
 </body>
 </html>
+

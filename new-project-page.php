@@ -572,9 +572,33 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
          <?php } ?>
 
 
-         <!--section 6 - Tour (video section) -->
+         <!-- section 6 - Tour (video section) -->
          <section class="project-video-section" id="tour">
             <div class="project-video-wrap">
+                <?php
+                $tour_video_url = '';
+                if ($project_slug === 'saya-piazza') {
+                    $tour_video_url = 'https://www.youtube.com/embed/E6Mg-AH0ZGQ?si=MebHfAWjxXYCalzA';
+                } elseif ($project_slug === 'gold-avenue') {
+                    $tour_video_url = 'https://www.youtube.com/embed/cYKlds80taA?si=d7MWc-6JaprepcNs';
+                } elseif ($project_slug === 'saya-zion') {
+                    $tour_video_url = 'https://www.youtube.com/embed/7TTFflCV6f0?si=TLwkrmy3zFSv66Q2';
+                } elseif ($project_slug === 'saya-zenith') {
+                    $tour_video_url = 'https://www.youtube.com/embed/Xm6NC2-N7j0?si=CmHRC-Zoac0gO7jg';
+                }
+                ?>
+                <?php if ($tour_video_url !== '') { ?>
+                <iframe
+                    class="section-4-bg-video project-video"
+                    src="<?= $tour_video_url ?>"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                    style="width: 100%; aspect-ratio: 16 / 9; height: auto; display: block; border: 0; border-radius: 16px;">
+                </iframe>
+                <?php } else { ?>
                 <video class="section-4-bg-video project-video" id="projectVideo" muted loop playsinline preload="metadata">
                     <source src="<?= $base_url ?>/images/new_theme/projectsuccessstory.mp4" type="video/mp4">
                 </video>
@@ -585,6 +609,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                 <button type="button" class="project-video-pause-btn" id="projectVideoPauseBtn" aria-label="Pause video" style="display: none;">
                     <img src="<?= $base_url ?>/images/new_theme/icons/pause-icon.svg" alt="">
                 </button>
+                <?php } ?>
             </div>
          </section>
 
@@ -1960,7 +1985,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
     <?php include_once('new_footer.php') ?>
 
     <!-- Enquiry Now - fixed bottom, left of scroll-to-hero -->
-    <a href="<?= $base_url ?>/new_media-page.php?page=contact" class="section-5-enquire-btn">ENQUIRE NOW</a>
+    <a href="<?= $base_url ?>/new_media-page.php?page=contact" class="section-5-enquire-btn" data-source="Common Enquiry">ENQUIRE NOW</a>
 
     <!-- Scroll to Hero Button - shows when section 3 is in view -->
     <button type="button" id="scroll-to-hero-btn" class="scroll-to-hero-btn" aria-label="Scroll to hero section" title="Back to top">

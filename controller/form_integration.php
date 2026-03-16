@@ -36,6 +36,16 @@ if (isset($_POST['query_nature']) && $_POST['query_nature'] === "modal") {
     $mpagename = get_safe_value($_POST['mpagename'] ?? '');
     $msource   = get_safe_value($_POST['msource'] ?? '');
 
+    if ($mpagename === '') {
+        $requestPath = (string) parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
+        $pageSlug = basename(trim($requestPath, '/'));
+        if ($pageSlug === '' || $pageSlug === false) {
+            $mpagename = 'home';
+        } else {
+            $mpagename = preg_replace('/\.php$/i', '', $pageSlug) ?: 'home';
+        }
+    }
+
     // Validate name
     if (empty($mname)) {
         $response['message'] = "Please enter your name.";

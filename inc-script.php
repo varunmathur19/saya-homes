@@ -52,7 +52,7 @@
 
                     // Redirect after 1.5 seconds
                     setTimeout(function () {
-                        window.location.href = 'thank-you.php';
+                        window.location.href = 'thank-you';
                     }, 1500);
                 } else {
                     $(".modalstatus")

@@ -2185,8 +2185,8 @@
 
 .new-project-page--gold .project-video-pause-btn {
     top: auto;
-    left: 24px;
-    bottom: 32px;
+    left: 15px;
+    bottom: 15px;
     transform: translate(0, 0);
 }
 .new-project-page--gold .project-video-pause-btn:hover {
@@ -2205,12 +2205,12 @@
 }
 @media (max-width: 518px) {
     .project-video-pause-btn {
-        width: 50px;
-        height: 50px;
+        width: 35px;
+        height: 35px;
     }
     .project-video-pause-btn img {
-        width: 22px;
-        height: 22px;
+        width: 15px;
+        height: 15px;
     }
 }
 

@@ -1,3 +1,10 @@
+<?php
+include_once "admin-panel-ecorp/config.php";
+if (isset($_GET['page']) && $_GET['page'] === 'event') {
+    header("Location: https://sayahomes.com/events.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,17 +15,23 @@
         ? 'Saya Homes Careers | Why Work With Saya?'
         : ((isset($_GET['page']) && $_GET['page'] === 'contact')
             ? 'Contact Us | Saya Homes | Get in Touch Today'
-            : 'In the Media | Saya Homes | Featured in Press & News'); ?>
+            : ((isset($_GET['page']) && $_GET['page'] === 'event')
+                ? 'Saya Homes Events | Community & Festive Celebrations'
+                : 'In the Media | Saya Homes | Featured in Press & News')); ?>
     <?php $meta_description = (isset($_GET['page']) && $_GET['page'] === 'career')
         ? "Join Saya Homes' careers. Openings in sales, marketing, finance, design & more in Greater Noida. Grow with a leading real estate team. Apply today."
         : ((isset($_GET['page']) && $_GET['page'] === 'contact')
             ? 'Contact us at Saya Homes. Get in touch for luxury residential & commercial inquiries in Greater Noida West. Use our form or call today.'
-            : 'Know more about Saya Homes, about our newly launched residential and commercial projects, community initiatives, and achievements.'); ?>
+            : ((isset($_GET['page']) && $_GET['page'] === 'event')
+                ? 'Explore Saya Homes Events showcasing festive celebrations, community gatherings, and memorable moments across Saya residential communities.'
+                : 'Know more about Saya Homes, about our newly launched residential and commercial projects, community initiatives, and achievements.')); ?>
     <?php $meta_keywords = (isset($_GET['page']) && $_GET['page'] === 'career')
         ? 'careers, careers at saya homes'
         : ((isset($_GET['page']) && $_GET['page'] === 'contact')
             ? 'contact us, get in touch, inquiries'
-            : 'in the media, print media, digital media'); ?>
+            : ((isset($_GET['page']) && $_GET['page'] === 'event')
+                ? 'saya event, event, Saya Homes Event Gallery, Saya Homes Celebrations, Saya Homes Community Events, Saya Homes Festive Celebrations, Saya Group Events, Saya Homes Event Highlights, Saya Homes Cultural Events, Saya Homes Resident Events, Saya Homes Event Updates'
+                : 'in the media, print media, digital media')); ?>
     <title><?= $meta_title ?></title>
     <meta name="description" content="<?= $meta_description ?>" />
     <meta name="keywords" content="<?= $meta_keywords ?>" />
@@ -40,7 +53,7 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
 <body class="new-media-page media-two-page<?= $is_contact_page ? ' new-contact-page' : '' ?><?= $is_career_page ? ' new-career-page' : '' ?><?= $is_event_page ? ' new-event-page' : '' ?>">
     <?php include_once('new_header.php');
     ?>
-    <a href="<?= $base_url ?>/new_media-page.php?page=contact" class="section-5-enquire-btn">ENQUIRE NOW</a>
+    <a href="<?= $base_url ?>/new_media-page.php?page=contact" class="section-5-enquire-btn" data-source="Common Enquiry">ENQUIRE NOW</a>
 
     <!-- Media Banner Section (mediabg / contact / career / event) -->
     <section class="media-banner-section<?= $is_contact_page ? ' contact-banner-section' : '' ?><?= $is_career_page ? ' career-banner-section' : '' ?><?= $is_event_page ? ' event-banner-section' : '' ?>">
@@ -107,61 +120,31 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
 
     <?php if ($is_event_page): ?>
     <?php
-    $events_list = array(
-        array('title' => 'Saya Success Party 2025', 'date' => '18 August, 2025', 'slug' => 'saya-success-party-2025', 'image' => 'Saya-Success-Party-2025.png'),
-        array('title' => 'Shri Lakshmi Narayan Yagya Ceremony at Saya Piazza', 'date' => '16 September, 2024', 'slug' => 'shri-lakshmi-narayan-yagya-ceremony-at-saya-piazza', 'image' => 'Shri-Lakshmi-Narayan-Yagya-Ceremony.png'),
-        array('title' => 'Dandiya Night', 'date' => '12 September, 2024', 'slug' => 'dandiya-night', 'image' => 'dandiyanight.png'),
-        array('title' => 'Janamasthami Celebration at Saya SouthX', 'date' => '26 August, 2024', 'slug' => 'janamasthami-celebration-at-saya-southx', 'image' => 'janmashtmi.png'),
-        array('title' => 'Independence Day Celebration at Saya SouthX', 'date' => '15 August, 2024', 'slug' => 'independence-day-celebration-at-saya-southx', 'image' => 'independence.png'),
-        array('title' => 'Shri Laxmi Narayan Yagya at SouthX', 'date' => '16 December, 2023', 'slug' => 'shri-laxmi-narayan-yagya-at-southx', 'image' => 'Shri-Laxmi-Narayan-Yagya-at-SouthX.png'),
-        array('title' => 'Rewards and Recognition at Saya', 'date' => '16 December, 2023', 'slug' => 'rewards-and-recognition-at-saya', 'image' => 'Rewards-and-Recognition-at-Saya.png'),
-        array('title' => 'Janmashtami 2022', 'date' => '1 October, 2022', 'slug' => 'janmashtami-2022', 'image' => 'Janmashtami-2022.png'),
-        array('title' => 'Independence Day 2022', 'date' => '15 August, 2022', 'slug' => 'independence-day-2022', 'image' => 'Independence-Day-2022.png'),
-        array('title' => 'Saya Gold Avenue Club House Launch', 'date' => '4 June, 2022', 'slug' => 'saya-gold-avenue-club-house-launch', 'image' => 'Saya-Gold-Avenue-Club-House-Launch.png'),
-        array('title' => 'Grand Lohri Night', 'date' => '4 June, 2022', 'slug' => 'grand-lohri-night', 'image' => 'Grand-Lohri-Night.png'),
-        array('title' => 'Piazza Event Launch', 'date' => '3 June, 2022', 'slug' => 'piazza-event-launch', 'image' => 'Piazza-Event-Launch.png'),
-        array('title' => 'Elevated Merchandise Launch', 'date' => '2 June, 2022', 'slug' => 'elevated-merchandise-launch', 'image' => 'Elevated-Merchandise-Launch.png'),
-        array('title' => 'Teej Mahotsav Celebration 2022', 'date' => '1 June, 2022', 'slug' => 'teej-mahotsav-celebration-2022', 'image' => 'Teej-Mahotsav-Celebration-2022.png'),
-        array('title' => 'Diwali Celebration 2020', 'date' => '20 October, 2020', 'slug' => 'diwali-celebration-2020', 'image' => 'Diwali-Celebration-2020.png'),
-        array('title' => "Women's Day Celebration at SGA 2020", 'date' => '21 June, 2020', 'slug' => 'womens-day-celebration-at-sga-2020', 'image' => "Women's-Day-Celebration-at-SGA-2020.png"),
-        array('title' => 'New Year Celebration-2019', 'date' => '21 June, 2020', 'slug' => 'new-year-celebration-2019', 'image' => 'New-Year-Celebration-2019.png'),
-        array('title' => 'Dandiya Night Celebration at SGA 2019', 'date' => '12 June, 2020', 'slug' => 'dandiya-night-celebration-at-sga-2019', 'image' => 'Dandiya-Night-Celebration-at-SGA-2019.png'),
-        array('title' => 'Holi-2019', 'date' => '10 June, 2020', 'slug' => 'holi-2019', 'image' => 'Holi-2019.png'),
-        array('title' => 'Saya Gold Avenue Carnival', 'date' => '5 June, 2020', 'slug' => 'saya-gold-avenue-carnival', 'image' => 'Saya-Gold-Avenue-Carnival.png'),
-        array('title' => 'Saya South-X Launch', 'date' => '4 June, 2020', 'slug' => 'saya-south-x-launch', 'image' => 'Saya-South-X-Launch.png'),
-        array('title' => 'Success Celebration', 'date' => '4 June, 2020', 'slug' => 'success-celebration', 'image' => 'Success-Celebration.png'),
-        array('title' => 'Zenith Club Launch', 'date' => '4 June, 2020', 'slug' => 'zenith-club-launch', 'image' => 'Zenith-Club-Launch.png'),
-        array('title' => 'Housewarming Ceremony at SGA', 'date' => '3 June, 2020', 'slug' => 'housewarming-ceremony-at-sga', 'image' => 'Housewarming-Ceremony-at-SGA.png'),
-        array('title' => 'The Dandiya', 'date' => '6 April, 2020', 'slug' => 'the-dandiya', 'image' => 'The-Dandiya.png'),
-        array('title' => 'Bhangra Night Celebration at SGA 2019', 'date' => '4 June, 2019', 'slug' => 'bhangra-night-celebration-at-sga-2019', 'image' => 'Bhangra-Night-Celebration-at-SGA-2019.png'),
-        array('title' => 'Sai Sandhya', 'date' => '4 June, 2019', 'slug' => 'sai-sandhya', 'image' => 'Sai-Sandhya.png'),
-        array('title' => 'Baisakhi Celebration', 'date' => '4 June, 2019', 'slug' => 'baisakhi-celebration', 'image' => 'Baisakhi-Celebration.png'),
-        array('title' => 'Saya Homes Festival-Patna-July 2018', 'date' => '1 July, 2018', 'slug' => 'saya-homes-festival-patna-july-2018', 'image' => 'Saya-Homes-Festival-Patna-July-2018.png'),
-        array('title' => 'Vishwakarma Puja at Saya Gold Avenue Site', 'date' => '4 June, 2018', 'slug' => 'vishwakarma-puja-at-saya-gold-avenue-site', 'image' => 'Vishwakarma-Puja-at-Saya-Gold-Avenue-Site.png'),
-        array('title' => 'Christmas Day Celebration', 'date' => '26 December, 2017', 'slug' => 'christmas-day-celebration', 'image' => 'Christmas-Day-Celebration.png'),
-    );
+    $events_query = mysqli_query($link, "SELECT * FROM `events` WHERE `ev_status`='1' ORDER BY `ev_date` DESC");
     ?>
     <!-- Event page section – all events from sayahomes.com/events -->
     <section class="event-page-section">
         <div class="event-page-inner">
             <h2 class="event-page-title">Event</h2>
             <div class="event-page-grid">
-                <?php foreach ($events_list as $ev): ?>
-                <a href="https://sayahomes.com/events/<?= htmlspecialchars($ev['slug']) ?>" class="event-page-card" target="_blank" rel="noopener noreferrer">
+                <?php if ($events_query && mysqli_num_rows($events_query) > 0): ?>
+                <?php while ($ev = mysqli_fetch_assoc($events_query)): ?>
+                <a href="https://sayahomes.com/events.php" class="event-page-card">
                     <div class="event-page-card-image-wrap">
-                        <img src="<?= $base_url ?>/images/new_theme/<?= htmlspecialchars($ev['image']) ?>" alt="<?= htmlspecialchars($ev['title']) ?>" class="event-page-card-image" loading="lazy">
+                        <img src="<?= $base_url ?>/uploads/events/<?= htmlspecialchars($ev['ev_image']) ?>" alt="<?= htmlspecialchars($ev['ev_title']) ?>" class="event-page-card-image" loading="lazy">
                     </div>
                     <div class="event-page-card-content">
                         <div class="event-page-card-text">
-                            <h3 class="event-page-card-title"><?= htmlspecialchars($ev['title']) ?></h3>
-                            <p class="event-page-card-date"><?= htmlspecialchars($ev['date']) ?></p>
+                            <h3 class="event-page-card-title"><?= htmlspecialchars($ev['ev_title']) ?></h3>
+                            <p class="event-page-card-date"><?= date('j F, Y', strtotime($ev['ev_date'])) ?></p>
                         </div>
                         <span class="event-page-card-arrow" aria-hidden="true">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </span>
                     </div>
                 </a>
-                <?php endforeach; ?>
+                <?php endwhile; ?>
+                <?php endif; ?>
             </div>
         </div>
     </section>
@@ -290,12 +273,12 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                         <svg class="contact-details-header-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
                         <input type="text" class="contact-details-header-search" placeholder="Search for roles..." aria-label="Search">
                     </div>
-                    <div class="contact-details-header-dropdown-wrap">
+                    <!-- <div class="contact-details-header-dropdown-wrap">
                         <select class="contact-details-header-dropdown" aria-label="Filter openings">
                             <option>All Openings</option>
                         </select>
                         <svg class="contact-details-header-dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="career-jobs-grid">
@@ -2467,6 +2450,26 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
             } else {
                 setTimeout(initMenuAnimation, 100);
             }
+        })();
+    </script>
+    <script>
+        (function () {
+            var searchInput = document.querySelector('.contact-details-header-search');
+            if (!searchInput || !document.body.classList.contains('new-career-page')) return;
+
+            var jobCards = document.querySelectorAll('.career-jobs-grid .career-job-card');
+            if (!jobCards.length) return;
+
+            function filterJobsByTitle() {
+                var query = searchInput.value.trim().toLowerCase();
+                jobCards.forEach(function (card) {
+                    var titleEl = card.querySelector('.career-job-card-title');
+                    var title = titleEl ? titleEl.textContent.toLowerCase() : '';
+                    card.style.display = title.indexOf(query) !== -1 ? '' : 'none';
+                });
+            }
+
+            searchInput.addEventListener('input', filterJobsByTitle);
         })();
     </script>
 </body>
