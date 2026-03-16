@@ -107,6 +107,25 @@ include_once "admin-panel-ecorp/config.php";
         }
     </script>
     <link rel="stylesheet" href="https://sayahomes.com/css/pr.css">
+    <style>
+        #vision-mission,
+        #founder,
+        #customer-relationship,
+        #partnerships,
+        #appreciation-letter {
+            scroll-margin-top: 60px;
+        }
+
+        @media (max-width: 767px) {
+            #vision-mission,
+            #founder,
+            #customer-relationship,
+            #partnerships,
+            #appreciation-letter {
+                scroll-margin-top: 90px;
+            }
+        }
+    </style>
 </head>
 
 <!-- <body> -->
@@ -124,7 +143,7 @@ include_once "admin-panel-ecorp/config.php";
             <p class="hero-about-title">About Saya Homes</p>
         </div>
         <!-- Meet Our Founder section (aboutsec-2) - below about hero image -->
-        <section class="about-founder-section">
+        <section id="founder" class="about-founder-section">
             <div class="about-founder-container">
                 <div class="about-founder-content">
                     <h2 class="about-founder-heading">Meet the Visionary</h2>
@@ -360,7 +379,7 @@ include_once "admin-panel-ecorp/config.php";
         <?php endif; ?>
         <?php if ($show_about_hero): ?>
         <!-- Our Vision section - about page only, below About Saya Group -->
-        <section class="about-vision-section">
+        <section id="vision-mission" class="about-vision-section">
             <div class="about-vision-container">
                 <div class="about-vision-image-wrap">
                     <img src="<?= $base_url ?>/images/new_theme/aboutvision.jpg" alt="Our Vision - Building Trust, Creating Homes" class="about-vision-image">
@@ -524,7 +543,7 @@ include_once "admin-panel-ecorp/config.php";
             </div>
         </section>
         <!-- Partnerships - Finance (below Customer Relationship) -->
-        <section id="partnerships-finance" class="about-partnerships-section" data-aos="fade-up" data-aos-duration="1000">
+        <section id="partnerships" class="about-partnerships-section" data-aos="fade-up" data-aos-duration="1000">
             <div class="about-partnerships-bg" style="background-image: url('<?= $base_url ?>/images/new_theme/relationshipbg.jpg');"></div>
             <div class="about-partnerships-inner">
                 <h2 class="about-partnerships-title">Partnerships</h2>
@@ -578,7 +597,7 @@ include_once "admin-panel-ecorp/config.php";
             </div>
         </section>
         <!-- Appreciation Letters (below Partnerships) -->
-        <section id="appreciation-letters" class="about-appreciation-section" data-aos="fade-up" data-aos-duration="1000">
+        <section id="appreciation-letter" class="about-appreciation-section" data-aos="fade-up" data-aos-duration="1000">
             <div class="about-appreciation-inner">
                 <div class="about-appreciation-logo-wrap">
                     <video src="<?= $base_url ?>/images/new_theme/sayahomeaboutvideo.mp4" class="about-appreciation-logo" autoplay muted loop playsinline></video>
@@ -2207,6 +2226,85 @@ Saya Group Clears Rs 1,500 Cr Debt, Signals Debt-Free Growth Across NCR
                     nextEl: '.about-customer-relationship-next',
                     prevEl: '.about-customer-relationship-prev',
                 },
+            });
+        })();
+
+        /* Partnerships + Media logos stagger animation */
+        (function() {
+            if (typeof gsap === 'undefined') return;
+            var section = document.getElementById('partnerships');
+            if (!section) return;
+
+            var logos = section.querySelectorAll('.about-partnerships-logos .about-partnerships-logo-item, #media-partners .about-partnerships-logo-item');
+            if (!logos.length) return;
+
+            gsap.set(logos, { opacity: 0, y: 20 });
+
+            function playLogosAnimation() {
+                gsap.to(logos, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.7,
+                    ease: 'power2.out',
+                    stagger: 0.09
+                });
+            }
+
+            if (!('IntersectionObserver' in window)) {
+                playLogosAnimation();
+                return;
+            }
+
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (!entry.isIntersecting) return;
+                    playLogosAnimation();
+                    observer.disconnect();
+                });
+            }, { threshold: 0.2 });
+
+            observer.observe(section);
+        })();
+
+        /* About hero title letters stagger from bottom */
+        (function() {
+            if (typeof gsap === 'undefined') return;
+            var title = document.querySelector('.hero-about-title');
+            if (!title) return;
+
+            var text = (title.textContent || '').trim();
+            if (!text) return;
+
+            var chars = text.split('');
+            var fragment = document.createDocumentFragment();
+            var charSpans = [];
+
+            title.textContent = '';
+
+            chars.forEach(function(ch) {
+                if (ch === ' ') {
+                    fragment.appendChild(document.createTextNode(' '));
+                    return;
+                }
+                var span = document.createElement('span');
+                span.textContent = ch;
+                span.style.display = 'inline-block';
+                span.style.willChange = 'transform, opacity';
+                charSpans.push(span);
+                fragment.appendChild(span);
+            });
+
+            title.appendChild(fragment);
+
+            gsap.fromTo(charSpans, {
+                y: 30,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1,
+                duration: 0.65,
+                ease: 'power3.out',
+                stagger: 0.06
             });
         })();
     </script>

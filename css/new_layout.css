@@ -12734,7 +12734,7 @@ img {
 }
 @media (max-width: 518px) {
     .hero-about-section .hero-about-title {
-        font-size: 20px;
+        font-size: 17px;
     }
     .section-2-about-title {
         line-height: normal;
@@ -12746,4 +12746,8 @@ img {
     .section-8-content-inner-left p {
         margin-bottom: 0;
     }
+}
+
+.facebook img {
+    height: 16px;
 }

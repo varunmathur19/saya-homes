@@ -9,6 +9,25 @@
     <meta name="description" content="Saya Homes is a top real estate builders in Noida with 25 years of legacy. We delivered residential & commercial property in Greater Noida, Ghaziabad."/>
     <meta name="keywords" content="saya homes, builders in noida, builders in greater noida, top real estate builders in noida, best real estate builder in noida, luxury real estate builder in noida"/>
     <?php include_once('inc-css.php') ?>
+    <style>
+        #vision-mission,
+        #founder,
+        #customer-relationship,
+        #partnerships,
+        #appreciation-letter {
+            scroll-margin-top: 110px;
+        }
+
+        @media (max-width: 767px) {
+            #vision-mission,
+            #founder,
+            #customer-relationship,
+            #partnerships,
+            #appreciation-letter {
+                scroll-margin-top: 90px;
+            }
+        }
+    </style>
 <script type="application/ld+json">
        {
         "@context": "https://schema.org/", 

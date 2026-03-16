@@ -110,10 +110,13 @@ if (!isset($base_url)) {
                     </div>
                 </div>
                 <div class="new-footer-social-icons">
-                    <a href="https://www.facebook.com/sayahomesofficial/" target="_blank" class="new-footer-social-icon" aria-label="Facebook">
+                    <!-- <a href="https://www.facebook.com/sayahomesofficial/" target="_blank" class="new-footer-social-icon" aria-label="Facebook">
                         <img src="<?= $base_url ?>/images/svg/facebook.svg" alt="Facebook" width="8" height="8">
 
-                    </a>
+                    </a> -->
+                    <a href="https://www.facebook.com/sayahomesofficial/" target="_blank" class="new-footer-social-icon facebook" aria-label="Facebook">
+    <img src="<?= $base_url ?>/images/svg/facebook.svg" alt="Facebook" width="8" height="8">
+</a>
                     <!-- <a href="https://twitter.com/sayahomes" target="_blank" class="new-footer-social-icon" aria-label="Twitter">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
@@ -685,6 +688,52 @@ if (!isset($base_url)) {
                 submitBtn.innerHTML = '<span class="new-enquire-submit-text">Get a Call Back</span>';
                 showStatus('Something went wrong. Please try again.', 'error');
             });
+        });
+    })();
+</script>
+<script>
+    (function() {
+        if (typeof gsap === 'undefined') return;
+        var h1 = document.querySelector('.new-footer-main-tagline');
+        if (!h1) return;
+
+        var text = h1.textContent || '';
+        h1.textContent = '';
+
+        text.split('').forEach(function(ch) {
+            var span = document.createElement('span');
+            if (ch === ' ') {
+                span.className = 'space';
+                span.innerHTML = '&nbsp;';
+            } else {
+                span.textContent = ch;
+            }
+            span.style.display = 'inline-block';
+            h1.appendChild(span);
+        });
+
+        var letters = Array.prototype.slice.call(
+            h1.querySelectorAll('span:not(.space)')
+        );
+        var orderedLetters = [];
+        var left = 0;
+        var right = letters.length - 1;
+
+        while (left <= right) {
+            orderedLetters.push(letters[left]);
+            left++;
+            if (left <= right) {
+                orderedLetters.push(letters[right]);
+                right--;
+            }
+        }
+
+        gsap.from(orderedLetters, {
+            y: 100,
+            opacity: 0,
+            duration: 1,
+            ease: 'power3.out',
+            stagger: 0.1,
         });
     })();
 </script>
