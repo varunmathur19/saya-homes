@@ -125,7 +125,7 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
     <!-- Event page section – all events from sayahomes.com/events -->
     <section class="event-page-section">
         <div class="event-page-inner">
-            <h2 class="event-page-title">Event</h2>
+            <h2 class="event-page-title">Events</h2>
             <div class="event-page-grid">
                 <?php if ($events_query && mysqli_num_rows($events_query) > 0): ?>
                 <?php while ($ev = mysqli_fetch_assoc($events_query)): ?>
@@ -559,7 +559,6 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 <select class="news-media-sort-select" id="sort-by-year-media" aria-label="Sort by year">
                     <option value="2025" selected>2025</option>
                     <option value="2024">2024</option>
-                    <option value="2023">2023</option>
                     <option value="2022">2022</option>
                     <option value="2021">2021</option>
                     <option value="2020">2020</option>
@@ -634,7 +633,7 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
             <div class="media-print-coverage-wrap" id="media-print-coverage-wrap" style="display: none;">
                 <a href="https://www.hindustantimes.com/real-estate/ghaziabad-real-estate-7-000-sq-ft-penthouse-in-indirapuram-sells-for-10-crore-101753092975854.html" class="media-template-box media-template-box--link media-template-box--featured media-print-card" target="_blank" rel="noopener noreferrer">
                     <div class="media-template-image media-template-image--full">
-                        <img src="<?= $base_url ?>/images/new_theme/hindustan.jpg" alt="Hindustan Times - Ghaziabad real estate: 7,000 sq ft penthouse in Indirapuram sells for ₹10 crore">
+                        <img src="<?= $base_url ?>/images/new_theme/hindustan.jpg" data-lightbox-src="<?= $base_url ?>/images/new_theme/hindustantimegallery.png" alt="Hindustan Times - Ghaziabad real estate: 7,000 sq ft penthouse in Indirapuram sells for ₹10 crore">
                     </div>
                     <div class="media-template-box-content">
                         <div class="media-print-card-meta">
@@ -645,7 +644,7 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 </a>
                 <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" target="_blank" rel="noopener noreferrer">
                     <div class="media-template-image media-template-image--full">
-                        <img src="<?= $base_url ?>/images/new_theme/navbharat.jpg" alt="NBT Navbharat Times - Property News Indirapuram">
+                        <img src="<?= $base_url ?>/images/new_theme/navbharat.jpg" data-lightbox-src="<?= $base_url ?>/images/new_theme/navbharatgallery.png" alt="NBT Navbharat Times - Property News Indirapuram">
                     </div>
                     <div class="media-template-box-content">
                         <div class="media-print-card-meta">
@@ -656,7 +655,7 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 </a>
                 <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" target="_blank" rel="noopener noreferrer">
                     <div class="media-template-image media-template-image--full">
-                        <img src="<?= $base_url ?>/images/new_theme/biznews.jpg" alt="Quick Biz News - Record-Setting Penthouse Saya Gold Avenue">
+                        <img src="<?= $base_url ?>/images/new_theme/biznews.jpg" data-lightbox-src="<?= $base_url ?>/images/new_theme/biznewsgallery.png" alt="Quick Biz News - Record-Setting Penthouse Saya Gold Avenue">
                     </div>
                     <div class="media-template-box-content">
                         <div class="media-print-card-meta">
@@ -667,7 +666,7 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 </a>
                 <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" target="_blank" rel="noopener noreferrer">
                     <div class="media-template-image media-template-image--full">
-                        <img src="<?= $base_url ?>/images/new_theme/reality.jpg" alt="Realty Plus - Record-Setting Sale Saya Group Penthouse Indirapuram">
+                        <img src="<?= $base_url ?>/images/new_theme/reality.jpg" data-lightbox-src="<?= $base_url ?>/images/new_theme/realtygallery.png" alt="Realty Plus - Record-Setting Sale Saya Group Penthouse Indirapuram">
                     </div>
                     <div class="media-template-box-content">
                         <div class="media-print-card-meta">
@@ -678,7 +677,7 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 </a>
                 <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" target="_blank" rel="noopener noreferrer">
                     <div class="media-template-image media-template-image--full">
-                        <img src="<?= $base_url ?>/images/new_theme/penthouse.jpg" alt="Business Standard - 7,000 sq ft penthouse Indirapuram sells for Rs 10 crore">
+                        <img src="<?= $base_url ?>/images/new_theme/penthouse.jpg" data-lightbox-src="<?= $base_url ?>/images/new_theme/businessstandardgallery.png" alt="Business Standard - 7,000 sq ft penthouse Indirapuram sells for Rs 10 crore">
                     </div>
                     <div class="media-template-box-content">
                         <div class="media-print-card-meta">
@@ -689,7 +688,7 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 </a>
                 <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" target="_blank" rel="noopener noreferrer">
                     <div class="media-template-image media-template-image--full">
-                        <img src="<?= $base_url ?>/images/new_theme/hindustanprintmedia..jpg" alt="Hindustan - Ghaziabad ₹10 crore flat">
+                        <img src="<?= $base_url ?>/images/new_theme/hindustanprintmedia..jpg" data-lightbox-src="<?= $base_url ?>/images/new_theme/gaziabad.png" alt="Hindustan - Ghaziabad ₹10 crore flat">
                     </div>
                     <div class="media-template-box-content">
                         <div class="media-print-card-meta">
@@ -700,7 +699,7 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 </a>
                 <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" target="_blank" rel="noopener noreferrer">
                     <div class="media-template-image media-template-image--full">
-                        <img src="<?= $base_url ?>/images/new_theme/zbusiness.jpg" alt="Zee Business - Saya Gold Avenue Penthouse Indirapuram">
+                        <img src="<?= $base_url ?>/images/new_theme/zbusiness.jpg" data-lightbox-src="<?= $base_url ?>/images/new_theme/zbusinessgalleryt.png" alt="Zee Business - Saya Gold Avenue Penthouse Indirapuram">
                     </div>
                     <div class="media-template-box-content">
                         <div class="media-print-card-meta">
@@ -711,7 +710,7 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 </a>
                 <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" target="_blank" rel="noopener noreferrer">
                     <div class="media-template-image media-template-image--full">
-                        <img src="<?= $base_url ?>/images/new_theme/record.jpg" alt="APN News - Record-Setting Penthouse Saya Gold Avenue Indirapuram">
+                        <img src="<?= $base_url ?>/images/new_theme/record.jpg" data-lightbox-src="<?= $base_url ?>/images/new_theme/apngallery.png" alt="APN News - Record-Setting Penthouse Saya Gold Avenue Indirapuram">
                     </div>
                     <div class="media-template-box-content">
                         <div class="media-print-card-meta">
@@ -722,13 +721,195 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 </a>
                 <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" target="_blank" rel="noopener noreferrer">
                     <div class="media-template-image media-template-image--full">
-                        <img src="<?= $base_url ?>/images/new_theme/construction.jpg" alt="CW Construction World - Saya Gold Avenue Penthouse Indirapuram">
+                        <img src="<?= $base_url ?>/images/new_theme/construction.jpg" data-lightbox-src="<?= $base_url ?>/images/new_theme/constructiongallery.png" alt="CW Construction World - Saya Gold Avenue Penthouse Indirapuram">
                     </div>
                     <div class="media-template-box-content">
                         <div class="media-print-card-meta">
                             <span class="media-print-card-source">CW Construction World</span>
                             <span class="media-print-card-date">13th August 2025</span>
                         </div>
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2024" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/timeofindia.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/leadersgallry.png" alt="Times of India - Leaders of Change">
+                    </div>
+                    <div class="media-template-box-content">
+                        <div class="media-print-card-meta">
+                            <span class="media-print-card-source">Times of India</span>
+                            <span class="media-print-card-date">15th August 2024</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2024" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/group.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/groupgallery.png" alt="Navbharat Times - Group coverage">
+                    </div>
+                    <div class="media-template-box-content">
+                        <div class="media-print-card-meta">
+                            <span class="media-print-card-source">Navbharat Times</span>
+                            <span class="media-print-card-date">15th May 2024</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2022" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/abhineta.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/abhineta.png" alt="Dainik Jagran - Abhineta Jeet Kapoor">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2021" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/newstart.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/newstart.png" alt="Print media 2021 - New Start">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2021" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/indrapuram.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/indrapuram.png" alt="Print media 2021 - Indrapuram">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2021" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/handover.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/handover.png" alt="Print media 2021 - Handover">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2021" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/livelarger.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/livelarger.png" alt="Print media 2021 - Live Larger">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2021" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/newspapersayagold.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/newspapersayagold.png" alt="Print media 2021 - Newspaper Saya Gold Avenue">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2021" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/nameplacedate.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/nameplacedate.png" alt="Print media 2021 - Name Place Date">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2021" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/homebuyer.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/homebuyer.png" alt="Print media 2021 - Homebuyer Dream">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2020" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/print20201.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/print20201.png" alt="Print media 2020 - Print 1">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2020" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/print20202.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/print20202.png" alt="Print media 2020 - Print 2">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2020" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/amar3.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/amar3.png" alt="Print media 2020 - Amar Ujala 3">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2020" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/amar4.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/amar4.png" alt="Print media 2020 - Amar Ujala 4">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2020" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/amar5.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/amar5.png" alt="Print media 2020 - Amar Ujala 5">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2020" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/businesstoday.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/businesstoday.png" alt="Print media 2020 - Business Today">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2020" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/architecture.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/architecture.png" alt="Print media 2020 - Architecture">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2020" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/dranik.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/dranik.png" alt="Print media 2020 - Dainik Jagran">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2020" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/corona.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/corona.png" alt="Print media 2020 - Corona">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2020" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/deshbandu.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/deshbandu.png" alt="Print media 2020 - Deshbandhu">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2020" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/ew.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/ew.png" alt="Print media 2020 - EW">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2020" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/financial.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/financial.png" alt="Print media 2020 - Financial Express">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2020" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/hindustanprint.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/hindustanprint.png" alt="Print media 2020 - Hindustan 1">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2020" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/hindustanprint2.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/hindustanprint2.png" alt="Print media 2020 - Hindustan 2">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2020" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/hindustanprint3.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/hindustanprint3.png" alt="Print media 2020 - Hindustan 3">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2020" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/mailtoday.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/mailtoday.png" alt="Print media 2020 - Mail Today 1">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2020" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/mailtoday2.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/mailtoday2.png" alt="Print media 2020 - Mail Today 2">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2020" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/navdev.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/navdev.png" alt="Print media 2020 - Navodaya">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2020" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/nbt.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/nbt.png" alt="Print media 2020 - NBT 1">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2020" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/nbt2.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/nbt2.png" alt="Print media 2020 - NBT 2">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2020" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/nbt3.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/nbt3.png" alt="Print media 2020 - NBT 3">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2020" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/nbt4.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/nbt4.png" alt="Print media 2020 - NBT 4">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2020" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/sahara.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/sahara.png" alt="Print media 2020 - Sahara">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2020" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/timeprint.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/timeprint.png" alt="Print media 2020 - Times of India">
                     </div>
                 </a>
             </div>
@@ -1849,9 +2030,10 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                         printCoverageWrap.style.display = 'grid';
                         var printCards = printCoverageWrap.querySelectorAll('.media-template-box');
                         printCards.forEach(function (c) { c.style.display = ''; });
+                        if (typeof window.updatePrintCardsByYear === 'function') window.updatePrintCardsByYear();
                     }
                     if (grid) grid.style.display = 'none';
-                    if (sortRow) sortRow.style.display = 'none';
+                    if (sortRow) sortRow.style.display = '';
                 } else {
                     if (prCoverageWrap) prCoverageWrap.style.display = 'none';
                     if (printCoverageWrap) printCoverageWrap.style.display = 'none';
@@ -2047,10 +2229,22 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                     if (grid) { grid.classList.remove('media-showing-year-2024', 'media-showing-year-2023', 'media-showing-year-2022', 'media-showing-year-2021', 'media-showing-year-2020', 'media-showing-year-2019'); }
                 }
             }
+            function updatePrintCardsByYear() {
+                var printWrap = document.getElementById('media-print-coverage-wrap');
+                if (!printWrap) return;
+                var selectedYear = select.value;
+                var printCards = printWrap.querySelectorAll('.media-print-card');
+                printCards.forEach(function (card) {
+                    var cardYear = card.getAttribute('data-year') || '2025';
+                    card.style.display = cardYear === selectedYear ? '' : 'none';
+                });
+            }
+            window.updatePrintCardsByYear = updatePrintCardsByYear;
             select.addEventListener('change', function () {
                 updateLabel();
                 ensureReadMoreForYearCards();
                 updateFirstBoxByYear();
+                updatePrintCardsByYear();
                 if (typeof window.runMediaCardAnimation === 'function') {
                     requestAnimationFrame(function () { window.runMediaCardAnimation(); });
                 }
@@ -2058,6 +2252,7 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
             updateLabel();
             ensureReadMoreForYearCards();
             updateFirstBoxByYear();
+            updatePrintCardsByYear();
         })();
     </script>
     <script>
@@ -2159,7 +2354,8 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
             function getImages() {
                 var list = [];
                 wrap.querySelectorAll('.media-print-card .media-template-image img').forEach(function (img) {
-                    if (img.src) list.push({ src: img.src, alt: img.alt || '' });
+                    var lightboxSrc = img.getAttribute('data-lightbox-src') || img.src;
+                    if (lightboxSrc) list.push({ src: lightboxSrc, alt: img.alt || '' });
                 });
                 return list;
             }

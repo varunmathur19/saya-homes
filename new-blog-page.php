@@ -27,11 +27,11 @@
         <div class="blog-banner-image" style="background-image: url('<?= $base_url ?>/images/new_theme/blogbanner.jpg');"></div>
         <div class="blog-banner-image blog-banner-image-mobile" style="background-image: url('<?= $base_url ?>/images/new_theme/blog-mobile.jpg');"></div>
         <div class="blog-banner-content">
-            <h1 class="blog-banner-title">Blog</h1>
+            <h1 class="blog-banner-title">Blogs</h1>
             <nav class="blog-banner-breadcrumb" aria-label="Breadcrumb">
                 <a href="<?= $base_url ?>/new_home.php" class="blog-breadcrumb-link">Homepage</a>
                 <img src="<?= $base_url ?>/images/svg/blogarrow.svg" alt="" class="blog-breadcrumb-arrow" aria-hidden="true">
-                <span class="blog-breadcrumb-current">Blog</span>
+                <span class="blog-breadcrumb-current">Blogs</span>
             </nav>
         </div>
     </section>

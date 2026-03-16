@@ -140,7 +140,7 @@ if (!isset($base_url)) {
 
         <!-- Bottom Section -->
         <div class="new-footer-bottom">
-            <p class="new-footer-copyright">© 2026 sayahomes. All rights reserved. digital media planned by Ritz Media World.</p>
+            <p class="new-footer-copyright">© 2026 Saya Homes. All rights reserved. Digital Media planned by Ritz Media World.</p>
         </div>
     </div>
 </footer>
@@ -548,8 +548,8 @@ if (!isset($base_url)) {
         </aside>
         <div class="new-enquire-modal-main">
             <button type="button" class="new-enquire-modal-close" id="newEnquireClose" aria-label="Close">×</button>
-            <h4 class="new-enquire-modal-title" id="newEnquireTitle">Book Your Dream Home Today !</h4>
-            <p class="new-enquire-modal-sub">Experience modern living in a location that connects you to everything.</p>
+            <h4 class="new-enquire-modal-title" id="newEnquireTitle">Find Your Perfect Space !</h4>
+            <p class="new-enquire-modal-sub">Designed for modern homes, thriving businesses, and a connected lifestyle.</p>
             <div class="new-enquire-status" id="newEnquireStatus"></div>
 
             <form id="newEnquireForm" novalidate>

@@ -1270,7 +1270,7 @@
     border-radius: 16px 16px 0 0;
 }
 .media-two-page .media-print-coverage-wrap .media-template-image {
-    padding: 10px;
+    /* padding: 10px; */
     box-sizing: border-box;
 }
 .media-two-page .media-print-coverage-wrap .media-template-title,

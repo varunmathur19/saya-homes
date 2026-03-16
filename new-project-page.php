@@ -49,7 +49,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
     $project_page_title = 'Saya zenith | 2/3/4 BHK Luxury Flats in Indirapuram, Ghaziabad';
     $project_meta_description = 'Saya Zenith offers premium 2/3/4 BHK flats in Indirapuram, Ghaziabad. Enjoy modern living with top-notch amenities, spacious layouts, vibrant community.';
     $project_meta_keywords = 'saya zenith, saya zenith indirapuram, 2 bhk flats in indirapuram, 3 bhk flats in indirapuram, 4 bhk flats in indirapuram, flats in ghaziabad, 2 bhk apartments in indirapuram, 3 bhk apartments in indirapuram, 4 bhk apartments in indirapuram, best residential property in indirapuram, residential property in ghaziabad';
-    $project_hero_desc = 'Discover spacious sized <b> 2, 3, & 4 BHK  apartments </b> at Saya Zenith, where each home has been carefully crafted for the discerning buyer. Illuminated with natural light and designed with exceptional craftsmanship, these residemces offer a <b>luxurious lifestyle experience</b> in the heart of <b>Indirapuram</b>.';
+    $project_hero_desc = 'Discover spacious sized <b> 2, 3, & 4 BHK  apartments </b> at Saya Zenith, where each home has been carefully crafted for the discerning buyer. Illuminated with natural light and designed with exceptional craftsmanship, these residences offer a <b>luxurious lifestyle experience</b> in the heart of <b>Indirapuram</b>.';
 
     $project_hero_btn_text = 'Book a Site Visit';
     $project_section2_img = 'sayazenithbanner.png';
@@ -100,7 +100,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
 } elseif ($project_slug === 'saya-piazza') {
     $project_hero_category = 'Commercial';
     $project_hero_name = 'SAYA PIAZZA';
-    $project_overview_location = 'Sector 131';
+    $project_overview_location = 'Sector 131, Noida';
     $project_hero_breadcrumb_cat = 'COMMERCIAL';
     $project_hero_breadcrumb_current = 'SAYA PIAZZA';
     $project_page_title = 'Saya Piazza | Top Retail Shops in on Noida Expressway';
@@ -366,7 +366,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                     <div class="project-overview-brand">
                         <img src="<?= $base_url ?>/images/svg/projectbiztoplogo.svg" alt="<?= htmlspecialchars($project_display_name) ?>" class="project-overview-logo">
                     </div>
-                    <p class="project-overview-gold-text">Saya Biztop at Saya SouthX is the ultimate location for elite professionals. Offering premium fully furnished suites that symbolize success.</p>
+                    <p class="project-overview-gold-text">Saya Biztop at Saya South X is the ultimate location for elite professionals. Offering premium fully furnished suites that symbolize success.</p>
                     <div class="project-overview-gold-cards">
                         <div class="project-overview-gold-card">
                             <span class="project-overview-gold-card-num">7th - 25th</span>
@@ -1565,7 +1565,7 @@ Saya Zion combines luxurious living with a vast green environment, providing a l
                             <div class="project-section-13-accordion-item" data-accordion-item>
                                 <button type="button" class="project-section-13-accordion-trigger" aria-expanded="false" aria-controls="faq-01" id="faq-trigger-01">
                                     <span class="project-section-13-accordion-num">01</span>
-                                    <span class="project-section-13-accordion-q"><?= ($project_slug === 'gold-avenue') ? 'Where is Saya Gold Avenue located?' : (($project_slug === 'saya-zion') ? 'Where is Saya Zion situated?' : (($project_slug === 'saya-zenith') ? 'Where is Saya Zenith situated?' : (($project_slug === 'saya-desire-residency') ? 'Where is Saya Desire Residency situated?' : ((isset($project_display_name) && $project_display_name === 'Saya South X') ? 'Is Saya South X a good investment in Noida Extension?' : ((isset($project_display_name) && $project_display_name === 'Saya Piazza') ? 'What is Saya Piazza?' : 'What is the property rate in greater Noida?'))))) ?></span>
+                                    <span class="project-section-13-accordion-q"><?= ($project_slug === 'gold-avenue') ? 'Where is Saya Gold Avenue located?' : (($project_slug === 'saya-zion') ? 'Where is Saya Zion situated?' : (($project_slug === 'saya-zenith') ? 'Where is Saya Zenith situated?' : (($project_slug === 'saya-desire-residency') ? 'Where is Saya Desire Residency situated?' : ((isset($project_display_name) && $project_display_name === 'Saya South X') ? 'Is Saya South X a good investment in Noida Extension?' : ((isset($project_display_name) && $project_display_name === 'Saya Piazza') ? 'What is Saya Piazza?' : 'What is the property rate in Greater Noida?'))))) ?></span>
                                     <span class="project-section-13-accordion-icon project-section-13-accordion-icon-plus" aria-hidden="true"><img src="<?= $base_url ?>/images/new_theme/projectpgplus.svg" alt=""></span>
                                     <span class="project-section-13-accordion-icon project-section-13-accordion-icon-minus" aria-hidden="true" hidden><img src="<?= $base_url ?>/images/new_theme/minus.svg" alt=""></span>
                                 </button>
