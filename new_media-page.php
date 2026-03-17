@@ -70,7 +70,7 @@ $is_blog_page = isset($_GET['page']) && ($_GET['page'] === 'blog' || $_GET['page
         <div class="media-banner-content">
             <h1 class="media-banner-title"><?= $is_contact_page ? 'Contact Us' : ($is_career_page ? 'Careers' : ($is_event_page ? 'Events' : ($is_blog_page ? 'Blogs' : 'In The Media'))) ?></h1>
             <nav class="media-banner-breadcrumb" aria-label="Breadcrumb">
-                <a href="<?= $base_url ?>/new_home.php" class="media-breadcrumb-link">Homepage</a>
+                <a href="https://sayahomes.com/" class="media-breadcrumb-link">Homepage</a>
                 <img src="<?= $base_url ?>/images/svg/blogarrow.svg" alt="" class="media-breadcrumb-arrow" aria-hidden="true">
                 <?php if ($is_contact_page): ?>
                 <span class="media-breadcrumb-link media-breadcrumb-link-blog">Contact Us</span>
@@ -2827,8 +2827,11 @@ $is_blog_page = isset($_GET['page']) && ($_GET['page'] === 'blog' || $_GET['page
                 var query = searchInput.value.trim().toLowerCase();
                 jobCards.forEach(function (card) {
                     var titleEl = card.querySelector('.career-job-card-title');
+                    var deptEl = card.querySelector('.career-job-card-dept');
                     var title = titleEl ? titleEl.textContent.toLowerCase() : '';
-                    card.style.display = title.indexOf(query) !== -1 ? '' : 'none';
+                    var dept = deptEl ? deptEl.textContent.toLowerCase() : '';
+                    var searchableText = (title + ' ' + dept).trim();
+                    card.style.display = searchableText.indexOf(query) !== -1 ? '' : 'none';
                 });
             }
 

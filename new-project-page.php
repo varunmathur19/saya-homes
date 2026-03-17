@@ -11,7 +11,7 @@ if ($project_slug === 'gold-avenue') {
     $project_page_title = 'Saya Gold Avenue | 2/3/4 BHK Luxury Apartments in Indirapuram';
     $project_meta_description = 'Saya Gold Avenue offers ready to move in 2/3/4 BHK Luxury Apartments in Indirapuram, Ghaziabad. Best 2/3/4 BHK Flats for sale in Indirapuram, Ghaziabad.';
     $project_meta_keywords = 'saya gold avenue, saya gold avenue indirapuram, 2 bhk apartments in indirapuram, 3 bhk apartments in indirapuram, 4 bhk apartments in indirapuram, ready to move in apartments in indirapuram, 2 bhk flats in indirapuram, 3 bhk flats in indirapuram, 4 bhk flats in indirapuram, best property in indirapuram, residential property in indirapuram';
-    $project_hero_desc = 'Discover a perfect blend of <b> modern luxury, comfort, and affordability </b> at Saya Gold Avenue. With carefully designed homes, premium amenities, and a semi-olympic sized swimming pool, this residential paradise offers effortless connectivity and ultimate convenience. Situated next to  <b> North India Mall and NH-9 </b>, Saya Gold Avenue brings to you a truly luxurious living experience.';
+    $project_hero_desc = 'Discover a perfect blend of <b> modern luxury, comfort, and affordability </b> at Saya Gold Avenue. With carefully designed homes, premium amenities, and a semi-olympic sized swimming pool, this residential paradise offers effortless connectivity and ultimate convenience. Situated next to  <b> North India Mall</b> and <b>NH-9</b>, Saya Gold Avenue brings to you a truly luxurious living experience.';
     $project_hero_btn_text = 'Book a Site Visit';
     $project_section2_img = 'section-2gold-avenue.png';
     $project_section2_alt = 'Saya Gold Avenue - Ready to Move In';

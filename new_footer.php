@@ -40,7 +40,7 @@ if (!isset($base_url)) {
         <div class="new-footer-middle">
             <div class="new-footer-links-container">
                 <!-- About Us Column -->
-                <div class="new-footer-column">
+                <div class="new-footer-column" style="text-align: left;">
                     <h6 class="new-footer-column-heading">ABOUT US</h6>
                     <ul class="new-footer-links">
                         <li><a href="<?= $base_url ?>/about-us">Overview</a></li>
@@ -53,33 +53,34 @@ if (!isset($base_url)) {
                 </div>
 
                 <!-- Projects Column -->
-                <div class="new-footer-column">
+                <div class="new-footer-column" style="text-align: left;">
                     <h6 class="new-footer-column-heading">PROJECTS</h6>
                     <ul class="new-footer-links">
-                        <li><a href="<?= $base_url ?>/residential">Residential</a></li>
-                        <li><a href="<?= $base_url ?>/commercial">Commercial</a></li>
+                        <li style="text-align: left;"><a href="<?= $base_url ?>/residential">Residential</a></li>
+                        <li style="text-align: left;"><a href="<?= $base_url ?>/commercial">Commercial</a></li>
                     </ul>
                 </div>
 
                 <!-- Media Column -->
-                <div class="new-footer-column">
+                <div class="new-footer-column" style="text-align: left;">
                     <h6 class="new-footer-column-heading">MEDIA</h6>
                     <ul class="new-footer-links">
                         <li><a href="<?= $base_url ?>/in-the-media">In The Media</a></li>
-                        <li><a href="<?= $base_url ?>/awards-and-recognition">Awards & Recognition</a></li>
+                        <li style="text-align: left;"><a href="<?= $base_url ?>/awards-and-recognition">Awards & Recognition</a></li>
                         <li><a href="<?= $base_url ?>/events">Events</a></li>
                         <li><a href="<?= $base_url ?>/blogs">Blogs</a></li>
                     </ul>
                 </div>
 
                 <!-- Quick Links Column -->
-                <div class="new-footer-column">
+                <div class="new-footer-column" style="text-align: left;">
                     <h6 class="new-footer-column-heading">QUICK LINKS</h6>
                     <ul class="new-footer-links">
-                        <li><a href="<?= $base_url ?>/nri-corner">NRI Corner</a></li>
-                        <li><a href="<?= $base_url ?>/customer-supports">Customer Support</a></li>
+                        <li style="text-align: left;"><a href="<?= $base_url ?>/nri-corner">NRI Corner</a></li>
+                        <li style="text-align: left;"><a href="<?= $base_url ?>/customer-supports">Customer Support</a></li>
                         <li><a href="<?= $base_url ?>/careers">Careers</a></li>
                         <li><a href="<?= $base_url ?>/contact-us">Contact Us</a></li>
+                        <li><a href="<?= $base_url ?>/privacy-policy">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>

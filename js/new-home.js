@@ -411,7 +411,7 @@ document.addEventListener("DOMContentLoaded", function () {
         mobileNav.innerHTML = inactiveSlidesWithIndices
             .map(({ slide, index }) => {
                 return `
-          <div class="project-slider-nav-item" data-index="${index}">
+          <div class="project-slider-nav-item" data-index="${index}" data-title="${slide.title}">
             <div class="project-slider-nav-id">${slide.id}</div>
             <div class="project-slider-nav-line"></div>
             <div class="project-slider-nav-title">${slide.title}</div>
@@ -424,9 +424,9 @@ document.addEventListener("DOMContentLoaded", function () {
         desktopNav.innerHTML = inactiveSlidesWithIndices
             .map(({ slide, index }) => {
                 return `
-          <div class="project-slider-nav-item-vertical" data-index="${index}">
-            <div class="project-slider-nav-arrow"><img src="${baseUrl}images/new_theme/icons/project_slider_arrow.svg" alt="Project Slider Arrow"/></div>
-            <div>
+          <div class="project-slider-nav-item-vertical" data-index="${index}" data-title="${slide.title}">
+            <div class="project-slider-nav-arrow" style="pointer-events:none;"><img src="${baseUrl}images/new_theme/icons/project_slider_arrow.svg" alt="Project Slider Arrow"/></div>
+            <div style="pointer-events:none;">
             <div class="project-slider-nav-title-vertical">${slide.title}</div>
             <div class="project-slider-nav-id-vertical">${slide.id}</div>
             </div>
@@ -441,7 +441,9 @@ document.addEventListener("DOMContentLoaded", function () {
             .forEach((item) => {
                 item.addEventListener("click", function (e) {
                     e.preventDefault();
-                    const index = parseInt(this.getAttribute("data-index"));
+                    e.stopPropagation();
+                    const clickedTitle = this.getAttribute("data-title") || "";
+                    const index = slides.findIndex((slide) => slide.title === clickedTitle);
                     updateSlide(index);
                 });
             });
@@ -451,7 +453,9 @@ document.addEventListener("DOMContentLoaded", function () {
             .forEach((item) => {
                 item.addEventListener("click", function (e) {
                     e.preventDefault();
-                    const index = parseInt(this.getAttribute("data-index"));
+                    e.stopPropagation();
+                    const clickedTitle = this.getAttribute("data-title") || "";
+                    const index = slides.findIndex((slide) => slide.title === clickedTitle);
                     updateSlide(index);
                 });
             });

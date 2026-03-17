@@ -3538,7 +3538,7 @@ input[type="submit"],
     width: 68px;
     height: 100%;
     text-align: center;
-    overflow: visible;
+    overflow: hidden;
 }
 
 .project-slider-nav-item-vertical div {
@@ -12750,4 +12750,8 @@ img {
 
 .facebook img {
     height: 16px;
+}
+
+.section-10-contact-us-form {
+    border-radius: 20px !important;
 }
