@@ -2658,6 +2658,83 @@ body.media-print-image-lightbox-open {
 .new-career-page .career-openings-footer-note a:hover {
     text-decoration: underline;
 }
+
+/* Career page: Apply Online form (matches website typography/theme) */
+.new-career-page #applyWrapper {
+    background: #fff;
+    max-width: 1500px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 50px 50px 80px;
+}
+.new-career-page #applyWrapper .heading .h2 {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: 0;
+    color: #111111 !important;
+    margin-bottom: 28px !important;
+}
+.new-career-page #applyWrapper .form-container {
+    background: #f8f8f8;
+    border: 1px solid #ececec;
+    border-radius: 12px;
+    padding: 28px;
+}
+.new-career-page #applyWrapper .career-form .form-floating > label {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #777;
+}
+.new-career-page #applyWrapper .career-form .form-control {
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.45;
+    color: #1f2937;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    box-shadow: none;
+}
+.new-career-page #applyWrapper .career-form .form-control::placeholder {
+    color: #9ca3af;
+}
+.new-career-page #applyWrapper .career-form textarea.form-control {
+    min-height: 100%;
+    resize: vertical;
+}
+.new-career-page #applyWrapper .career-form .form-control:focus {
+    border-color: #f6883e;
+    box-shadow: 0 0 0 0.12rem rgba(246, 136, 62, 0.16);
+}
+.new-career-page #applyWrapper .career-form .readmore {
+    margin-top: 24px;
+}
+.new-career-page #applyWrapper .career-form #contsubmti.button {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0;
+    background: #f6883e;
+    border: 1px solid #f6883e;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 8px;
+    min-width: 170px;
+}
+.new-career-page #applyWrapper .career-form #contsubmti.button:hover {
+    background: #e57a35;
+    border-color: #e57a35;
+}
+.new-career-page #applyWrapper .carstatus {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 12px;
+}
 @media (max-width: 1024px) {
     .new-career-page .career-jobs-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -2691,6 +2768,16 @@ body.media-print-image-lightbox-open {
     .new-career-page .career-openings-inner {
         padding: 50px 30px;
     }
+    .new-career-page #applyWrapper {
+        padding: 50px 30px;
+    }
+    .new-career-page #applyWrapper .heading .h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+    .new-career-page #applyWrapper .form-container {
+        padding: 22px;
+    }
     .new-career-page .contact-details-header-title {
         text-align: center;
         width: 100%;
@@ -2708,6 +2795,24 @@ body.media-print-image-lightbox-open {
 @media (max-width: 518px) {
     .new-career-page .career-openings-inner {
         padding: 30px 10px !important;
+    }
+    .new-career-page #applyWrapper {
+        padding: 30px 10px 40px;
+    }
+    .new-career-page #applyWrapper .heading .h2 {
+        font-size: 24px;
+        margin-bottom: 20px !important;
+    }
+    .new-career-page #applyWrapper .form-container {
+        padding: 16px;
+        border-radius: 10px;
+    }
+    .new-career-page #applyWrapper .career-form .readmore {
+        margin-top: 18px;
+    }
+    .new-career-page #applyWrapper .career-form #contsubmti.button {
+        width: 100%;
+        min-width: 0;
     }
     .new-career-page .contact-details-header-right {
         width: 100%;

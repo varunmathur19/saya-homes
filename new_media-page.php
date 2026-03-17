@@ -523,6 +523,88 @@ $is_blog_page = isset($_GET['page']) && ($_GET['page'] === 'blog' || $_GET['page
             <!-- <p class="career-openings-footer-note">Fill out the form and we'll be in touch soon! The aspirants may send their resumes to <a href="mailto:hr@sayahomes.in">hr@sayahomes.in</a>.</p> -->
         </div>
     </section>
+    <div class="w-100 padding" id="applyWrapper">
+        <div class="container-lg">
+            <div class="heading mx-auto text-center">
+                <h2 class="h2 text-primary mb-0">Apply Online</h2>
+            </div>
+            <div class="form-container">
+                <form class="career-form" id="careerForm" method="post" enctype="multipart/form-data">
+                    <span class="text-danger carstatus"></span>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="row g-3">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="input-group">
+                                        <div class="form-floating">
+                                            <input type="text" name="crfirstname" id="crfirstname" class="form-control" placeholder=" ">
+                                            <label for="crfirstname">First Name*</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="input-group">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" name="crlastname" id="crlastname" placeholder=" ">
+                                            <label for="crlastname">Last Name <span class="text-danger">*</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="input-group">
+                                        <div class="form-floating">
+                                            <input type="tel" class="form-control" name="crmobile" id="crmobile" placeholder=" ">
+                                            <label for="crmobile">Tel/Mobile <span class="text-danger">*</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="input-group">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" name="cremail" id="cremail" placeholder=" ">
+                                            <label for="cremail">Email <span class="text-danger">*</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="input-group">
+                                        <div class="form-floating">
+                                            <input type="text" readonly class="form-control" name="jobPosition" id="jobPosition" placeholder=" " value="">
+                                            <label>Job Position</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="input-group">
+                                        <div class="form-floating">
+                                            <input type="text" readonly class="form-control" name="experience" id="experience" placeholder=" " value="">
+                                            <label for="experience">Experience <span class="text-danger">*</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-6">
+                                    <div class="input-group">
+                                        <div class="form-floating">
+                                            <input type="file" name="resume" id="resume" placeholder=" " accept="application/pdf,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" size="34" maxlength="255" class="form-control">
+                                            <label for="resume">Attach Your Resume <span class="text-danger">*</span></label>
+                                            <input type="hidden" name="resumefile" id="resumefile">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <textarea class="form-control h-100 bg-light" name="shortdescription" id="shortdescription" placeholder="Short Description" rows="7"></textarea>
+                        </div>
+                    </div>
+                    <div class="readmore">
+                        <input type="hidden" name="car_action" value="active">
+                        <button type="submit" class="button justify-content-center mx-auto" id="contsubmti">Submit<i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <?php else: ?>
     <!-- News & Media Section: title, tabs, sort by year (template layout) -->
     <section class="news-media-section">
@@ -2836,6 +2918,47 @@ $is_blog_page = isset($_GET['page']) && ($_GET['page'] === 'blog' || $_GET['page
             }
 
             searchInput.addEventListener('input', filterJobsByTitle);
+        })();
+    </script>
+    <script>
+        (function () {
+            if (!document.body.classList.contains('new-career-page')) return;
+
+            var applyWrapper = document.getElementById('applyWrapper');
+            var jobPositionInput = document.getElementById('jobPosition');
+            var experienceInput = document.getElementById('experience');
+            var applyButtons = document.querySelectorAll('.career-job-card-apply-btn');
+
+            if (!applyWrapper || !applyButtons.length) return;
+            applyWrapper.style.display = 'none';
+
+            function openApplyForm(card) {
+                var titleEl = card.querySelector('.career-job-card-title');
+                var expRow = card.querySelector('.career-job-card-detail-row');
+                var jobTitle = titleEl ? titleEl.textContent.trim() : '';
+                var experience = expRow ? expRow.textContent.replace(/Experience/gi, '').trim() : '';
+
+                if (jobPositionInput) {
+                    jobPositionInput.value = jobTitle;
+                }
+                if (experienceInput) {
+                    experienceInput.value = experience;
+                }
+
+                applyWrapper.style.display = 'block';
+                setTimeout(function () {
+                    applyWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 120);
+            }
+
+            applyButtons.forEach(function (button) {
+                button.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    var card = button.closest('.career-job-card');
+                    if (!card) return;
+                    openApplyForm(card);
+                });
+            });
         })();
     </script>
 </body>
