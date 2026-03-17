@@ -62,6 +62,47 @@
             line-height: 1.4;
         }
 
+        .new-thanku-timer {
+            margin: 0 auto 18px;
+            width: min(360px, 92%);
+            text-align: center;
+        }
+
+        .new-thanku-timer-text {
+            margin: 0 0 10px;
+            font-family: "Inter", sans-serif;
+            font-size: 15px;
+            color: #425066;
+            line-height: 1.3;
+        }
+
+        .new-thanku-timer-text strong {
+            color: #101322;
+            font-weight: 700;
+        }
+
+        .new-thanku-timer-track {
+            width: 100%;
+            height: 6px;
+            background: #dbe1ec;
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .new-thanku-timer-fill {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #f6883e 0%, #ff9a56 100%);
+            border-radius: inherit;
+            transform-origin: left center;
+            animation: thankuTimerFill 5s linear forwards;
+        }
+
+        @keyframes thankuTimerFill {
+            from { transform: scaleX(1); }
+            to { transform: scaleX(0); }
+        }
+
         .project-gold-about-btn {
             display: inline-flex;
             align-items: center;
@@ -170,6 +211,12 @@
             <img src="<?= $base_url ?>/images/new_theme/biztopgallery6.png" alt="Saya Homes" class="new-thanku-image">
             <h1 class="new-thanku-title">Thanks for submitting!</h1>
             <p class="new-thanku-text">your message has been sent!</p>
+            <div class="new-thanku-timer" aria-live="polite">
+                <p class="new-thanku-timer-text">Redirecting in <strong id="thankuCountdown">5</strong> seconds...</p>
+                <div class="new-thanku-timer-track" role="presentation">
+                    <div class="new-thanku-timer-fill"></div>
+                </div>
+            </div>
             <a href="<?= $base_url ?>/" class="project-gold-about-btn">
                 <span class="project-gold-about-btn-text">Go Home</span>
                 <div class="project-gold-about-btn-arrow">
@@ -178,5 +225,20 @@
             </a>
         </section>
     </main>
+    <script>
+        (function () {
+            var countdownEl = document.getElementById('thankuCountdown');
+            if (!countdownEl) return;
+            var secondsLeft = 5;
+            var timer = setInterval(function () {
+                secondsLeft -= 1;
+                if (secondsLeft < 0) {
+                    clearInterval(timer);
+                    return;
+                }
+                countdownEl.textContent = String(secondsLeft);
+            }, 1000);
+        })();
+    </script>
 </body>
 </html>

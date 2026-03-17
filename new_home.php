@@ -113,7 +113,7 @@ include_once "admin-panel-ecorp/config.php";
         #customer-relationship,
         #partnerships,
         #appreciation-letter {
-            scroll-margin-top: 60px;
+            scroll-margin-top: 30px;
         }
 
         @media (max-width: 767px) {

@@ -1,9 +1,5 @@
 <?php
 include_once "admin-panel-ecorp/config.php";
-if (isset($_GET['page']) && $_GET['page'] === 'event') {
-    header("Location: https://sayahomes.com/events.php");
-    exit;
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,8 +45,9 @@ if (isset($_GET['page']) && $_GET['page'] === 'event') {
 $is_contact_page = isset($_GET['page']) && $_GET['page'] === 'contact';
 $is_career_page = isset($_GET['page']) && $_GET['page'] === 'career';
 $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
+$is_blog_page = isset($_GET['page']) && ($_GET['page'] === 'blog' || $_GET['page'] === 'blogs');
 ?>
-<body class="new-media-page media-two-page<?= $is_contact_page ? ' new-contact-page' : '' ?><?= $is_career_page ? ' new-career-page' : '' ?><?= $is_event_page ? ' new-event-page' : '' ?>">
+<body class="new-media-page media-two-page<?= $is_contact_page ? ' new-contact-page' : '' ?><?= $is_career_page ? ' new-career-page' : '' ?><?= $is_event_page ? ' new-event-page' : '' ?><?= $is_blog_page ? ' new-blog-page' : '' ?>">
     <?php include_once('new_header.php');
     ?>
     <a href="<?= $base_url ?>/new_media-page.php?page=contact" class="section-5-enquire-btn" data-source="Common Enquiry">ENQUIRE NOW</a>
@@ -71,7 +68,7 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
         <div class="media-banner-overlay" aria-hidden="true"></div>
         <?php endif; ?>
         <div class="media-banner-content">
-            <h1 class="media-banner-title"><?= $is_contact_page ? 'Contact Us' : ($is_career_page ? 'Careers' : ($is_event_page ? 'Events' : 'In The Media')) ?></h1>
+            <h1 class="media-banner-title"><?= $is_contact_page ? 'Contact Us' : ($is_career_page ? 'Careers' : ($is_event_page ? 'Events' : ($is_blog_page ? 'Blogs' : 'In The Media'))) ?></h1>
             <nav class="media-banner-breadcrumb" aria-label="Breadcrumb">
                 <a href="<?= $base_url ?>/new_home.php" class="media-breadcrumb-link">Homepage</a>
                 <img src="<?= $base_url ?>/images/svg/blogarrow.svg" alt="" class="media-breadcrumb-arrow" aria-hidden="true">
@@ -81,6 +78,8 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 <span class="media-breadcrumb-link media-breadcrumb-link-blog">Careers</span>
                 <?php elseif ($is_event_page): ?>
                 <span class="media-breadcrumb-link media-breadcrumb-link-blog">Events</span>
+                <?php elseif ($is_blog_page): ?>
+                <span class="media-breadcrumb-link media-breadcrumb-link-blog">Blogs</span>
                 <?php else: ?>
                 <a href="<?= $base_url ?>/new-media-one-page.php" class="media-breadcrumb-link media-breadcrumb-link-blog">media</a>
                 <?php endif; ?>
@@ -129,7 +128,7 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
             <div class="event-page-grid">
                 <?php if ($events_query && mysqli_num_rows($events_query) > 0): ?>
                 <?php while ($ev = mysqli_fetch_assoc($events_query)): ?>
-                <a href="https://sayahomes.com/events.php" class="event-page-card">
+                <a href="<?= $base_url ?>/events/<?= htmlspecialchars($ev['ev_group']) ?>" class="event-page-card" target="_blank" rel="noopener noreferrer">
                     <div class="event-page-card-image-wrap">
                         <img src="<?= $base_url ?>/uploads/events/<?= htmlspecialchars($ev['ev_image']) ?>" alt="<?= htmlspecialchars($ev['ev_title']) ?>" class="event-page-card-image" loading="lazy">
                     </div>
@@ -910,6 +909,131 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
                 <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2020" target="_blank" rel="noopener noreferrer" style="display: none;">
                     <div class="media-template-image media-template-image--full">
                         <img src="<?= $base_url ?>/images/new_theme/timeprint.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/timeprint.png" alt="Print media 2020 - Times of India">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2019" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/amar2019-1.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/amar2019-1.png" alt="Print media 2019 - Amar Ujala">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2019" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/amar2019-2.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/amar2019-2.png" alt="Print media 2019 - Amar Ujala 2">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2019" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/amar2019-3.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/amar2019-3.png" alt="Print media 2019 - Amar Ujala 3">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2019" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/amar2019-4.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/amar2019-4.png" alt="Print media 2019 - Amar Ujala 4">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2019" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/amar2019-5.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/amar2019-5.png" alt="Print media 2019 - Amar Ujala 5">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2019" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/amar2019-6.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/amar2019-6.png" alt="Print media 2019 - Amar Ujala 6">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2019" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/amar2019-7.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/amar2019-7.png" alt="Print media 2019 - Amar Ujala 7">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2019" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/amar2019-8.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/amar2019-8.png" alt="Print media 2019 - Amar Ujala 8">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2019" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/amar2019-9.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/amar2019-9.png" alt="Print media 2019 - Amar Ujala 9">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2019" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/amar2019-10.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/amar2019-10.png" alt="Print media 2019 - Amar Ujala 10">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2019" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/amar2019-11.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/amar2019-11.png" alt="Print media 2019 - Amar Ujala 11">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2019" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/amar2019-12.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/amar2019-12.png" alt="Print media 2019 - Amar Ujala 12">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2019" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/amar2019-13.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/amar2019-13.png" alt="Print media 2019 - Amar Ujala 13">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2019" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/amar2019-14.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/amar2019-14.png" alt="Print media 2019 - Amar Ujala 14">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2019" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/business2019.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/business2019.png" alt="Print media 2019 - Business Today">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2019" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/dranik2019.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/dranik2019.png" alt="Print media 2019 - Dainik Jagran 1">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2019" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/dranik2019-2.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/dranik2019-2.png" alt="Print media 2019 - Dainik Jagran 2">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2019" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/dranik2019-3.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/dranik2019-3.png" alt="Print media 2019 - Dainik Jagran 3">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2019" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/dranik2019-4.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/dranik2019-4.png" alt="Print media 2019 - Dainik Jagran 4">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2019" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/dranik2019-5.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/dranik2019-5.png" alt="Print media 2019 - Dainik Jagran 5">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2019" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/dranik2019-6.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/dranik2019-6.png" alt="Print media 2019 - Dainik Jagran 6">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2019" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/dranik2019-7.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/dranik2019-7.png" alt="Print media 2019 - Dainik Jagran 7">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2019" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/dranik2019-8.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/dranik2019-8.png" alt="Print media 2019 - Dainik Jagran 8">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2019" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/dranik2019-9.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/dranik2019-9.png" alt="Print media 2019 - Dainik Jagran 9">
+                    </div>
+                </a>
+                <a href="#" class="media-template-box media-template-box--link media-template-box--featured media-print-card" data-year="2019" target="_blank" rel="noopener noreferrer" style="display: none;">
+                    <div class="media-template-image media-template-image--full">
+                        <img src="<?= $base_url ?>/images/new_theme/dranik2019-10.png" data-lightbox-src="<?= $base_url ?>/images/new_theme/dranik2019-10.png" alt="Print media 2019 - Dainik Jagran 10">
                     </div>
                 </a>
             </div>
@@ -1853,6 +1977,49 @@ $is_event_page = isset($_GET['page']) && $_GET['page'] === 'event';
     </style>
 
     <?php include_once('inc-script.php') ?>
+
+    <script>
+        // Banner title spelling animation (one by one)
+        (function() {
+            if (typeof gsap === 'undefined') return;
+
+            var title = document.querySelector('.media-banner-title');
+            if (!title) return;
+
+            var text = title.textContent || '';
+            if (!text.trim()) return;
+
+            var fragment = document.createDocumentFragment();
+            var letters = [];
+            title.textContent = '';
+
+            text.split('').forEach(function(ch) {
+                if (ch === ' ') {
+                    fragment.appendChild(document.createTextNode(' '));
+                    return;
+                }
+                var span = document.createElement('span');
+                span.textContent = ch;
+                span.style.display = 'inline-block';
+                span.style.willChange = 'transform, opacity';
+                letters.push(span);
+                fragment.appendChild(span);
+            });
+
+            title.appendChild(fragment);
+
+            gsap.fromTo(letters, {
+                y: 22,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1,
+                duration: 0.48,
+                ease: 'power3.out',
+                stagger: 0.045
+            });
+        })();
+    </script>
 
     <script>
         // GSAP ScrollTrigger – Media cards + Career + Contact page

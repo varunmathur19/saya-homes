@@ -55,7 +55,7 @@
 
         <div class="w-100 padding position-relative overflow-hidden section-faq">
             <div class="container-lg">
-                <p>We have put together the list of most relevant questions from an NRI/PlO’s perspective.</p>
+                <p class="nri-intro-text">We have put together the list of most relevant questions from an NRI/PlO’s perspective.</p>
                 <div class="faqs-box">
                     <div class="faqs_question ">Who is classified as an NRI? <span><i class="fa fa-angle-down"></i></span></div>
                     <div class="faqs_answer">
@@ -109,7 +109,7 @@
                             <p>Yes.</p>
                         </article>
                     </div>
-                    <h4>Property Purchase / Sale</h4>
+                    <h4 class="nri-intro-text nri-subsection-title">Property Purchase / Sale</h4>
                     <p>Acquisition of Immovable Property in India.</p>
                     <div class="faqs_question ">Who can purchase immovable property in India? <span><i class="fa fa-angle-down"></i></span></div>
                     <div class="faqs_answer">
@@ -140,7 +140,7 @@
                             <p>No.</p>
                         </article>
                     </div>
-                    <h4>Mode of Payment for Purchase/ Loan</h4>
+                    <h4 class="nri-intro-text nri-subsection-title">Mode of Payment for Purchase/ Loan</h4>
                     <div class="faqs_question ">How can an NRI / PIO make payment for purchase of residential / commercial property in India? <span><i class="fa fa-angle-down"></i></span></div>
                     <div class="faqs_answer">
                         <article>
@@ -168,7 +168,7 @@
                             </ul>
                         </article>
                     </div>
-                    <h4>Property Sale</h4>
+                    <h4 class="nri-intro-text nri-subsection-title">Property Sale</h4>
                     <div class="faqs_question ">Can an NRI/ PIO/foreign national sell his residential / commercial property? <span><i class="fa fa-angle-down"></i></span></div>
                     <div class="faqs_answer">
                         <article>
@@ -187,7 +187,7 @@
                             <p>Yes, NRI / PIO may gift residential / commercial property.</p>
                         </article>
                     </div>
-                    <h4>Repatriation</h4>
+                    <h4 class="nri-intro-text nri-subsection-title">Repatriation</h4>
                     <div class="faqs_question ">Property acquired of foreign Exchange source? <span><i class="fa fa-angle-down"></i></span></div>
                     <div class="faqs_answer">
                         <article>
@@ -219,6 +219,62 @@
         </svg>
     </button>
     <style>
+        .nri-intro-text {
+            font-family: Lato, sans-serif !important;
+            font-weight: 700 !important;
+            font-style: normal !important;
+            font-size: 36px !important;
+            line-height: 100% !important;
+            letter-spacing: 0 !important;
+            color: #111 !important;
+            margin: 0 0 45px 0 !important;
+        }
+
+        .nri-subsection-title {
+            margin-top: 20px !important;
+        }
+
+        .faqs-box > h4 {
+            border-left-color: #f6883e !important;
+        }
+
+        .faqs-box .faqs_question {
+            background-color: #fff !important;
+            color: #000 !important;
+            border-color: #f6883e !important;
+        }
+
+        .faqs-box .faqs_question:hover {
+            background-color: #fff !important;
+            color: #000 !important;
+            border-color: #f6883e !important;
+        }
+
+        .faqs-box .faqs_question.active {
+            background-color: #f6883e !important;
+            color: #fff !important;
+            border-color: #f6883e !important;
+        }
+
+        .faqs-box .faqs_question span,
+        .faqs-box .faqs_question span i {
+            color: inherit !important;
+        }
+
+        .faqs-box .faqs_answer {
+            background-color: #fff !important;
+        }
+
+        .faqs-box .faqs_question.active + .faqs_answer {
+            border-color: #f6883e !important;
+        }
+
+        @media (max-width: 540px) {
+            .nri-intro-text {
+                font-size: 24px !important;
+            }
+        }
+
         .scroll-to-hero-btn {
             position: fixed;
             bottom: 24px;

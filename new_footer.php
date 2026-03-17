@@ -639,7 +639,7 @@ if (!isset($base_url)) {
         }
 
         document.addEventListener('click', function(e) {
-            var trigger = e.target.closest('.section-5-enquire-btn');
+            var trigger = e.target.closest('.section-5-enquire-btn, .new-footer-schedule-btn');
             if (!trigger) return;
             e.preventDefault();
             var src = trigger.getAttribute('data-bs-source') || trigger.getAttribute('data-source') || 'Common Enquiry';

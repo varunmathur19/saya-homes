@@ -198,6 +198,121 @@
         </svg>
     </button>
     <style>
+        .project-title-container .title,
+        .section-support .blog-title {
+            font-family: "Lato", sans-serif !important;
+        }
+
+        .project-title-container .breadcrumb .breadcrumb-item,
+        .project-title-container .breadcrumb .breadcrumb-item a,
+        .section-support .blogBox article p {
+            font-family: Inter, "Open Sans", sans-serif !important;
+        }
+
+        .section-support .heading .h2 {
+            font-family: Lato, sans-serif !important;
+            font-weight: 700 !important;
+            font-style: normal !important;
+            font-size: 36px !important;
+            line-height: 100% !important;
+            letter-spacing: 0 !important;
+            text-align: center !important;
+            color: #111 !important;
+        }
+
+        .section-support .blog-title {
+            color: #000 !important;
+        }
+
+        @media (max-width: 540px) {
+            .section-support .heading .h2 {
+                font-size: 24px !important;
+            }
+        }
+
+        .section-support .newsBox .inner,
+        .section-support .newsBox .inner:hover,
+        .section-support .newsBox .inner:focus,
+        .section-support .newsBox .inner:active {
+            text-decoration: none !important;
+            color: inherit !important;
+        }
+
+        .section-support .newsBox .inner *,
+        .section-support .newsBox .inner:hover *,
+        .section-support .newsBox .inner:focus *,
+        .section-support .newsBox .inner:active * {
+            text-decoration: none !important;
+        }
+
+        .section-support .newsBox .inner article p,
+        .section-support .newsBox .inner:hover article p,
+        .section-support .newsBox .inner:focus article p,
+        .section-support .newsBox .inner:active article p {
+            color: inherit !important;
+        }
+
+        .blogBox.newsBox .inner {
+            border-bottom: 1px solid #f6883e;
+        }
+
+        body.awards-lightbox-open .new-header,
+        body.awards-lightbox-open .hover-header-container,
+        body.awards-lightbox-open .hover-project-header-container {
+            display: none !important;
+        }
+
+        body.awards-lightbox-open .magnify-button-prev,
+        body.awards-lightbox-open .magnify-button-next,
+        body.awards-lightbox-open .magnify-button-close {
+            width: 44px !important;
+            height: 44px !important;
+            border-radius: 50% !important;
+            background: rgba(255, 255, 255, 0.15) !important;
+            color: #fff !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            z-index: 10001 !important;
+            font-size: 20px !important;
+        }
+
+        body.awards-lightbox-open .magnify-stage {
+            border: none !important;
+        }
+
+        body.awards-lightbox-open .magnify-button-close {
+            position: fixed !important;
+            top: 16px !important;
+            right: 16px !important;
+        }
+
+        body.awards-lightbox-open .magnify-button-prev,
+        body.awards-lightbox-open .magnify-button-next {
+            position: fixed !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+        }
+
+        body.awards-lightbox-open .magnify-button-prev {
+            left: 16px !important;
+        }
+
+        body.awards-lightbox-open .magnify-button-next {
+            right: 16px !important;
+        }
+
+        body.awards-lightbox-open .magnify-button-prev:hover,
+        body.awards-lightbox-open .magnify-button-next:hover {
+            background: rgba(255, 255, 255, 0.3) !important;
+            color: #fff !important;
+        }
+
+        body.awards-lightbox-open .magnify-button-close:hover {
+            background: rgba(255, 255, 255, 0.25) !important;
+            color: #fff !important;
+        }
+
         .scroll-to-hero-btn {
             position: fixed;
             bottom: 24px;
@@ -260,6 +375,16 @@
     <?php include_once('inc-script.php') ?>
     <script data-base-url="<?= $base_url ?>/" src="<?= $base_url ?>/js/new-home.js?v=20260305"></script>
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof window.jQuery === 'undefined' || typeof window.jQuery.fn.magnify !== 'function') return;
+            window.jQuery('[data-magnify="awards"]').magnify({
+                headToolbar: ['close'],
+                footToolbar: ['prev', 'next'],
+                initMaximized: true
+            });
+        });
+    </script>
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
             var mobileMenuToggle = document.getElementById('mobileMenuToggle');
             var hoverHeaderContainer = document.querySelector('.hover-header-container');
@@ -294,6 +419,17 @@
                 if (e.target === hoverHeaderContainer) closeHeaderMenu();
             });
         });
+    </script>
+    <script>
+        (function () {
+            function syncAwardsLightboxState() {
+                var isOpen = document.querySelector('.magnify-modal') !== null;
+                document.body.classList.toggle('awards-lightbox-open', isOpen);
+            }
+            var observer = new MutationObserver(syncAwardsLightboxState);
+            observer.observe(document.body, { childList: true, subtree: true });
+            syncAwardsLightboxState();
+        })();
     </script>
     <script>
         (function() {

@@ -118,6 +118,52 @@
         </svg>
     </button>
     <style>
+        .project-title-container .title {
+            font-family: "Lato", sans-serif !important;
+        }
+
+        .project-title-container .breadcrumb .breadcrumb-item,
+        .project-title-container .breadcrumb .breadcrumb-item a {
+            font-family: Inter, "Open Sans", sans-serif !important;
+        }
+
+        .section-projects .heading .h2 {
+            font-family: Lato, sans-serif !important;
+            font-weight: 700 !important;
+            font-style: normal !important;
+            font-size: 36px !important;
+            line-height: 100% !important;
+            letter-spacing: 0 !important;
+            text-align: center !important;
+            color: #111 !important;
+        }
+
+        .project-slide-title {
+            font-family: "Lato", sans-serif !important;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 18px !important;
+            line-height: normal !important;
+            letter-spacing: 0;
+            margin: 0px 0px 5px 0px !important;
+        }
+
+        .project-slide-location {
+            font-family: Inter, "Open Sans", sans-serif;
+            font-size: 16px;
+            line-height: normal;
+            font-weight: 400;
+            /* color: #f6883e; */
+            color: #fff;
+            letter-spacing: 0;
+        }
+
+        @media (max-width: 540px) {
+            .section-projects .heading .h2 {
+                font-size: 24px !important;
+            }
+        }
+
         .scroll-to-hero-btn {
             position: fixed;
             bottom: 24px;
